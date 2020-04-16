@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CAAA37D82448DA4D00A8170A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA37D72448DA4D00A8170A /* AppDelegate.swift */; };
-		CAAA37DA2448DA4D00A8170A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA37D92448DA4D00A8170A /* SceneDelegate.swift */; };
 		CAAA37DC2448DA4D00A8170A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA37DB2448DA4D00A8170A /* ViewController.swift */; };
 		CAAA37DF2448DA4D00A8170A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAA37DD2448DA4D00A8170A /* Main.storyboard */; };
 		CAAA37E12448DA4E00A8170A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAAA37E02448DA4E00A8170A /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		CAAA37D42448DA4D00A8170A /* Movist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAAA37D72448DA4D00A8170A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CAAA37D92448DA4D00A8170A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CAAA37DB2448DA4D00A8170A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CAAA37DE2448DA4D00A8170A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAAA37E02448DA4E00A8170A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,15 +54,46 @@
 		CAAA37D62448DA4D00A8170A /* Movist */ = {
 			isa = PBXGroup;
 			children = (
-				CAAA37D72448DA4D00A8170A /* AppDelegate.swift */,
-				CAAA37D92448DA4D00A8170A /* SceneDelegate.swift */,
-				CAAA37DB2448DA4D00A8170A /* ViewController.swift */,
-				CAAA37DD2448DA4D00A8170A /* Main.storyboard */,
-				CAAA37E02448DA4E00A8170A /* Assets.xcassets */,
-				CAAA37E22448DA4E00A8170A /* LaunchScreen.storyboard */,
-				CAAA37E52448DA4E00A8170A /* Info.plist */,
+				CAAA37EC2448DC6F00A8170A /* AppDelegate */,
+				CAAA37ED2448DC8100A8170A /* Scenes */,
+				CAAA37EB2448DC4500A8170A /* Resources */,
 			);
 			path = Movist;
+			sourceTree = "<group>";
+		};
+		CAAA37EB2448DC4500A8170A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CAAA37E02448DA4E00A8170A /* Assets.xcassets */,
+				CAAA37E52448DA4E00A8170A /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CAAA37EC2448DC6F00A8170A /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				CAAA37D72448DA4D00A8170A /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		CAAA37ED2448DC8100A8170A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CAAA37DB2448DA4D00A8170A /* ViewController.swift */,
+				CAAA37DD2448DA4D00A8170A /* Main.storyboard */,
+				CAAA37EE2448DCA400A8170A /* Splash */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CAAA37EE2448DCA400A8170A /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				CAAA37E22448DA4E00A8170A /* LaunchScreen.storyboard */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +169,6 @@
 			files = (
 				CAAA37DC2448DA4D00A8170A /* ViewController.swift in Sources */,
 				CAAA37D82448DA4D00A8170A /* AppDelegate.swift in Sources */,
-				CAAA37DA2448DA4D00A8170A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +314,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VALK7BP96F;
-				INFOPLIST_FILE = Movist/Info.plist;
+				INFOPLIST_FILE = Movist/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +332,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VALK7BP96F;
-				INFOPLIST_FILE = Movist/Info.plist;
+				INFOPLIST_FILE = Movist/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

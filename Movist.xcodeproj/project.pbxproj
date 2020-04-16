@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA11932824490EA100625FB5 /* UIButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA11932724490EA100625FB5 /* UIButton+Additions.swift */; };
 		CAAA37D82448DA4D00A8170A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA37D72448DA4D00A8170A /* AppDelegate.swift */; };
 		CAAA37DC2448DA4D00A8170A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA37DB2448DA4D00A8170A /* ViewController.swift */; };
 		CAAA37DF2448DA4D00A8170A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAA37DD2448DA4D00A8170A /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA11932724490EA100625FB5 /* UIButton+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Additions.swift"; sourceTree = "<group>"; };
 		CAAA37D42448DA4D00A8170A /* Movist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAAA37D72448DA4D00A8170A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAAA37DB2448DA4D00A8170A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA11932624490E8C00625FB5 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				CA11932724490EA100625FB5 /* UIButton+Additions.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
 		CAAA37CB2448DA4D00A8170A = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +196,7 @@
 		CAAA38032448EEFA00A8170A /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CA11932624490E8C00625FB5 /* UIButton */,
 				CAAA38082448F05900A8170A /* UITableView */,
 				CAAA38042448EF7700A8170A /* UIView */,
 			);
@@ -292,6 +303,7 @@
 				CAAA38072448EFA400A8170A /* UIResponder+Additions.swift in Sources */,
 				CAAA37F72448E16100A8170A /* Bundle+Additions.swift in Sources */,
 				CAAA37DC2448DA4D00A8170A /* ViewController.swift in Sources */,
+				CA11932824490EA100625FB5 /* UIButton+Additions.swift in Sources */,
 				CAAA380A2448F08300A8170A /* UITableView+Additions.swift in Sources */,
 				CAAA37FF2448E38500A8170A /* Bool+Additions.swift in Sources */,
 				CAAA37D82448DA4D00A8170A /* AppDelegate.swift in Sources */,

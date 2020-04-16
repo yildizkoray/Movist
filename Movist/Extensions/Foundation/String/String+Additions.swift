@@ -31,3 +31,12 @@ public extension String {
         return UIImageView(image: image)
     }
 }
+
+// MARK: - Optional
+
+public extension Optional where Wrapped == String {
+    
+    var emptyIfNil: Wrapped {
+        return ifNil(.empty)
+    }
+}

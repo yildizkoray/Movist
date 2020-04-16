@@ -12,11 +12,11 @@ public typealias Callback<T> = (_: T) -> Void
 public typealias VoidCallback = () -> Void
 
 public func emptyCallback<T>() -> Callback<T> {
-  return { _ in }
+    return { _ in }
 }
 
 public func voidCallback() -> VoidCallback {
-  return { }
+    return { }
 }
 
 public extension Optional where Wrapped: Any {

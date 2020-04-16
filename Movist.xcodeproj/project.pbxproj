@@ -18,6 +18,8 @@
 		CAAA37F72448E16100A8170A /* Bundle+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA37F62448E16100A8170A /* Bundle+Additions.swift */; };
 		CAAA37FF2448E38500A8170A /* Bool+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA37FE2448E38500A8170A /* Bool+Additions.swift */; };
 		CAAA38012448E3D400A8170A /* Any+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA38002448E3D400A8170A /* Any+Additions.swift */; };
+		CAAA38072448EFA400A8170A /* UIResponder+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA38062448EFA400A8170A /* UIResponder+Additions.swift */; };
+		CAAA380A2448F08300A8170A /* UITableView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA38092448F08300A8170A /* UITableView+Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		CAAA37F62448E16100A8170A /* Bundle+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Additions.swift"; sourceTree = "<group>"; };
 		CAAA37FE2448E38500A8170A /* Bool+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Additions.swift"; sourceTree = "<group>"; };
 		CAAA38002448E3D400A8170A /* Any+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Any+Additions.swift"; sourceTree = "<group>"; };
+		CAAA38062448EFA400A8170A /* UIResponder+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Additions.swift"; sourceTree = "<group>"; };
+		CAAA38092448F08300A8170A /* UITableView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 			children = (
 				CAAA38002448E3D400A8170A /* Any+Additions.swift */,
 				CAAA37F82448E28800A8170A /* Foundation */,
+				CAAA38032448EEFA00A8170A /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -176,6 +181,39 @@
 				CAAA37FE2448E38500A8170A /* Bool+Additions.swift */,
 			);
 			path = Bool;
+			sourceTree = "<group>";
+		};
+		CAAA38032448EEFA00A8170A /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				CAAA38082448F05900A8170A /* UITableView */,
+				CAAA38042448EF7700A8170A /* UIView */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		CAAA38042448EF7700A8170A /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				CAAA38052448EF8400A8170A /* UIResponder */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		CAAA38052448EF8400A8170A /* UIResponder */ = {
+			isa = PBXGroup;
+			children = (
+				CAAA38062448EFA400A8170A /* UIResponder+Additions.swift */,
+			);
+			path = UIResponder;
+			sourceTree = "<group>";
+		};
+		CAAA38082448F05900A8170A /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				CAAA38092448F08300A8170A /* UITableView+Additions.swift */,
+			);
+			path = UITableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +289,10 @@
 			files = (
 				CAAA38012448E3D400A8170A /* Any+Additions.swift in Sources */,
 				CAAA37F52448E06900A8170A /* Array+Additions.swift in Sources */,
+				CAAA38072448EFA400A8170A /* UIResponder+Additions.swift in Sources */,
 				CAAA37F72448E16100A8170A /* Bundle+Additions.swift in Sources */,
 				CAAA37DC2448DA4D00A8170A /* ViewController.swift in Sources */,
+				CAAA380A2448F08300A8170A /* UITableView+Additions.swift in Sources */,
 				CAAA37FF2448E38500A8170A /* Bool+Additions.swift in Sources */,
 				CAAA37D82448DA4D00A8170A /* AppDelegate.swift in Sources */,
 				CAAA37F12448DFD300A8170A /* String+Additions.swift in Sources */,

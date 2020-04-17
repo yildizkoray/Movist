@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		CA11932824490EA100625FB5 /* UIButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA11932724490EA100625FB5 /* UIButton+Additions.swift */; };
+		CA9D560E244A47B10055D942 /* UIStoryboard+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9D560D244A47B10055D942 /* UIStoryboard+Additions.swift */; };
+		CA9D5611244A48C50055D942 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9D5610244A48C50055D942 /* Storyboarded.swift */; };
+		CA9D5613244A49EE0055D942 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9D5612244A49EE0055D942 /* Coordinator.swift */; };
+		CA9D5615244A4A8F0055D942 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9D5614244A4A8F0055D942 /* ApplicationCoordinator.swift */; };
 		CAAA37D82448DA4D00A8170A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA37D72448DA4D00A8170A /* AppDelegate.swift */; };
 		CAAA37DC2448DA4D00A8170A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA37DB2448DA4D00A8170A /* ViewController.swift */; };
 		CAAA37DF2448DA4D00A8170A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAA37DD2448DA4D00A8170A /* Main.storyboard */; };
@@ -25,6 +29,10 @@
 
 /* Begin PBXFileReference section */
 		CA11932724490EA100625FB5 /* UIButton+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Additions.swift"; sourceTree = "<group>"; };
+		CA9D560D244A47B10055D942 /* UIStoryboard+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Additions.swift"; sourceTree = "<group>"; };
+		CA9D5610244A48C50055D942 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		CA9D5612244A49EE0055D942 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CA9D5614244A4A8F0055D942 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		CAAA37D42448DA4D00A8170A /* Movist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAAA37D72448DA4D00A8170A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAAA37DB2448DA4D00A8170A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +69,23 @@
 			path = UIButton;
 			sourceTree = "<group>";
 		};
+		CA9D560C244A47990055D942 /* UIStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				CA9D560D244A47B10055D942 /* UIStoryboard+Additions.swift */,
+			);
+			path = UIStoryboard;
+			sourceTree = "<group>";
+		};
+		CA9D560F244A48AF0055D942 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CA9D5610244A48C50055D942 /* Storyboarded.swift */,
+				CA9D5612244A49EE0055D942 /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		CAAA37CB2448DA4D00A8170A = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +105,7 @@
 		CAAA37D62448DA4D00A8170A /* Movist */ = {
 			isa = PBXGroup;
 			children = (
+				CA9D560F244A48AF0055D942 /* Protocols */,
 				CAAA37EC2448DC6F00A8170A /* AppDelegate */,
 				CAAA37EF2448DFB800A8170A /* Extensions */,
 				CAAA37ED2448DC8100A8170A /* Scenes */,
@@ -101,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				CAAA37D72448DA4D00A8170A /* AppDelegate.swift */,
+				CA9D5614244A4A8F0055D942 /* ApplicationCoordinator.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -196,6 +223,7 @@
 		CAAA38032448EEFA00A8170A /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CA9D560C244A47990055D942 /* UIStoryboard */,
 				CA11932624490E8C00625FB5 /* UIButton */,
 				CAAA38082448F05900A8170A /* UITableView */,
 				CAAA38042448EF7700A8170A /* UIView */,
@@ -303,9 +331,13 @@
 				CAAA38072448EFA400A8170A /* UIResponder+Additions.swift in Sources */,
 				CAAA37F72448E16100A8170A /* Bundle+Additions.swift in Sources */,
 				CAAA37DC2448DA4D00A8170A /* ViewController.swift in Sources */,
+				CA9D5615244A4A8F0055D942 /* ApplicationCoordinator.swift in Sources */,
+				CA9D5611244A48C50055D942 /* Storyboarded.swift in Sources */,
+				CA9D5613244A49EE0055D942 /* Coordinator.swift in Sources */,
 				CA11932824490EA100625FB5 /* UIButton+Additions.swift in Sources */,
 				CAAA380A2448F08300A8170A /* UITableView+Additions.swift in Sources */,
 				CAAA37FF2448E38500A8170A /* Bool+Additions.swift in Sources */,
+				CA9D560E244A47B10055D942 /* UIStoryboard+Additions.swift in Sources */,
 				CAAA37D82448DA4D00A8170A /* AppDelegate.swift in Sources */,
 				CAAA37F12448DFD300A8170A /* String+Additions.swift in Sources */,
 				CAAA37F32448E01C00A8170A /* Int+Additions.swift in Sources */,

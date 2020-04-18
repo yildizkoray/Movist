@@ -10,6 +10,19 @@ import UIKit
 
 public protocol Coordinator {
     
-    var navigationController: UINavigationController { get set }
-    func start()
+    associatedtype Controller: ViewController
+    
+    func createViewController() -> Controller
+    func createNavigationViewController() -> UINavigationController
+}
+
+public extension Coordinator where Controller: UIViewController {
+    
+    func createViewController() -> Controller {
+        return Controller.controller()
+    }
+    
+    func createNavigationViewController() -> UINavigationController {
+        return Controller.navigation()
+    }
 }

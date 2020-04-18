@@ -10,11 +10,25 @@ import UIKit
 
 public final class ApplicationCoordinator {
     
+    var tabController: TabBarController
     
+    public init() {
+        tabController = TabBarController()
+    }
     
     public func start(with window: UIWindow) {
-        let view = ViewController.instantiate(for: .main)
-        window.rootViewController = view
+        prepareTabs()
+        
+        window.rootViewController = tabController
         window.makeKeyAndVisible()
+    }
+    
+    private func prepareTabs() {
+        var views: [UIViewController] = .empty()
+        
+        views.insert(MovieCoordinator().start(), at: 0)
+        views.insert(SecondCoordinator().start(), at: 1)
+        
+        tabController.setViewControllers(views, animated: false)
     }
 }

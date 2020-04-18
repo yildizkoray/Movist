@@ -96,6 +96,7 @@
 		CA884C17244AD9940004C1E3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CA9D5612244A49EE0055D942 /* Coordinator.swift */,
 				CA884C18244AD9B20004C1E3 /* TabBarController.swift */,
 				CA884C20244AF9A40004C1E3 /* ViewController.swift */,
 			);
@@ -136,14 +137,6 @@
 			path = UIStoryboard;
 			sourceTree = "<group>";
 		};
-		CA9D560F244A48AF0055D942 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				CA9D5612244A49EE0055D942 /* Coordinator.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		CAAA37CB2448DA4D00A8170A = {
 			isa = PBXGroup;
 			children = (
@@ -163,8 +156,6 @@
 		CAAA37D62448DA4D00A8170A /* Movist */ = {
 			isa = PBXGroup;
 			children = (
-				CA884C17244AD9940004C1E3 /* Controllers */,
-				CA9D560F244A48AF0055D942 /* Protocols */,
 				CAAA37EC2448DC6F00A8170A /* AppDelegate */,
 				CAAA37EF2448DFB800A8170A /* Extensions */,
 				CAAA37ED2448DC8100A8170A /* Scenes */,
@@ -194,6 +185,7 @@
 		CAAA37ED2448DC8100A8170A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CA884C17244AD9940004C1E3 /* Controllers */,
 				CA884C12244AD8390004C1E3 /* Movie */,
 				CAAA37EE2448DCA400A8170A /* Splash */,
 				CA884C26244B1C1E0004C1E3 /* ThirdViewController.swift */,

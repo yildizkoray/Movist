@@ -10,6 +10,7 @@
 		CA11932824490EA100625FB5 /* UIButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA11932724490EA100625FB5 /* UIButton+Additions.swift */; };
 		CA81A415244CF7CF0016A303 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA81A414244CF7CF0016A303 /* Alamofire.framework */; };
 		CA81A419244CFC4B0016A303 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA81A418244CFC4B0016A303 /* AlamofireImage.framework */; };
+		CA81A41D244CFF410016A303 /* AlamofireNetworkActivityLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA81A41C244CFF410016A303 /* AlamofireNetworkActivityLogger.framework */; };
 		CA884C14244AD85A0004C1E3 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA884C13244AD85A0004C1E3 /* MovieViewController.swift */; };
 		CA884C16244AD89D0004C1E3 /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA884C15244AD89D0004C1E3 /* Movie.storyboard */; };
 		CA884C19244AD9B20004C1E3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA884C18244AD9B20004C1E3 /* TabBarController.swift */; };
@@ -40,6 +41,7 @@
 		CA11932724490EA100625FB5 /* UIButton+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Additions.swift"; sourceTree = "<group>"; };
 		CA81A414244CF7CF0016A303 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CA81A418244CFC4B0016A303 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		CA81A41C244CFF410016A303 /* AlamofireNetworkActivityLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityLogger.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework; sourceTree = "<group>"; };
 		CA884C13244AD85A0004C1E3 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		CA884C15244AD89D0004C1E3 /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
 		CA884C18244AD9B20004C1E3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			files = (
 				CA81A415244CF7CF0016A303 /* Alamofire.framework in Frameworks */,
 				CA81A419244CFC4B0016A303 /* AlamofireImage.framework in Frameworks */,
+				CA81A41D244CFF410016A303 /* AlamofireNetworkActivityLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +95,7 @@
 		CA81A413244CF7CF0016A303 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA81A41C244CFF410016A303 /* AlamofireNetworkActivityLogger.framework */,
 				CA81A418244CFC4B0016A303 /* AlamofireImage.framework */,
 				CA81A414244CF7CF0016A303 /* Alamofire.framework */,
 			);
@@ -402,6 +406,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -409,6 +414,7 @@
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireImage.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireNetworkActivityLogger.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -1,3 +1,4 @@
 github "Alamofire/Alamofire" "5.1.0"
 github "Alamofire/AlamofireImage" "4.1.0"
 github "konkab/AlamofireNetworkActivityLogger" "3.0.0"
+github "tristanhimmelman/ObjectMapper" "3.5.2"

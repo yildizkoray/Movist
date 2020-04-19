@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CA11932824490EA100625FB5 /* UIButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA11932724490EA100625FB5 /* UIButton+Additions.swift */; };
+		CA81A415244CF7CF0016A303 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA81A414244CF7CF0016A303 /* Alamofire.framework */; };
 		CA884C14244AD85A0004C1E3 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA884C13244AD85A0004C1E3 /* MovieViewController.swift */; };
 		CA884C16244AD89D0004C1E3 /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA884C15244AD89D0004C1E3 /* Movie.storyboard */; };
 		CA884C19244AD9B20004C1E3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA884C18244AD9B20004C1E3 /* TabBarController.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		CA11932724490EA100625FB5 /* UIButton+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Additions.swift"; sourceTree = "<group>"; };
+		CA81A414244CF7CF0016A303 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CA884C13244AD85A0004C1E3 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		CA884C15244AD89D0004C1E3 /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
 		CA884C18244AD9B20004C1E3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA81A415244CF7CF0016A303 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,14 @@
 				CA11932724490EA100625FB5 /* UIButton+Additions.swift */,
 			);
 			path = UIButton;
+			sourceTree = "<group>";
+		};
+		CA81A413244CF7CF0016A303 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA81A414244CF7CF0016A303 /* Alamofire.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CA884C12244AD8390004C1E3 /* Movie */ = {
@@ -142,6 +153,7 @@
 			children = (
 				CAAA37D62448DA4D00A8170A /* Movist */,
 				CAAA37D52448DA4D00A8170A /* Products */,
+				CA81A413244CF7CF0016A303 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -318,6 +330,7 @@
 				CAAA37D02448DA4D00A8170A /* Sources */,
 				CAAA37D12448DA4D00A8170A /* Frameworks */,
 				CAAA37D22448DA4D00A8170A /* Resources */,
+				CA81A412244CF7490016A303 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -373,6 +386,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CA81A412244CF7490016A303 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CAAA37D02448DA4D00A8170A /* Sources */ = {
@@ -538,6 +574,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VALK7BP96F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Movist/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -556,6 +596,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VALK7BP96F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Movist/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

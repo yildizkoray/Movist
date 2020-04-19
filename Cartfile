@@ -1,4 +1,4 @@
 github "Alamofire/Alamofire" ~> 5.1
 github "Alamofire/AlamofireImage" ~> 4.1
 github "konkab/AlamofireNetworkActivityLogger" ~> 3.0
-github "tristanhimmelman/ObjectMapper" ~> 3.5
+github "tristanhimmelman/ObjectMapper" ~> 3.5.2

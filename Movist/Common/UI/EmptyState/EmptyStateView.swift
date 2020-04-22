@@ -28,8 +28,9 @@ public final class EmptyStateView: UIView, NibLoadable {
     
     
     public func configure(infoImage: UIImage?, titleImage: UIImage, title: String) {
-        self.infoImage.image = infoImage
-        self.titleImage.image = titleImage
-        self.titleLabel.text = title
+        
+        self.infoImage.hidableImage = infoImage
+        self.titleImage.hidableImage = titleImage
+        self.titleLabel.hidableText = title
     }
 }

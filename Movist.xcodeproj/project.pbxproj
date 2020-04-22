@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CA11932824490EA100625FB5 /* UIButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA11932724490EA100625FB5 /* UIButton+Additions.swift */; };
 		CA26E997244F7282001D01C9 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA26E996244F7282001D01C9 /* PromiseKit.framework */; };
+		CA7711CF2450F29200B25AEE /* UILabel+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7711CE2450F29200B25AEE /* UILabel+Additions.swift */; };
+		CA7711D22450F3CB00B25AEE /* UIImageView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7711D12450F3CB00B25AEE /* UIImageView+Additions.swift */; };
 		CA81A415244CF7CF0016A303 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA81A414244CF7CF0016A303 /* Alamofire.framework */; };
 		CA81A419244CFC4B0016A303 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA81A418244CFC4B0016A303 /* AlamofireImage.framework */; };
 		CA81A41D244CFF410016A303 /* AlamofireNetworkActivityLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA81A41C244CFF410016A303 /* AlamofireNetworkActivityLogger.framework */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		CA11932724490EA100625FB5 /* UIButton+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Additions.swift"; sourceTree = "<group>"; };
 		CA26E996244F7282001D01C9 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		CA7711CE2450F29200B25AEE /* UILabel+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Additions.swift"; sourceTree = "<group>"; };
+		CA7711D12450F3CB00B25AEE /* UIImageView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Additions.swift"; sourceTree = "<group>"; };
 		CA81A414244CF7CF0016A303 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CA81A418244CFC4B0016A303 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		CA81A41C244CFF410016A303 /* AlamofireNetworkActivityLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityLogger.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework; sourceTree = "<group>"; };
@@ -102,6 +106,22 @@
 				CA11932724490EA100625FB5 /* UIButton+Additions.swift */,
 			);
 			path = UIButton;
+			sourceTree = "<group>";
+		};
+		CA7711CD2450F27800B25AEE /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				CA7711CE2450F29200B25AEE /* UILabel+Additions.swift */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		CA7711D02450F3B100B25AEE /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				CA7711D12450F3CB00B25AEE /* UIImageView+Additions.swift */,
+			);
+			path = UIImageView;
 			sourceTree = "<group>";
 		};
 		CA81A413244CF7CF0016A303 /* Frameworks */ = {
@@ -310,6 +330,8 @@
 		CAAA38032448EEFA00A8170A /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CA7711D02450F3B100B25AEE /* UIImageView */,
+				CA7711CD2450F27800B25AEE /* UILabel */,
 				CA11932624490E8C00625FB5 /* UIButton */,
 				CA9D560C244A47990055D942 /* UIStoryboard */,
 				CAAA38082448F05900A8170A /* UITableView */,
@@ -495,6 +517,8 @@
 				CA884C2C244B27120004C1E3 /* UIViewController+Additions.swift in Sources */,
 				CA9D5613244A49EE0055D942 /* Coordinator.swift in Sources */,
 				CA11932824490EA100625FB5 /* UIButton+Additions.swift in Sources */,
+				CA7711D22450F3CB00B25AEE /* UIImageView+Additions.swift in Sources */,
+				CA7711CF2450F29200B25AEE /* UILabel+Additions.swift in Sources */,
 				CAAA380A2448F08300A8170A /* UITableView+Additions.swift in Sources */,
 				CA884C29244B1C6E0004C1E3 /* ThirdCoordinator.swift in Sources */,
 				CA884C1D244AF1CB0004C1E3 /* MovieCoordinator.swift in Sources */,

@@ -232,8 +232,8 @@
 		CAAA37D62448DA4D00A8170A /* Movist */ = {
 			isa = PBXGroup;
 			children = (
-				CAC11212244FA26000B5E8AE /* Common */,
 				CAAA37EC2448DC6F00A8170A /* AppDelegate */,
+				CAC11212244FA26000B5E8AE /* Common */,
 				CAAA37EF2448DFB800A8170A /* Extensions */,
 				CAAA37ED2448DC8100A8170A /* Scenes */,
 				CAAA37EB2448DC4500A8170A /* Resources */,

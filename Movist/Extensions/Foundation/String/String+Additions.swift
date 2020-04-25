@@ -30,6 +30,10 @@ public extension String {
     var imageView: UIImageView {
         return UIImageView(image: image)
     }
+    
+    var url: URL? {
+        return URL(string: self)
+    }
 }
 
 // MARK: - Optional

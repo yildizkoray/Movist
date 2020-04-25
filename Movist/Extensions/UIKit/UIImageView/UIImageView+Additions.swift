@@ -29,4 +29,17 @@ public extension UIImageView {
             image = placeholderImage
         }
     }
+    
+    func setVisual(_ visual: VisaulContent.Visual?, placeholderImage: UIImage? = nil) {
+        
+        if let visual = visual {
+            switch visual {
+            case .static(let image):
+                self.image = image
+                
+            case .url(let url):
+                set_af_image(url: url, placeholderImage: placeholderImage)
+            }
+        }
+    }
 }

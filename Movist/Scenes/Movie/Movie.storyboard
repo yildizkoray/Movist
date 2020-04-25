@@ -16,16 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGK-4P-Xbx">
-                                <rect key="frame" x="142.5" y="418" width="129.5" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeQ-93-oUx">
-                                <rect key="frame" x="165" y="180" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Movie Detail"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeQ-93-oUx">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="lrN-H8-iPw"/>
+                                </constraints>
+                                <state key="normal" title="Movie Detail">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="handleGoThird:" destination="4bh-ib-sA4" eventType="touchUpInside" id="v0G-e4-Jit"/>
                                 </connections>
@@ -33,8 +32,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="OGK-4P-Xbx" firstAttribute="centerY" secondItem="TWv-Lc-niy" secondAttribute="centerY" id="OwV-i2-fG1"/>
-                            <constraint firstItem="OGK-4P-Xbx" firstAttribute="centerX" secondItem="TWv-Lc-niy" secondAttribute="centerX" id="kYN-4k-pds"/>
+                            <constraint firstItem="MeQ-93-oUx" firstAttribute="centerX" secondItem="TWv-Lc-niy" secondAttribute="centerX" id="AYW-va-SUR"/>
+                            <constraint firstItem="XBM-uT-bia" firstAttribute="trailing" secondItem="MeQ-93-oUx" secondAttribute="trailing" id="HXE-gB-Fd8"/>
+                            <constraint firstItem="XBM-uT-bia" firstAttribute="bottom" secondItem="MeQ-93-oUx" secondAttribute="bottom" id="jsT-dk-b0h"/>
+                            <constraint firstItem="MeQ-93-oUx" firstAttribute="leading" secondItem="XBM-uT-bia" secondAttribute="leading" id="wNx-Q7-vSi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XBM-uT-bia"/>
                     </view>
@@ -82,19 +83,7 @@
                     <view key="view" contentMode="scaleToFill" id="nVT-vL-Mp4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mk2-dq-5yH">
-                                <rect key="frame" x="76.5" y="418" width="261.5" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="mk2-dq-5yH" firstAttribute="centerY" secondItem="nVT-vL-Mp4" secondAttribute="centerY" id="OFA-fM-hl6"/>
-                            <constraint firstItem="mk2-dq-5yH" firstAttribute="centerX" secondItem="nVT-vL-Mp4" secondAttribute="centerX" id="rQs-48-CGh"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Cn9-qV-SC5"/>
                     </view>
                 </viewController>

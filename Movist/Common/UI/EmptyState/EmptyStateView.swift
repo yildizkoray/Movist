@@ -11,9 +11,9 @@ import UIKit
 public final class EmptyStateView: UIView, NibLoadable {
     
     
-    @IBOutlet private weak var infoImage: UIImageView!
-    @IBOutlet private weak var titleImage: UIImageView!
-    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var info: UIImageView!
+    @IBOutlet private weak var image: UIImageView!
+    @IBOutlet private weak var title: UILabel!
 
     
     public override init(frame: CGRect) {
@@ -27,10 +27,12 @@ public final class EmptyStateView: UIView, NibLoadable {
     }
     
     
-    public func configure(infoImage: UIImage?, titleImage: UIImage, title: String) {
+    public func configure(visualContent: VisaulContent, info: UIImage = "empty_info".image) {
         
-        self.infoImage.hidableImage = infoImage
-        self.titleImage.hidableImage = titleImage
-        self.titleLabel.hidableText = title
+        self.info.hidableImage = info
+        self.image.hidableImage = visualContent.image
+        self.title.hidableText = visualContent.title
     }
 }
+
+

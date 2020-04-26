@@ -44,6 +44,7 @@
 		CAC11216244FA28F00B5E8AE /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC11215244FA28F00B5E8AE /* NibLoadable.swift */; };
 		CAC11219244FA65800B5E8AE /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC11218244FA65800B5E8AE /* EmptyStateView.swift */; };
 		CAC1121B244FA70F00B5E8AE /* EmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC1121A244FA70F00B5E8AE /* EmptyStateView.xib */; };
+		CAD3081D2455E0B700317EBD /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD3081C2455E0B700317EBD /* AlamofireObjectMapper.framework */; };
 		CAF97A072451FE1000D762B8 /* UIView+EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF97A062451FE1000D762B8 /* UIView+EmptyState.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		CAC11215244FA28F00B5E8AE /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		CAC11218244FA65800B5E8AE /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		CAC1121A244FA70F00B5E8AE /* EmptyStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateView.xib; sourceTree = "<group>"; };
+		CAD3081C2455E0B700317EBD /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
 		CAF97A062451FE1000D762B8 /* UIView+EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EmptyState.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA81A415244CF7CF0016A303 /* Alamofire.framework in Frameworks */,
+				CAD3081D2455E0B700317EBD /* AlamofireObjectMapper.framework in Frameworks */,
 				CA81A419244CFC4B0016A303 /* AlamofireImage.framework in Frameworks */,
 				CA26E997244F7282001D01C9 /* PromiseKit.framework in Frameworks */,
 				CA81A421244D02140016A303 /* ObjectMapper.framework in Frameworks */,
@@ -141,6 +144,7 @@
 		CA81A413244CF7CF0016A303 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CAD3081C2455E0B700317EBD /* AlamofireObjectMapper.framework */,
 				CA26E996244F7282001D01C9 /* PromiseKit.framework */,
 				CA81A420244D02140016A303 /* ObjectMapper.framework */,
 				CA81A41C244CFF410016A303 /* AlamofireNetworkActivityLogger.framework */,
@@ -506,6 +510,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -516,6 +521,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireNetworkActivityLogger.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ObjectMapper.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PromiseKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

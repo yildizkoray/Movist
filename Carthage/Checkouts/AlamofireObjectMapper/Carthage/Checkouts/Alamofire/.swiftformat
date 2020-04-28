@@ -1,10 +1,9 @@
 # file options
 
 --symlinks ignore
---swiftversion 5.1
+--swiftversion 5
 
 # rules
---enable isEmpty
 --disable andOperator
 
 # format options
@@ -16,12 +15,11 @@
 --exponentcase lowercase
 --exponentgrouping disabled
 --fractiongrouping disabled
---ifdef no-indent
+--ifdef outdent
 --importgrouping testable-top
 --operatorfunc no-space
---nospaceoperators ..<, ...
+--ranges no-space
 --selfrequired validate
 --stripunusedargs closure-only
 --wraparguments after-first
 --wrapcollections after-first
---wrapparameters after-first

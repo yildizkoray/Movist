@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.0
 //
 //  Package.swift
 //
@@ -33,8 +33,5 @@ let package = Package(name: "Alamofire",
                       products: [.library(name: "Alamofire",
                                           targets: ["Alamofire"])],
                       targets: [.target(name: "Alamofire",
-                                        path: "Source"),
-                                .testTarget(name: "AlamofireTests",
-                                            dependencies: ["Alamofire"],
-                                            path: "Tests")],
+                                        path: "Source")],
                       swiftLanguageVersions: [.v5])

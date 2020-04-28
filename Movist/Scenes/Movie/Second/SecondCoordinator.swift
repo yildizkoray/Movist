@@ -16,10 +16,11 @@ public final class SecondCoordinator: Coordinator {
     private weak var navigator: UINavigationController!
     
     public func start() -> UINavigationController {
-        defer { self.navigator = navigator }
         
         let view = createViewController()
         let navigator = UINavigationController(rootViewController: view)
+        
+        defer { self.navigator = navigator }
         
         navigator.tabBarItem = UITabBarItem(
           title: "Second", image: "second".image, selectedImage: "second-selected".image

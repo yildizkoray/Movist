@@ -72,7 +72,7 @@ class DownloadInitializationTestCase: BaseTestCase {
 
 class DownloadResponseTestCase: BaseTestCase {
     private var randomCachesFileURL: URL {
-        testDirectoryURL.appendingPathComponent("\(UUID().uuidString).json")
+        return testDirectoryURL.appendingPathComponent("\(UUID().uuidString).json")
     }
 
     func testDownloadRequest() {
@@ -141,7 +141,7 @@ class DownloadResponseTestCase: BaseTestCase {
 
     func testDownloadRequestWithProgress() {
         // Given
-        let randomBytes = 1 * 25 * 1024
+        let randomBytes = 1 * 1024 * 1024
         let urlString = "https://httpbin.org/bytes/\(randomBytes)"
 
         let expectation = self.expectation(description: "Bytes download progress should be reported: \(urlString)")
@@ -366,8 +366,6 @@ class DownloadResponseTestCase: BaseTestCase {
     }
 }
 
-// MARK: -
-
 final class DownloadRequestEventsTestCase: BaseTestCase {
     func testThatDownloadRequestTriggersAllAppropriateLifetimeEvents() {
         // Given
@@ -455,7 +453,7 @@ final class DownloadRequestEventsTestCase: BaseTestCase {
         eventMonitor.requestDidCancelTask = { _, _ in didCancelTask.fulfill() }
 
         // When
-        let request = session.download(URLRequest.makeHTTPBinRequest(path: "delay/5")).response { _ in
+        let request = session.download(URLRequest.makeHTTPBinRequest()).response { _ in
             responseHandler.fulfill()
         }
 
@@ -476,7 +474,7 @@ final class DownloadRequestEventsTestCase: BaseTestCase {
 // MARK: -
 
 final class DownloadResumeDataTestCase: BaseTestCase {
-    let urlString = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/HubbleDeepField.800px.jpg/2048px-HubbleDeepField.800px.jpg"
+    let urlString = "https://upload.wikimedia.org/wikipedia/commons/6/69/NASA-HS201427a-HubbleUltraDeepField2014-20140603.jpg"
 
     func testThatCancelledDownloadRequestDoesNotProduceResumeData() {
         // Given
@@ -597,7 +595,7 @@ final class DownloadResumeDataTestCase: BaseTestCase {
         download.downloadProgress { progress in
             guard !cancelled else { return }
 
-            if progress.fractionCompleted > 0.1 {
+            if progress.fractionCompleted > 0.4 {
                 download.cancel(producingResumeData: true)
                 cancelled = true
             }
@@ -642,7 +640,7 @@ final class DownloadResumeDataTestCase: BaseTestCase {
         XCTAssertEqual(response2?.result.isSuccess, true)
         XCTAssertNil(response2?.result.failure)
 
-        progressValues.forEach { XCTAssertGreaterThanOrEqual($0, 0.1) }
+        progressValues.forEach { XCTAssertGreaterThanOrEqual($0, 0.4) }
     }
 
     func testThatCancelledDownloadProducesMatchingResumeData() {
@@ -686,7 +684,7 @@ final class DownloadResumeDataTestCase: BaseTestCase {
 
 // MARK: -
 
-final class DownloadResponseMapTestCase: BaseTestCase {
+class DownloadResponseMapTestCase: BaseTestCase {
     func testThatMapTransformsSuccessValue() {
         // Given
         let urlString = "https://httpbin.org/get"
@@ -744,7 +742,7 @@ final class DownloadResponseMapTestCase: BaseTestCase {
 
 // MARK: -
 
-final class DownloadResponseTryMapTestCase: BaseTestCase {
+class DownloadResponseTryMapTestCase: BaseTestCase {
     func testThatTryMapTransformsSuccessValue() {
         // Given
         let urlString = "https://httpbin.org/get"
@@ -834,7 +832,7 @@ final class DownloadResponseTryMapTestCase: BaseTestCase {
     }
 }
 
-final class DownloadResponseMapErrorTestCase: BaseTestCase {
+class DownloadResponseMapErrorTestCase: BaseTestCase {
     func testThatMapErrorTransformsFailureValue() {
         // Given
         let urlString = "https://invalid-url-here.org/this/does/not/exist"
@@ -893,7 +891,7 @@ final class DownloadResponseMapErrorTestCase: BaseTestCase {
 
 // MARK: -
 
-final class DownloadResponseTryMapErrorTestCase: BaseTestCase {
+class DownloadResponseTryMapErrorTestCase: BaseTestCase {
     func testThatTryMapErrorPreservesSuccessValue() {
         // Given
         let urlString = "https://httpbin.org/get"

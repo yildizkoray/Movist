@@ -14,10 +14,11 @@ public final class MovieCoordinator: Coordinator {
     private weak var navigator: UINavigationController!
     
     public func start() -> UINavigationController {
-        defer { self.navigator = navigator }
         
         let view = createViewController()
         let navigator = UINavigationController(rootViewController: view)
+        
+        defer { self.navigator = navigator }
         
         navigator.tabBarItem = UITabBarItem(
             title: "tabbarTitle", image: "tab-casino".image, selectedImage: "tab-casino-selected".image

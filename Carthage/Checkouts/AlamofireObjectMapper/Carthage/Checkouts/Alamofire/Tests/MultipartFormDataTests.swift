@@ -51,12 +51,12 @@ struct BoundaryGenerator {
     }
 
     static func boundaryData(boundaryType: BoundaryType, boundaryKey: String) -> Data {
-        Data(BoundaryGenerator.boundary(forBoundaryType: boundaryType,
-                                        boundaryKey: boundaryKey).utf8)
+        return Data(BoundaryGenerator.boundary(forBoundaryType: boundaryType,
+                                               boundaryKey: boundaryKey).utf8)
     }
 }
 
-private func temporaryFileURL() -> URL { BaseTestCase.testDirectoryURL.appendingPathComponent(UUID().uuidString) }
+private func temporaryFileURL() -> URL { return BaseTestCase.testDirectoryURL.appendingPathComponent(UUID().uuidString) }
 
 // MARK: -
 
@@ -175,7 +175,6 @@ class MultipartFormDataEncodingTestCase: BaseTestCase {
         }
     }
 
-    #if !SWIFT_PACKAGE
     func testEncodingFileBodyPart() {
         // Given
         let multipartFormData = MultipartFormData()
@@ -421,7 +420,6 @@ class MultipartFormDataEncodingTestCase: BaseTestCase {
             XCTAssertEqual(encodedData, expectedData, "data should match expected data")
         }
     }
-    #endif
 }
 
 // MARK: -
@@ -512,7 +510,6 @@ class MultipartFormDataWriteEncodedDataToDiskTestCase: BaseTestCase {
         }
     }
 
-    #if !SWIFT_PACKAGE
     func testWritingEncodedFileBodyPartToDisk() {
         // Given
         let fileURL = temporaryFileURL()
@@ -773,7 +770,6 @@ class MultipartFormDataWriteEncodedDataToDiskTestCase: BaseTestCase {
             XCTFail("file data should not be nil")
         }
     }
-    #endif
 }
 
 // MARK: -

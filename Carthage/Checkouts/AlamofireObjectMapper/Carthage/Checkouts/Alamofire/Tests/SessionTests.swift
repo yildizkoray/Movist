@@ -274,29 +274,36 @@ final class SessionTestCase: BaseTestCase {
             let versionString = "\(version.majorVersion).\(version.minorVersion).\(version.patchVersion)"
 
             let osName: String = {
-                #if os(iOS)
+#if os(iOS)
                 return "iOS"
-                #elseif os(watchOS)
+#elseif os(watchOS)
                 return "watchOS"
-                #elseif os(tvOS)
+#elseif os(tvOS)
                 return "tvOS"
-                #elseif os(macOS)
+#elseif os(macOS)
                 return "macOS"
-                #elseif os(Linux)
+#elseif os(Linux)
                 return "Linux"
-                #else
+#else
                 return "Unknown"
-                #endif
+#endif
             }()
 
             return "\(osName) \(versionString)"
         }()
 
-        let alamofireVersion = "Alamofire/\(Alamofire.version)"
+        let alamofireVersion: String = {
+            guard
+                let afInfo = Bundle(for: Session.self).infoDictionary,
+                let build = afInfo["CFBundleShortVersionString"]
+            else { return "Unknown" }
+
+            return "Alamofire/\(build)"
+        }()
 
         XCTAssertTrue(userAgent?.contains(alamofireVersion) == true)
         XCTAssertTrue(userAgent?.contains(osNameVersion) == true)
-        XCTAssertTrue(userAgent?.contains("xctest/Unknown") == true)
+        XCTAssertTrue(userAgent?.contains("Unknown/Unknown") == true)
     }
 
     // MARK: Tests - Supported Accept-Encodings
@@ -1477,38 +1484,25 @@ final class SessionCancellationTestCase: BaseTestCase {
     func testThatAutomaticallyResumedRequestsCanBeMassCancelled() {
         // Given
         let count = 100
+        let session = Session()
+        var responses: [DataResponse<Data?, AFError>] = []
         let completion = expectation(description: "all requests should finish")
         completion.expectedFulfillmentCount = count
-        let createdTasks = expectation(description: "all tasks created")
-        createdTasks.expectedFulfillmentCount = count
-        let gatheredMetrics = expectation(description: "metrics gathered for all tasks")
-        gatheredMetrics.expectedFulfillmentCount = count
         let cancellation = expectation(description: "cancel all requests should be called")
-        let monitor = ClosureEventMonitor()
-        monitor.requestDidCreateTask = { _, _ in createdTasks.fulfill() }
-        monitor.requestDidGatherMetrics = { _, _ in gatheredMetrics.fulfill() }
-        let session = Session(eventMonitors: [monitor])
-        let request = URLRequest.makeHTTPBinRequest(path: "delay/1")
-        var requests: [DataRequest] = []
-        var responses: [DataResponse<Data?, AFError>] = []
 
         // When
-        requests = (0..<count).map { _ in session.request(request) }
-
-        wait(for: [createdTasks], timeout: timeout)
-
-        requests.forEach { request in
-            request.response { response in
+        for _ in 1...count {
+            let request = URLRequest.makeHTTPBinRequest(path: "delay/1")
+            session.request(request).response { response in
                 responses.append(response)
                 completion.fulfill()
             }
         }
-
         session.cancelAllRequests {
             cancellation.fulfill()
         }
 
-        wait(for: [gatheredMetrics, cancellation, completion], timeout: timeout)
+        waitForExpectations(timeout: timeout)
 
         // Then
         XCTAssertTrue(responses.allSatisfy { $0.error?.isExplicitlyCancelledError == true })
@@ -1521,35 +1515,25 @@ final class SessionCancellationTestCase: BaseTestCase {
     func testThatManuallyResumedRequestsCanBeMassCancelled() {
         // Given
         let count = 100
-        let completion = expectation(description: "all requests should finish")
-        completion.expectedFulfillmentCount = count
-        let createdTasks = expectation(description: "all tasks created")
-        createdTasks.expectedFulfillmentCount = count
-        let gatheredMetrics = expectation(description: "metrics gathered for all tasks")
-        gatheredMetrics.expectedFulfillmentCount = count
-        let cancellation = expectation(description: "cancel all requests should be called")
-        let monitor = ClosureEventMonitor()
-        monitor.requestDidCreateTask = { _, _ in createdTasks.fulfill() }
-        monitor.requestDidGatherMetrics = { _, _ in gatheredMetrics.fulfill() }
-        let session = Session(startRequestsImmediately: false, eventMonitors: [monitor])
+        let session = Session(startRequestsImmediately: false)
         let request = URLRequest.makeHTTPBinRequest(path: "delay/1")
         var responses: [DataResponse<Data?, AFError>] = []
+        let completion = expectation(description: "all requests should finish")
+        completion.expectedFulfillmentCount = count
+        let cancellation = expectation(description: "cancel all requests should be called")
 
         // When
-        for _ in 0..<count {
+        for _ in 1...count {
             session.request(request).response { response in
                 responses.append(response)
                 completion.fulfill()
             }
         }
-
-        wait(for: [createdTasks], timeout: timeout)
-
         session.cancelAllRequests {
             cancellation.fulfill()
         }
 
-        wait(for: [gatheredMetrics, cancellation, completion], timeout: timeout)
+        waitForExpectations(timeout: timeout)
 
         // Then
         XCTAssertTrue(responses.allSatisfy { $0.error?.isExplicitlyCancelledError == true })
@@ -1564,39 +1548,25 @@ final class SessionCancellationTestCase: BaseTestCase {
         final class OnceRetrier: RequestInterceptor {
             private var hasRetried = false
 
-            func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
-                if hasRetried {
-                    var request = urlRequest
-                    request.url = URL.makeHTTPBinURL(path: "delay/1")
-                    completion(.success(request))
-                } else {
-                    completion(.success(urlRequest))
-                }
-            }
-
             func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
                 completion(hasRetried ? .doNotRetry : .retry)
                 hasRetried = true
             }
         }
-
-        let queue = DispatchQueue(label: "com.alamofire.testQueue")
-        let monitor = ClosureEventMonitor(queue: queue)
-        let session = Session(rootQueue: queue, interceptor: OnceRetrier(), eventMonitors: [monitor])
+        let monitor = ClosureEventMonitor()
+        let session = Session(interceptor: OnceRetrier(), eventMonitors: [monitor])
         let request = URLRequest.makeHTTPBinRequest(path: "status/401")
         let completion = expectation(description: "all requests should finish")
         let cancellation = expectation(description: "cancel all requests should be called")
         let createTask = expectation(description: "should create task twice")
         createTask.expectedFulfillmentCount = 2
-        var tasksCreated = 0
         monitor.requestDidCreateTask = { _, _ in
-            tasksCreated += 1
             createTask.fulfill()
-            // Cancel after the second task is created to ensure proper lifetime events.
-            if tasksCreated == 2 {
-                session.cancelAllRequests {
-                    cancellation.fulfill()
-                }
+        }
+        // Cancel when retry starts.
+        monitor.requestIsRetrying = { _ in
+            session.cancelAllRequests {
+                cancellation.fulfill()
             }
         }
 
@@ -1688,12 +1658,12 @@ final class SessionConfigurationHeadersTestCase: BaseTestCase {
         executeAuthorizationHeaderTest(for: .ephemeral)
     }
 
-    #if os(macOS)
+#if os(macOS)
     func disabled_testThatBackgroundConfigurationHeadersAreSentWithRequest() {
         // Given, When, Then
         executeAuthorizationHeaderTest(for: .background)
     }
-    #endif
+#endif
 
     private func executeAuthorizationHeaderTest(for type: ConfigurationType) {
         // Given

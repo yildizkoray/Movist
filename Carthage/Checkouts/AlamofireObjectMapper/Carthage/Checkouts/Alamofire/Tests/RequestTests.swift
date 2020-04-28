@@ -51,7 +51,7 @@ final class RequestResponseTestCase: BaseTestCase {
 
     func testRequestResponseWithProgress() {
         // Given
-        let randomBytes = 1 * 25 * 1024
+        let randomBytes = 1 * 1024 * 1024
         let urlString = "https://httpbin.org/bytes/\(randomBytes)"
 
         let expectation = self.expectation(description: "Bytes download progress should be reported: \(urlString)")
@@ -127,7 +127,6 @@ final class RequestResponseTestCase: BaseTestCase {
         }
     }
 
-    #if !SWIFT_PACKAGE
     func testPOSTRequestWithBase64EncodedImages() {
         // Given
         let urlString = "https://httpbin.org/post"
@@ -177,7 +176,6 @@ final class RequestResponseTestCase: BaseTestCase {
             XCTFail("form parameter in JSON should not be nil")
         }
     }
-    #endif
 
     // MARK: Queues
 
@@ -287,7 +285,7 @@ final class RequestResponseTestCase: BaseTestCase {
         let session = Session(eventMonitors: [eventMonitor])
 
         let expect = expectation(description: "request should receive appropriate lifetime events")
-        expect.expectedFulfillmentCount = 4
+        expect.expectedFulfillmentCount = 3
 
         eventMonitor.requestDidResumeTask = { _, _ in expect.fulfill() }
         eventMonitor.requestDidResume = { _ in expect.fulfill() }
@@ -299,7 +297,7 @@ final class RequestResponseTestCase: BaseTestCase {
         eventMonitor.requestDidCancelTask = { _, _ in expect.fulfill() }
 
         // When
-        let request = session.request(URLRequest.makeHTTPBinRequest()).response { _ in expect.fulfill() }
+        let request = session.request(URLRequest.makeHTTPBinRequest())
 
         waitForExpectations(timeout: timeout, handler: nil)
 
@@ -313,7 +311,7 @@ final class RequestResponseTestCase: BaseTestCase {
         let session = Session(eventMonitors: [eventMonitor])
 
         let expect = expectation(description: "request should receive appropriate lifetime events")
-        expect.expectedFulfillmentCount = 4
+        expect.expectedFulfillmentCount = 3
 
         eventMonitor.requestDidResumeTask = { _, _ in expect.fulfill() }
         eventMonitor.requestDidResume = { _ in expect.fulfill() }
@@ -325,7 +323,7 @@ final class RequestResponseTestCase: BaseTestCase {
         eventMonitor.requestDidCancelTask = { _, _ in expect.fulfill() }
 
         // When
-        let request = session.request(URLRequest.makeHTTPBinRequest()).response { _ in expect.fulfill() }
+        let request = session.request(URLRequest.makeHTTPBinRequest())
         for _ in 0..<100 {
             request.resume()
         }
@@ -371,7 +369,7 @@ final class RequestResponseTestCase: BaseTestCase {
         let session = Session(startRequestsImmediately: false, eventMonitors: [eventMonitor])
 
         let expect = expectation(description: "request should receive appropriate lifetime events")
-        expect.expectedFulfillmentCount = 4
+        expect.expectedFulfillmentCount = 3
 
         eventMonitor.requestDidResumeTask = { _, _ in expect.fulfill() }
         eventMonitor.requestDidResume = { _ in expect.fulfill() }
@@ -383,7 +381,7 @@ final class RequestResponseTestCase: BaseTestCase {
         eventMonitor.requestDidCancelTask = { _, _ in expect.fulfill() }
 
         // When
-        let request = session.request(URLRequest.makeHTTPBinRequest()).response { _ in expect.fulfill() }
+        let request = session.request(URLRequest.makeHTTPBinRequest())
         for _ in 0..<100 {
             request.resume()
         }
@@ -514,7 +512,7 @@ final class RequestResponseTestCase: BaseTestCase {
         let session = Session(eventMonitors: [eventMonitor])
 
         let expect = expectation(description: "request should receive appropriate lifetime events")
-        expect.expectedFulfillmentCount = 6
+        expect.expectedFulfillmentCount = 5
 
         eventMonitor.requestDidCancelTask = { _, _ in expect.fulfill() }
         eventMonitor.requestDidCancel = { _ in expect.fulfill() }
@@ -525,7 +523,7 @@ final class RequestResponseTestCase: BaseTestCase {
         eventMonitor.requestDidSuspendTask = { _, _ in expect.fulfill() }
 
         // When
-        let request = session.request(URLRequest.makeHTTPBinRequest(path: "delay/5")).response { _ in expect.fulfill() }
+        let request = session.request(URLRequest.makeHTTPBinRequest())
         // Cancellation stops task creation, so don't cancel the request until the task has been created.
         eventMonitor.requestDidCreateTask = { _, _ in
             DispatchQueue.concurrentPerform(iterations: 100) { i in
@@ -621,7 +619,7 @@ final class RequestResponseTestCase: BaseTestCase {
         eventMonitor.requestDidCancelTask = { _, _ in didCancelTask.fulfill() }
 
         // When
-        let request = session.request(URLRequest.makeHTTPBinRequest(path: "delay/5")).response { _ in
+        let request = session.request(URLRequest.makeHTTPBinRequest()).response { _ in
             responseHandler.fulfill()
         }
 
@@ -678,7 +676,7 @@ final class RequestResponseTestCase: BaseTestCase {
         var response2: DataResponse<Any, AFError>?
         var response3: DataResponse<Any, AFError>?
 
-        let expect = expectation(description: "all response serializer completions should be called")
+        let expect = expectation(description: "both response serializer completions should be called")
         expect.expectedFulfillmentCount = 3
 
         // When
@@ -857,7 +855,7 @@ final class RequestCURLDescriptionTestCase: BaseTestCase {
         XCTAssertEqual(components?[0..<3], ["$", "curl", "-v"])
         XCTAssertTrue(components?.contains("-X") == true)
         XCTAssertEqual(components?.last, "\"\(urlString)\"")
-        XCTAssertEqual(components?.sorted(), syncComponents?.sorted())
+        XCTAssertEqual(components, syncComponents)
     }
 
     func testGETRequestCURLDescriptionCanBeRequestedManyTimes() {
@@ -891,7 +889,7 @@ final class RequestCURLDescriptionTestCase: BaseTestCase {
         XCTAssertEqual(components?[0..<3], ["$", "curl", "-v"])
         XCTAssertTrue(components?.contains("-X") == true)
         XCTAssertEqual(components?.last, "\"\(urlString)\"")
-        XCTAssertEqual(components?.sorted(), secondComponents?.sorted())
+        XCTAssertEqual(components, secondComponents)
     }
 
     func testGETRequestWithCustomHeaderCURLDescription() {
@@ -1101,7 +1099,7 @@ final class RequestCURLDescriptionTestCase: BaseTestCase {
     // MARK: Test Helper Methods
 
     private func cURLCommandComponents(from cURLString: String) -> [String] {
-        cURLString.components(separatedBy: .whitespacesAndNewlines)
+        return cURLString.components(separatedBy: .whitespacesAndNewlines)
             .filter { $0 != "" && $0 != "\\" }
     }
 }

@@ -71,7 +71,7 @@ class ProxyURLProtocol: URLProtocol {
     }
 
     override class func requestIsCacheEquivalent(_ a: URLRequest, to b: URLRequest) -> Bool {
-        false
+        return false
     }
 
     // MARK: Loading Methods

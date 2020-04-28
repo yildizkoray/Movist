@@ -32,4 +32,23 @@ public final class RestAPI {
             }
         }
     }
+    
+    func readJSONFile<R>(from filename: String) -> Promise<R> where R: Mappable {
+        let url = Bundle.main.url(forResource: filename, withExtension: "json")!
+        
+        return Promise<R> { seal in
+            
+            AF.request(url).responseObject { (response: AFDataResponse<R>) in
+                
+                switch response.result {
+                case .success(let data):
+                    seal.fulfill(data)
+                    
+                case .failure(let error):
+                    seal.reject(error)
+                    
+                }
+            }
+        }
+    }
 }

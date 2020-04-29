@@ -43,7 +43,7 @@
 		CAAA380A2448F08300A8170A /* UITableView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA38092448F08300A8170A /* UITableView+Additions.swift */; };
 		CABFA82D2458D04D0044784C /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFA82C2458D04D0044784C /* RestAPI.swift */; };
 		CABFA82F2458D6C30044784C /* Weather.json in Resources */ = {isa = PBXBuildFile; fileRef = CABFA82E2458D6C30044784C /* Weather.json */; };
-		CABFA8322458DC580044784C /* Popular_Multiple.json in Resources */ = {isa = PBXBuildFile; fileRef = CABFA8312458DC580044784C /* Popular_Multiple.json */; };
+		CABFA8322458DC580044784C /* Movie_Popular.json in Resources */ = {isa = PBXBuildFile; fileRef = CABFA8312458DC580044784C /* Movie_Popular.json */; };
 		CABFA83C2458DE7C0044784C /* TheMovieDB_TimeZones.json in Resources */ = {isa = PBXBuildFile; fileRef = CABFA8352458DE7B0044784C /* TheMovieDB_TimeZones.json */; };
 		CABFA83D2458DE7C0044784C /* TheMovieDB_Certificates.json in Resources */ = {isa = PBXBuildFile; fileRef = CABFA8362458DE7B0044784C /* TheMovieDB_Certificates.json */; };
 		CABFA83E2458DE7C0044784C /* TheMovieDB_Countries.json in Resources */ = {isa = PBXBuildFile; fileRef = CABFA8372458DE7B0044784C /* TheMovieDB_Countries.json */; };
@@ -57,6 +57,10 @@
 		CAC11219244FA65800B5E8AE /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC11218244FA65800B5E8AE /* EmptyStateView.swift */; };
 		CAC1121B244FA70F00B5E8AE /* EmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC1121A244FA70F00B5E8AE /* EmptyStateView.xib */; };
 		CAD3081D2455E0B700317EBD /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD3081C2455E0B700317EBD /* AlamofireObjectMapper.framework */; };
+		CAEB5E612458ED5E001E7EFD /* testImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAEB5E602458ED5E001E7EFD /* testImage.jpg */; };
+		CAEB5E632458EE9C001E7EFD /* Movie_TopRated.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEB5E622458EE9C001E7EFD /* Movie_TopRated.json */; };
+		CAEB5E652458EF12001E7EFD /* Movie_UpComing.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEB5E642458EF12001E7EFD /* Movie_UpComing.json */; };
+		CAEB5E672458EF54001E7EFD /* Movie_NowPlaying.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEB5E662458EF54001E7EFD /* Movie_NowPlaying.json */; };
 		CAF97A072451FE1000D762B8 /* UIView+EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF97A062451FE1000D762B8 /* UIView+EmptyState.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,7 +103,7 @@
 		CAAA38092448F08300A8170A /* UITableView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Additions.swift"; sourceTree = "<group>"; };
 		CABFA82C2458D04D0044784C /* RestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
 		CABFA82E2458D6C30044784C /* Weather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Weather.json; sourceTree = "<group>"; };
-		CABFA8312458DC580044784C /* Popular_Multiple.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Popular_Multiple.json; sourceTree = "<group>"; };
+		CABFA8312458DC580044784C /* Movie_Popular.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movie_Popular.json; sourceTree = "<group>"; };
 		CABFA8352458DE7B0044784C /* TheMovieDB_TimeZones.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TheMovieDB_TimeZones.json; sourceTree = "<group>"; };
 		CABFA8362458DE7B0044784C /* TheMovieDB_Certificates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TheMovieDB_Certificates.json; sourceTree = "<group>"; };
 		CABFA8372458DE7B0044784C /* TheMovieDB_Countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TheMovieDB_Countries.json; sourceTree = "<group>"; };
@@ -113,6 +117,10 @@
 		CAC11218244FA65800B5E8AE /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		CAC1121A244FA70F00B5E8AE /* EmptyStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateView.xib; sourceTree = "<group>"; };
 		CAD3081C2455E0B700317EBD /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+		CAEB5E602458ED5E001E7EFD /* testImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImage.jpg; sourceTree = "<group>"; };
+		CAEB5E622458EE9C001E7EFD /* Movie_TopRated.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movie_TopRated.json; sourceTree = "<group>"; };
+		CAEB5E642458EF12001E7EFD /* Movie_UpComing.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movie_UpComing.json; sourceTree = "<group>"; };
+		CAEB5E662458EF54001E7EFD /* Movie_NowPlaying.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movie_NowPlaying.json; sourceTree = "<group>"; };
 		CAF97A062451FE1000D762B8 /* UIView+EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EmptyState.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,9 +189,9 @@
 		CA884C12244AD8390004C1E3 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
-				CABFA8452458E2BE0044784C /* Home */,
 				CA884C22244AFD0E0004C1E3 /* Movie */,
 				CA884C23244AFD160004C1E3 /* Second */,
+				CAEB5E692458F94C001E7EFD /* Third */,
 				CA884C15244AD89D0004C1E3 /* Movie.storyboard */,
 			);
 			path = Movie;
@@ -202,6 +210,9 @@
 		CA884C22244AFD0E0004C1E3 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				CAEB5E6B24590A41001E7EFD /* API */,
+				CAEB5E6C24590A49001E7EFD /* UI */,
+				CAEB5E6A2458F99C001E7EFD /* Model */,
 				CA884C13244AD85A0004C1E3 /* MovieViewController.swift */,
 				CA884C1C244AF1CB0004C1E3 /* MovieCoordinator.swift */,
 			);
@@ -267,7 +278,6 @@
 				CAAA37EF2448DFB800A8170A /* Extensions */,
 				CAAA37ED2448DC8100A8170A /* Scenes */,
 				CAAA37EB2448DC4500A8170A /* Resources */,
-				CABFA8302458DC180044784C /* SampleJSON */,
 			);
 			path = Movist;
 			sourceTree = "<group>";
@@ -275,6 +285,8 @@
 		CAAA37EB2448DC4500A8170A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CABFA8302458DC180044784C /* SampleJSON */,
+				CAEB5E682458F927001E7EFD /* SampleImage */,
 				CAAA37E02448DA4E00A8170A /* Assets.xcassets */,
 				CAAA37E52448DA4E00A8170A /* Info.plist */,
 			);
@@ -296,8 +308,6 @@
 				CA884C17244AD9940004C1E3 /* Controllers */,
 				CA884C12244AD8390004C1E3 /* Movie */,
 				CAAA37EE2448DCA400A8170A /* Splash */,
-				CA884C26244B1C1E0004C1E3 /* ThirdViewController.swift */,
-				CA884C28244B1C6E0004C1E3 /* ThirdCoordinator.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -439,18 +449,13 @@
 				CABFA8352458DE7B0044784C /* TheMovieDB_TimeZones.json */,
 				CABFA8392458DE7C0044784C /* TheMovieDB_Tranlations.json */,
 				CABFA82E2458D6C30044784C /* Weather.json */,
-				CABFA8312458DC580044784C /* Popular_Multiple.json */,
+				CABFA8312458DC580044784C /* Movie_Popular.json */,
+				CAEB5E622458EE9C001E7EFD /* Movie_TopRated.json */,
 				CABFA8432458E2580044784C /* Movie_Detail.json */,
+				CAEB5E642458EF12001E7EFD /* Movie_UpComing.json */,
+				CAEB5E662458EF54001E7EFD /* Movie_NowPlaying.json */,
 			);
 			path = SampleJSON;
-			sourceTree = "<group>";
-		};
-		CABFA8452458E2BE0044784C /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				CABFA8462458E2E20044784C /* Movie.swift */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		CAC11212244FA26000B5E8AE /* Common */ = {
@@ -486,6 +491,45 @@
 				CAC1121A244FA70F00B5E8AE /* EmptyStateView.xib */,
 			);
 			path = EmptyState;
+			sourceTree = "<group>";
+		};
+		CAEB5E682458F927001E7EFD /* SampleImage */ = {
+			isa = PBXGroup;
+			children = (
+				CAEB5E602458ED5E001E7EFD /* testImage.jpg */,
+			);
+			path = SampleImage;
+			sourceTree = "<group>";
+		};
+		CAEB5E692458F94C001E7EFD /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				CA884C26244B1C1E0004C1E3 /* ThirdViewController.swift */,
+				CA884C28244B1C6E0004C1E3 /* ThirdCoordinator.swift */,
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
+		CAEB5E6A2458F99C001E7EFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CABFA8462458E2E20044784C /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CAEB5E6B24590A41001E7EFD /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CAEB5E6C24590A49001E7EFD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -547,18 +591,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAEB5E672458EF54001E7EFD /* Movie_NowPlaying.json in Resources */,
 				CABFA83F2458DE7C0044784C /* TheMovieDB_Languages.json in Resources */,
 				CABFA8402458DE7C0044784C /* TheMovieDB_Tranlations.json in Resources */,
 				CABFA83D2458DE7C0044784C /* TheMovieDB_Certificates.json in Resources */,
 				CABFA83E2458DE7C0044784C /* TheMovieDB_Countries.json in Resources */,
 				CABFA8412458DE7C0044784C /* TheMovieDB_Jobs.json in Resources */,
 				CAAA37E42448DA4E00A8170A /* LaunchScreen.storyboard in Resources */,
-				CABFA8322458DC580044784C /* Popular_Multiple.json in Resources */,
+				CABFA8322458DC580044784C /* Movie_Popular.json in Resources */,
 				CA884C16244AD89D0004C1E3 /* Movie.storyboard in Resources */,
 				CAC1121B244FA70F00B5E8AE /* EmptyStateView.xib in Resources */,
+				CAEB5E652458EF12001E7EFD /* Movie_UpComing.json in Resources */,
+				CAEB5E612458ED5E001E7EFD /* testImage.jpg in Resources */,
 				CABFA8422458DE7C0044784C /* TheMovieDB_Certificates_TV.json in Resources */,
 				CAAA37E12448DA4E00A8170A /* Assets.xcassets in Resources */,
 				CABFA82F2458D6C30044784C /* Weather.json in Resources */,
+				CAEB5E632458EE9C001E7EFD /* Movie_TopRated.json in Resources */,
 				CABFA83C2458DE7C0044784C /* TheMovieDB_TimeZones.json in Resources */,
 				CABFA8442458E2580044784C /* Movie_Detail.json in Resources */,
 			);

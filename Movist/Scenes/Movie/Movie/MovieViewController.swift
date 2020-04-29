@@ -12,6 +12,8 @@ public final class MovieViewController: UIViewController, ViewController {
     
     public static var storyboardName: UIStoryboard.Name = .movie
     
+    @IBOutlet private weak var imageView: UIImageView!
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         

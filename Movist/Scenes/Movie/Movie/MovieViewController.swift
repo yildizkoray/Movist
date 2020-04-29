@@ -12,15 +12,30 @@ public final class MovieViewController: UIViewController, ViewController {
     
     public static var storyboardName: UIStoryboard.Name = .movie
     
-    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var tableView: UITableView!
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Movie"
+        prepareTableView()
     }
     
-    @IBAction func handleGoThird(_ sender: Any) {
-        ThirdCoordinator().start()
+    private func prepareTableView() {
+        tableView.registerCells(for: MovieTableViewCell.self)
+    }
+}
+
+// MARK: - UITableViewDataSource
+
+extension MovieViewController: UITableViewDataSource {
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: MovieTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        return cell
     }
 }

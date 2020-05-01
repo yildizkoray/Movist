@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieCollectionView" customModule="Movist" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="Pjx-4j-reg" id="qD7-3A-4ec"/>
+                <outlet property="collectionViewLayout" destination="2Oh-zy-gGt" id="Frz-iI-A8i"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Pjx-4j-reg">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="999" constant="220" id="9ky-Bu-nba"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2Oh-zy-gGt">
+                        <size key="itemSize" width="120" height="200"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="PZQ-bz-Caf"/>
+                        <outlet property="delegate" destination="-1" id="PLf-Jt-FMD"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Pjx-4j-reg" secondAttribute="bottom" id="Bfg-0k-Zn5"/>
+                <constraint firstItem="Pjx-4j-reg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LgB-CV-a9w"/>
+                <constraint firstItem="Pjx-4j-reg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="U26-9M-lYr"/>
+                <constraint firstAttribute="trailing" secondItem="Pjx-4j-reg" secondAttribute="trailing" id="jbI-QF-Lvl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="100.00000000000001" y="32.8125"/>
+        </view>
+    </objects>
+</document>

@@ -31,10 +31,10 @@ class BaseRetryPolicyTestCase: BaseTestCase {
 
     final class StubRequest: DataRequest {
         let urlRequest: URLRequest
-        override var request: URLRequest? { urlRequest }
+        override var request: URLRequest? { return urlRequest }
 
         let mockedResponse: HTTPURLResponse?
-        override var response: HTTPURLResponse? { mockedResponse }
+        override var response: HTTPURLResponse? { return mockedResponse }
 
         init(_ url: URL, method: HTTPMethod, response: HTTPURLResponse?, session: Session) {
             mockedResponse = response
@@ -43,8 +43,7 @@ class BaseRetryPolicyTestCase: BaseTestCase {
                                                      method: method,
                                                      parameters: nil,
                                                      encoding: URLEncoding.default,
-                                                     headers: nil,
-                                                     requestModifier: nil)
+                                                     headers: nil)
 
             urlRequest = try! request.asURLRequest()
 
@@ -61,7 +60,7 @@ class BaseRetryPolicyTestCase: BaseTestCase {
 
     let idempotentMethods: Set<HTTPMethod> = [.get, .head, .put, .delete, .options, .trace]
     let nonIdempotentMethods: Set<HTTPMethod> = [.post, .patch, .connect]
-    var methods: Set<HTTPMethod> { idempotentMethods.union(nonIdempotentMethods) }
+    var methods: Set<HTTPMethod> { return idempotentMethods.union(nonIdempotentMethods) }
 
     let session = Session(rootQueue: .main, startRequestsImmediately: false)
 
@@ -128,7 +127,7 @@ class BaseRetryPolicyTestCase: BaseTestCase {
                                                       .zeroByteResource]
 
     var errorCodes: Set<URLError.Code> {
-        retryableErrorCodes.union(nonRetryableErrorCodes)
+        return retryableErrorCodes.union(nonRetryableErrorCodes)
     }
 }
 
@@ -386,10 +385,6 @@ final class RetryPolicyTestCase: BaseRetryPolicyTestCase {
         }
 
         return StubRequest(url, method: method, response: response, session: session)
-    }
-
-    func urlError(with code: URLError.Code) -> URLError {
-        NSError(domain: URLError.errorDomain, code: code.rawValue, userInfo: nil) as! URLError
     }
 }
 

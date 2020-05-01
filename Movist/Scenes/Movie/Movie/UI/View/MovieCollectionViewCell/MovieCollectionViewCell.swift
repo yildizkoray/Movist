@@ -2,16 +2,22 @@
 //  MovieCollectionViewCell.swift
 //  Movist
 //
-//  Created by Yildiz, Koray(AWF) on 29.04.2020.
+//  Created by Yildiz, Koray(AWF) on 2.05.2020.
 //  Copyright © 2020 Koray Yildiz. All rights reserved.
 //
 
 import UIKit
 
-class MovieCollectionViewCell: UICollectionViewCell {
+public final class MovieCollectionViewCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
+    @IBOutlet weak var movieView: MovieView!
+    
+    override public func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    public func configure(name: String, image: UIImage) {
+        movieView.configure(name: name, image: image)
     }
 }

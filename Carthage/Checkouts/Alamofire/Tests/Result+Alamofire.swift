@@ -31,7 +31,7 @@ extension Result {
     }
 
     var isFailure: Bool {
-        !isSuccess
+        return !isSuccess
     }
 
     var success: Success? {

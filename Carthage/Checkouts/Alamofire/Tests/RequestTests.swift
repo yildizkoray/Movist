@@ -1101,7 +1101,7 @@ final class RequestCURLDescriptionTestCase: BaseTestCase {
     // MARK: Test Helper Methods
 
     private func cURLCommandComponents(from cURLString: String) -> [String] {
-        cURLString.components(separatedBy: .whitespacesAndNewlines)
+        return cURLString.components(separatedBy: .whitespacesAndNewlines)
             .filter { $0 != "" && $0 != "\\" }
     }
 }

@@ -292,11 +292,18 @@ final class SessionTestCase: BaseTestCase {
             return "\(osName) \(versionString)"
         }()
 
-        let alamofireVersion = "Alamofire/\(Alamofire.version)"
+        let alamofireVersion: String = {
+            guard
+                let afInfo = Bundle(for: Session.self).infoDictionary,
+                let build = afInfo["CFBundleShortVersionString"]
+            else { return "Unknown" }
+
+            return "Alamofire/\(build)"
+        }()
 
         XCTAssertTrue(userAgent?.contains(alamofireVersion) == true)
         XCTAssertTrue(userAgent?.contains(osNameVersion) == true)
-        XCTAssertTrue(userAgent?.contains("xctest/Unknown") == true)
+        XCTAssertTrue(userAgent?.contains("Unknown/Unknown") == true)
     }
 
     // MARK: Tests - Supported Accept-Encodings

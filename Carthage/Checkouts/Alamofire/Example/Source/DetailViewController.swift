@@ -174,7 +174,7 @@ extension DetailViewController {
 
 extension DetailViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        2
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

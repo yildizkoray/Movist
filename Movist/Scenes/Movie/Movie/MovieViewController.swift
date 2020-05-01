@@ -18,6 +18,7 @@ public final class MovieViewController: UIViewController, ViewController {
         super.viewDidLoad()
         
         title = "Movie"
+        
         prepareTableView()
     }
     
@@ -31,7 +32,7 @@ public final class MovieViewController: UIViewController, ViewController {
 extension MovieViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 3
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

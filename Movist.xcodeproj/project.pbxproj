@@ -18,6 +18,8 @@
 		CA37BF0F245CC7C40015D105 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37BF0D245CC7C40015D105 /* MovieTableViewCell.swift */; };
 		CA37BF10245CC7C40015D105 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA37BF0E245CC7C40015D105 /* MovieTableViewCell.xib */; };
 		CA632988245A093300379198 /* UICollectionView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA632987245A093300379198 /* UICollectionView+Additions.swift */; };
+		CA6C266E245E26D500B243EC /* BahijTheSansArabic-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA6C266D245E26D500B243EC /* BahijTheSansArabic-ExtraLight.ttf */; };
+		CA6C2670245E26DD00B243EC /* BahijTheSansArabic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA6C266F245E26DD00B243EC /* BahijTheSansArabic-Bold.ttf */; };
 		CA7711CF2450F29200B25AEE /* UILabel+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7711CE2450F29200B25AEE /* UILabel+Additions.swift */; };
 		CA7711D22450F3CB00B25AEE /* UIImageView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7711D12450F3CB00B25AEE /* UIImageView+Additions.swift */; };
 		CA81A415244CF7CF0016A303 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA81A414244CF7CF0016A303 /* Alamofire.framework */; };
@@ -53,6 +55,7 @@
 		CAAA38012448E3D400A8170A /* Any+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA38002448E3D400A8170A /* Any+Additions.swift */; };
 		CAAA38072448EFA400A8170A /* UIResponder+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA38062448EFA400A8170A /* UIResponder+Additions.swift */; };
 		CAAA380A2448F08300A8170A /* UITableView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA38092448F08300A8170A /* UITableView+Additions.swift */; };
+		CABED3C6245E2F260033D776 /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABED3C5245E2F260033D776 /* UIView+Additions.swift */; };
 		CABFA82D2458D04D0044784C /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFA82C2458D04D0044784C /* RestAPI.swift */; };
 		CABFA82F2458D6C30044784C /* Weather.json in Resources */ = {isa = PBXBuildFile; fileRef = CABFA82E2458D6C30044784C /* Weather.json */; };
 		CABFA8322458DC580044784C /* Movie_Popular.json in Resources */ = {isa = PBXBuildFile; fileRef = CABFA8312458DC580044784C /* Movie_Popular.json */; };
@@ -88,6 +91,8 @@
 		CA37BF0D245CC7C40015D105 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		CA37BF0E245CC7C40015D105 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		CA632987245A093300379198 /* UICollectionView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Additions.swift"; sourceTree = "<group>"; };
+		CA6C266D245E26D500B243EC /* BahijTheSansArabic-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BahijTheSansArabic-ExtraLight.ttf"; sourceTree = "<group>"; };
+		CA6C266F245E26DD00B243EC /* BahijTheSansArabic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BahijTheSansArabic-Bold.ttf"; sourceTree = "<group>"; };
 		CA7711CE2450F29200B25AEE /* UILabel+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Additions.swift"; sourceTree = "<group>"; };
 		CA7711D12450F3CB00B25AEE /* UIImageView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Additions.swift"; sourceTree = "<group>"; };
 		CA81A414244CF7CF0016A303 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -125,6 +130,7 @@
 		CAAA38002448E3D400A8170A /* Any+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Any+Additions.swift"; sourceTree = "<group>"; };
 		CAAA38062448EFA400A8170A /* UIResponder+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Additions.swift"; sourceTree = "<group>"; };
 		CAAA38092448F08300A8170A /* UITableView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Additions.swift"; sourceTree = "<group>"; };
+		CABED3C5245E2F260033D776 /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
 		CABFA82C2458D04D0044784C /* RestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
 		CABFA82E2458D6C30044784C /* Weather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Weather.json; sourceTree = "<group>"; };
 		CABFA8312458DC580044784C /* Movie_Popular.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movie_Popular.json; sourceTree = "<group>"; };
@@ -235,6 +241,15 @@
 				CA98BC0E24516DA6007A4828 /* VisualContent.swift */,
 			);
 			path = VisualContent;
+			sourceTree = "<group>";
+		};
+		CA6C266C245E264E00B243EC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CA6C266F245E26DD00B243EC /* BahijTheSansArabic-Bold.ttf */,
+				CA6C266D245E26D500B243EC /* BahijTheSansArabic-ExtraLight.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		CA7711CD2450F27800B25AEE /* UILabel */ = {
@@ -382,6 +397,7 @@
 		CAAA37EB2448DC4500A8170A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CA6C266C245E264E00B243EC /* Fonts */,
 				CABFA8302458DC180044784C /* SampleJSON */,
 				CAEB5E682458F927001E7EFD /* SampleImage */,
 				CAAA37E02448DA4E00A8170A /* Assets.xcassets */,
@@ -510,6 +526,7 @@
 			children = (
 				CAAA38052448EF8400A8170A /* UIResponder */,
 				CAF97A062451FE1000D762B8 /* UIView+EmptyState.swift */,
+				CABED3C5245E2F260033D776 /* UIView+Additions.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -707,12 +724,14 @@
 				CAEB5E652458EF12001E7EFD /* Movie_UpComing.json in Resources */,
 				CAEB5E612458ED5E001E7EFD /* testImage.jpg in Resources */,
 				CABFA8422458DE7C0044784C /* TheMovieDB_Certificates_TV.json in Resources */,
+				CA6C2670245E26DD00B243EC /* BahijTheSansArabic-Bold.ttf in Resources */,
 				CAAA37E12448DA4E00A8170A /* Assets.xcassets in Resources */,
 				CABFA82F2458D6C30044784C /* Weather.json in Resources */,
 				CAEB5E632458EE9C001E7EFD /* Movie_TopRated.json in Resources */,
 				CABFA83C2458DE7C0044784C /* TheMovieDB_TimeZones.json in Resources */,
 				CABFA8442458E2580044784C /* Movie_Detail.json in Resources */,
 				CA097A2B245CC8F200EB9889 /* MovieCollectionView.xib in Resources */,
+				CA6C266E245E26D500B243EC /* BahijTheSansArabic-ExtraLight.ttf in Resources */,
 				CA097A32245CCC4A00EB9889 /* MovieCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -783,6 +802,7 @@
 				CAAA380A2448F08300A8170A /* UITableView+Additions.swift in Sources */,
 				CA37BF0F245CC7C40015D105 /* MovieTableViewCell.swift in Sources */,
 				CABFA8472458E2E20044784C /* Movie.swift in Sources */,
+				CABED3C6245E2F260033D776 /* UIView+Additions.swift in Sources */,
 				CA884C29244B1C6E0004C1E3 /* ThirdCoordinator.swift in Sources */,
 				CA98BC12245171BA007A4828 /* URL+Additions.swift in Sources */,
 				CA884C1D244AF1CB0004C1E3 /* MovieCoordinator.swift in Sources */,

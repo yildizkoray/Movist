@@ -12,15 +12,10 @@ import Cosmos
 public final class MovieView: UIView, NibLoadable {
     
     @IBOutlet private weak var name: UILabel!
-    @IBOutlet private weak var image: UIImageView! {
-        didSet {
-            image.layer.cornerRadius = 5
-            image.layer.masksToBounds = true
-        }
-    }
+    @IBOutlet private weak var image: UIImageView!
     @IBOutlet private weak var ratingView: CosmosView! {
         didSet {
-            ratingView.settings.fillMode = .precise
+            ratingView.settings.fillMode = .full
         }
     }
     

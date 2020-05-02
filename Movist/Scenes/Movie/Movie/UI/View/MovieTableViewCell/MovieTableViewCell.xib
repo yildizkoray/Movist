@@ -17,16 +17,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G6U-QW-MNp" customClass="MovieCollectionView" customModule="Movist" customModuleProvider="target">
-                        <rect key="frame" x="5" y="5" width="310" height="66"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="G6U-QW-MNp" secondAttribute="trailing" constant="5" id="A10-is-uZr"/>
-                    <constraint firstItem="G6U-QW-MNp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="DL6-VJ-Ei5"/>
-                    <constraint firstAttribute="bottom" secondItem="G6U-QW-MNp" secondAttribute="bottom" constant="5" id="JCU-u1-8Nb"/>
-                    <constraint firstItem="G6U-QW-MNp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="ydX-0P-ke1"/>
+                    <constraint firstAttribute="trailing" secondItem="G6U-QW-MNp" secondAttribute="trailing" id="A10-is-uZr"/>
+                    <constraint firstItem="G6U-QW-MNp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="DL6-VJ-Ei5"/>
+                    <constraint firstAttribute="bottom" secondItem="G6U-QW-MNp" secondAttribute="bottom" id="JCU-u1-8Nb"/>
+                    <constraint firstItem="G6U-QW-MNp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ydX-0P-ke1"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

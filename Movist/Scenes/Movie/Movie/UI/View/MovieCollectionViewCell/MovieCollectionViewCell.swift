@@ -17,7 +17,7 @@ public final class MovieCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    public func configure(name: String, image: UIImage) {
-        movieView.configure(name: name, image: image)
+    public func configure(rate: Double, image: UIImage) {
+        movieView.configure(rate: rate, image: image)
     }
 }

@@ -30,6 +30,7 @@ public final class MovieCollectionView: UIView, NibLoadable {
     
     private func prepareCollectionView() {
         collectionView.registerCells(for: MovieCollectionViewCell.self)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 0)
     }
 }
 
@@ -43,7 +44,7 @@ extension MovieCollectionView: UICollectionViewDataSource {
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: MovieCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.configure(name: "8.7", image: "testImage".image)
+        cell.configure(rate: 8.7, image: "testImage".image)
         return cell
     }
 }

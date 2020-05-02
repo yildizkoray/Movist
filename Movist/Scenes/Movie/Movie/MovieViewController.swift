@@ -19,6 +19,8 @@ public final class MovieViewController: UIViewController, ViewController {
         
         title = "Movie"
         
+        view.backgroundColor = UIColor(red: 29, green: 29, blue: 39)
+        
         prepareTableView()
     }
     
@@ -32,7 +34,7 @@ public final class MovieViewController: UIViewController, ViewController {
 extension MovieViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 6
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

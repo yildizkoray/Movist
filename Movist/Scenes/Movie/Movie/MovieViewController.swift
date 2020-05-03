@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import PromiseKit
 
 public final class MovieViewController: UIViewController, ViewController {
     
     public static var storyboardName: UIStoryboard.Name = .movie
     
     @IBOutlet private weak var tableView: UITableView!
+    
+    private var display: MoviePopularDisplay = .empty {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +29,20 @@ public final class MovieViewController: UIViewController, ViewController {
         view.backgroundColor = UIColor(red: 29, green: 29, blue: 39)
         
         prepareTableView()
+        
+        getMovieDetail().done { display in
+            self.display = display
+        }.cauterize()
     }
     
     private func prepareTableView() {
         tableView.registerCells(for: MovieTableViewCell.self)
+    }
+    
+    private func getMovieDetail() -> Promise<MoviePopularDisplay> {
+        
+        let popular: Promise<Popular> = RestAPI.shared.readJSONFile(from: "Movie_Popular")
+        return popular.map(MoviePopularDisplay.init)
     }
 }
 
@@ -34,11 +51,12 @@ public final class MovieViewController: UIViewController, ViewController {
 extension MovieViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 300
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MovieTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.configure(movieDisplay: display.movies)
         return cell
     }
 }

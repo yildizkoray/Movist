@@ -15,7 +15,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieView">
             <connections>
                 <outlet property="image" destination="8LV-DS-LGc" id="vNG-8B-FXX"/>
-                <outlet property="name" destination="bJG-72-vpN" id="LYo-sx-8xh"/>
+                <outlet property="name" destination="2VJ-JV-yA7" id="II6-zI-af9"/>
+                <outlet property="ratingLabel" destination="bJG-72-vpN" id="lZb-ze-4hO"/>
                 <outlet property="ratingView" destination="S9U-Uq-PtQ" id="b6n-E8-JBY"/>
             </connections>
         </placeholder>
@@ -39,19 +40,19 @@
                             </userDefinedRuntimeAttributes>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2dw-Pl-Z9O">
-                            <rect key="frame" x="7" y="182" width="106" height="28"/>
+                            <rect key="frame" x="6.5" y="182" width="107.5" height="28"/>
                             <subviews>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Koray Yıldız" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VJ-JV-yA7">
-                                    <rect key="frame" x="20.5" y="0.0" width="65" height="16"/>
+                                    <rect key="frame" x="19" y="0.0" width="69" height="15.5"/>
                                     <fontDescription key="fontDescription" name="BahijTheSansArabicBold" family="Bahij TheSansArabic" pointSize="13"/>
                                     <color key="textColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ZYc-Er-nfk">
-                                    <rect key="frame" x="0.0" y="16" width="106" height="12"/>
+                                    <rect key="frame" x="0.0" y="15.5" width="107.5" height="12.5"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9U-Uq-PtQ" customClass="CosmosView" customModule="Cosmos">
-                                            <rect key="frame" x="0.0" y="0.0" width="80" height="12"/>
+                                            <rect key="frame" x="0.0" y="0.5" width="80" height="12"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="starSize">
                                                     <real key="value" value="12"/>
@@ -69,7 +70,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gL9-Rc-pvP">
-                                            <rect key="frame" x="84" y="1" width="1" height="10"/>
+                                            <rect key="frame" x="84" y="1.5" width="1" height="10"/>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="1" id="UUh-HG-DjP"/>
@@ -77,7 +78,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="bJG-72-vpN">
-                                            <rect key="frame" x="89" y="0.0" width="17" height="12"/>
+                                            <rect key="frame" x="89" y="0.0" width="18.5" height="12.5"/>
                                             <fontDescription key="fontDescription" name="BahijTheSansArabicBold" family="Bahij TheSansArabic" pointSize="13"/>
                                             <color key="textColor" red="0.88235294117647056" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>

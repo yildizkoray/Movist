@@ -15,7 +15,7 @@ public final class RestAPI {
     
     static let shared = RestAPI()
     
-    func execute<R>(with url: URL) -> Promise<R> where R: Mappable {
+    func execute<R>(with url: URL) -> Promise<R> where R: ImmutableMappable {
         
         return Promise<R> { seal in
             
@@ -33,7 +33,7 @@ public final class RestAPI {
         }
     }
     
-    func readJSONFile<R>(from filename: String) -> Promise<R> where R: Mappable {
+    func readJSONFile<R>(from filename: String) -> Promise<R> where R: ImmutableMappable {
         let url = Bundle.main.url(forResource: filename, withExtension: "json")!
         
         return Promise<R> { seal in

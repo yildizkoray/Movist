@@ -30,6 +30,9 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="movieCollectionView" destination="G6U-QW-MNp" id="fvm-r6-1Qu"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="163.39285714285714"/>
         </tableViewCell>
     </objects>

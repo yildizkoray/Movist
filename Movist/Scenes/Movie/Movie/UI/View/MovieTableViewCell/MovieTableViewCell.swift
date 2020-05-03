@@ -9,8 +9,14 @@
 import UIKit
 
 public final class MovieTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet private (set) weak var movieCollectionView: MovieCollectionView!
+    
     override public func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    public func configure(movieDisplay: [MovieItemDisplay]) {
+        movieCollectionView.display = movieDisplay
     }
 }

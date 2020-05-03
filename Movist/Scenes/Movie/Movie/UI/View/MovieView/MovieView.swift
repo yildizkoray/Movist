@@ -12,6 +12,7 @@ import Cosmos
 public final class MovieView: UIView, NibLoadable {
     
     @IBOutlet private weak var name: UILabel!
+    @IBOutlet private weak var ratingLabel: UILabel!
     @IBOutlet private weak var image: UIImageView!
     @IBOutlet private weak var ratingView: CosmosView! {
         didSet {
@@ -29,9 +30,11 @@ public final class MovieView: UIView, NibLoadable {
         setupFromNib()
     }
     
-    public func configure(rate: Double, image: UIImage) {
-        self.name.hidableText = rate.string
-        self.image.hidableImage = image
-        ratingView.rating = (rate / 2)
+    public func configure(display: MovieItemDisplay) {
+        
+        name.hidableText = display.content.title
+        ratingLabel.hidableText = display.rating.string
+        image.setVisual(display.content.visual)
+        ratingView.rating = display.rating / 2
     }
 }

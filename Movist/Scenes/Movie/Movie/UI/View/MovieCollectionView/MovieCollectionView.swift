@@ -13,6 +13,12 @@ public final class MovieCollectionView: UIView, NibLoadable {
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var collectionViewLayout: UICollectionViewFlowLayout!
     
+    public var display: [MovieItemDisplay] = .empty() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,12 +45,12 @@ public final class MovieCollectionView: UIView, NibLoadable {
 extension MovieCollectionView: UICollectionViewDataSource {
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return display.count
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: MovieCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.configure(rate: 8.7, image: "testImage".image)
+        cell.configure(display: display[indexPath.row])
         return cell
     }
 }

@@ -40,8 +40,8 @@ public final class MovieViewController: UIViewController, ViewController {
     }
     
     private func getMovieDetail() -> Promise<MoviePopularDisplay> {
-        
-        let popular: Promise<Popular> = RestAPI.shared.readJSONFile(from: "Movie_Popular")
+        let url = URL(string: "https://api.themoviedb.org/3/movie/popular?api_key=2526d77d81bb50e7ae223a8f13db2a2f")!
+        let popular: Promise<Popular> = RestAPI.shared.execute(with: url)
         return popular.map(MoviePopularDisplay.init)
     }
 }

@@ -85,6 +85,7 @@
 		CAEB5E672458EF54001E7EFD /* Movie_NowPlaying.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEB5E662458EF54001E7EFD /* Movie_NowPlaying.json */; };
 		CAF306A8245F514100378716 /* Popular.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF306A7245F514100378716 /* Popular.swift */; };
 		CAF97A072451FE1000D762B8 /* UIView+EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF97A062451FE1000D762B8 /* UIView+EmptyState.swift */; };
+		CAFC2C37245F66A6005AB758 /* MoviePopularDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFC2C36245F66A6005AB758 /* MoviePopularDisplay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +169,7 @@
 		CAEB5E662458EF54001E7EFD /* Movie_NowPlaying.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movie_NowPlaying.json; sourceTree = "<group>"; };
 		CAF306A7245F514100378716 /* Popular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popular.swift; sourceTree = "<group>"; };
 		CAF97A062451FE1000D762B8 /* UIView+EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EmptyState.swift"; sourceTree = "<group>"; };
+		CAFC2C36245F66A6005AB758 /* MoviePopularDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePopularDisplay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,7 +245,6 @@
 		CA63298A245A0E3300379198 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CAA29F24245ED7ED00BF5249 /* Display */,
 				CA097A33245CD66600EB9889 /* MovieView */,
 				CA097A2E245CCC1F00EB9889 /* MovieCollectionViewCell */,
 				CA37BF12245CC84D0015D105 /* MovieCollectionView */,
@@ -385,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				CAA29F26245ED9C400BF5249 /* MovieItemDisplay.swift */,
+				CAFC2C36245F66A6005AB758 /* MoviePopularDisplay.swift */,
 			);
 			path = Display;
 			sourceTree = "<group>";
@@ -680,6 +682,7 @@
 		CAEB5E6C24590A49001E7EFD /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CAA29F24245ED7ED00BF5249 /* Display */,
 				CA63298A245A0E3300379198 /* View */,
 			);
 			path = UI;
@@ -839,6 +842,7 @@
 				CAAA37F52448E06900A8170A /* Array+Additions.swift in Sources */,
 				CA884C25244AFD2A0004C1E3 /* SecondCoordinator.swift in Sources */,
 				CAAA38072448EFA400A8170A /* UIResponder+Additions.swift in Sources */,
+				CAFC2C37245F66A6005AB758 /* MoviePopularDisplay.swift in Sources */,
 				CAC11216244FA28F00B5E8AE /* NibLoadable.swift in Sources */,
 				CAAA37F72448E16100A8170A /* Bundle+Additions.swift in Sources */,
 				CA9D5615244A4A8F0055D942 /* ApplicationCoordinator.swift in Sources */,

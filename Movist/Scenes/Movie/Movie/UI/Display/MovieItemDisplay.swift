@@ -31,18 +31,3 @@ public struct MovieItemDisplay {
     
     public static let empty = MovieItemDisplay()
 }
-
-public struct MoviePopularDisplay {
-    
-    let movies: [MovieItemDisplay]
-    
-    public init(items: Popular) {
-        movies = items.movies.map(MovieItemDisplay.init)
-    }
-    
-    private init() {
-        movies = .empty()
-    }
-    
-    public static let empty = MoviePopularDisplay()
-}

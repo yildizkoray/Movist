@@ -16,6 +16,8 @@ public final class MovieCoordinator: Coordinator {
     public func start() -> UINavigationController {
         
         let view = createViewController()
+        view.viewModel = MovieViewModel()
+        
         let navigator = UINavigationController(rootViewController: view)
         
         defer { self.navigator = navigator }

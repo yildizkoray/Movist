@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-public struct Popular: ImmutableMappable {
+public struct Popular: ImmutableMappable { // TODO: - Change `Popular` struct name
     
     let movies: [Movie]
     let page: Int?

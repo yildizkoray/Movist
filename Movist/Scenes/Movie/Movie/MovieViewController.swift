@@ -9,9 +9,15 @@
 import UIKit
 import PromiseKit
 
+fileprivate struct Constants {
+    static let title = "Movie"
+}
+
 public final class MovieViewController: UIViewController, ViewController {
     
     public static var storyboardName: UIStoryboard.Name = .movie
+    
+    public var viewModel: MovieViewModel!
     
     @IBOutlet private weak var tableView: UITableView!
     
@@ -24,25 +30,29 @@ public final class MovieViewController: UIViewController, ViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Movie"
+        prepareUI()
         
+        viewModel.popular().done { [weak self] display in
+            self?.display = display
+        }.ensure {
+            self.tableView.isHidden = false
+        }
+        .cauterize()
+    }
+    
+    private func prepareUI() {
         view.backgroundColor = UIColor(red: 29, green: 29, blue: 39)
-        
+        prepareNavigation()
         prepareTableView()
-        
-        getMovieDetail().done { display in
-            self.display = display
-        }.cauterize()
+    }
+    
+    private func prepareNavigation() {
+        title = Constants.title
     }
     
     private func prepareTableView() {
+        tableView.isHidden = true
         tableView.registerCells(for: MovieTableViewCell.self)
-    }
-    
-    private func getMovieDetail() -> Promise<MoviePopularDisplay> {
-        let url = URL(string: "https://api.themoviedb.org/3/movie/popular?api_key=2526d77d81bb50e7ae223a8f13db2a2f")!
-        let popular: Promise<Popular> = RestAPI.shared.execute(with: url)
-        return popular.map(MoviePopularDisplay.init)
     }
 }
 
@@ -51,7 +61,7 @@ public final class MovieViewController: UIViewController, ViewController {
 extension MovieViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 300
+        return 3
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

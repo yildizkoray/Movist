@@ -31,6 +31,7 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func prepareUISettings() {
+//        TODO: - This color should move AppColor class
         UINavigationBar.appearance().backgroundColor = UIColor(red: 29, green: 29, blue: 39)
         UINavigationBar.appearance().barTintColor = UIColor(red: 29, green: 29, blue: 39)
         UIBarButtonItem.appearance().tintColor = UIColor(red: 29, green: 29, blue: 39)

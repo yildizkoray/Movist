@@ -78,12 +78,14 @@
 		CAC11216244FA28F00B5E8AE /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC11215244FA28F00B5E8AE /* NibLoadable.swift */; };
 		CAC11219244FA65800B5E8AE /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC11218244FA65800B5E8AE /* EmptyStateView.swift */; };
 		CAC1121B244FA70F00B5E8AE /* EmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC1121A244FA70F00B5E8AE /* EmptyStateView.xib */; };
+		CAD25A6B2460D3F4009BA080 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD25A6A2460D3F4009BA080 /* MovieViewModel.swift */; };
 		CAD3081D2455E0B700317EBD /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD3081C2455E0B700317EBD /* AlamofireObjectMapper.framework */; };
 		CAEB5E612458ED5E001E7EFD /* testImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAEB5E602458ED5E001E7EFD /* testImage.jpg */; };
 		CAEB5E632458EE9C001E7EFD /* Movie_TopRated.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEB5E622458EE9C001E7EFD /* Movie_TopRated.json */; };
 		CAEB5E652458EF12001E7EFD /* Movie_UpComing.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEB5E642458EF12001E7EFD /* Movie_UpComing.json */; };
 		CAEB5E672458EF54001E7EFD /* Movie_NowPlaying.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEB5E662458EF54001E7EFD /* Movie_NowPlaying.json */; };
 		CAF306A8245F514100378716 /* Popular.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF306A7245F514100378716 /* Popular.swift */; };
+		CAF964422460C4FB00471285 /* ConfigReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF964412460C4FB00471285 /* ConfigReader.swift */; };
 		CAF97A072451FE1000D762B8 /* UIView+EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF97A062451FE1000D762B8 /* UIView+EmptyState.swift */; };
 		CAFC2C37245F66A6005AB758 /* MoviePopularDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFC2C36245F66A6005AB758 /* MoviePopularDisplay.swift */; };
 /* End PBXBuildFile section */
@@ -162,12 +164,14 @@
 		CAC11215244FA28F00B5E8AE /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		CAC11218244FA65800B5E8AE /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		CAC1121A244FA70F00B5E8AE /* EmptyStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateView.xib; sourceTree = "<group>"; };
+		CAD25A6A2460D3F4009BA080 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		CAD3081C2455E0B700317EBD /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
 		CAEB5E602458ED5E001E7EFD /* testImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImage.jpg; sourceTree = "<group>"; };
 		CAEB5E622458EE9C001E7EFD /* Movie_TopRated.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movie_TopRated.json; sourceTree = "<group>"; };
 		CAEB5E642458EF12001E7EFD /* Movie_UpComing.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movie_UpComing.json; sourceTree = "<group>"; };
 		CAEB5E662458EF54001E7EFD /* Movie_NowPlaying.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movie_NowPlaying.json; sourceTree = "<group>"; };
 		CAF306A7245F514100378716 /* Popular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popular.swift; sourceTree = "<group>"; };
+		CAF964412460C4FB00471285 /* ConfigReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigReader.swift; sourceTree = "<group>"; };
 		CAF97A062451FE1000D762B8 /* UIView+EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EmptyState.swift"; sourceTree = "<group>"; };
 		CAFC2C36245F66A6005AB758 /* MoviePopularDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePopularDisplay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -328,6 +332,7 @@
 				CAEB5E6A2458F99C001E7EFD /* Model */,
 				CAEB5E6C24590A49001E7EFD /* UI */,
 				CA884C1C244AF1CB0004C1E3 /* MovieCoordinator.swift */,
+				CAD25A6A2460D3F4009BA080 /* MovieViewModel.swift */,
 				CA884C13244AD85A0004C1E3 /* MovieViewController.swift */,
 			);
 			path = Movie;
@@ -471,9 +476,9 @@
 		CAAA37EF2448DFB800A8170A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CAA29F32245EE82B00BF5249 /* ObjectMapper */,
 				CAAA38002448E3D400A8170A /* Any+Additions.swift */,
 				CAAA37F82448E28800A8170A /* Foundation */,
+				CAA29F32245EE82B00BF5249 /* ObjectMapper */,
 				CAAA38032448EEFA00A8170A /* UIKit */,
 			);
 			path = Extensions;
@@ -614,6 +619,7 @@
 		CAC11212244FA26000B5E8AE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CAF964412460C4FB00471285 /* ConfigReader.swift */,
 				CAC11213244FA26900B5E8AE /* UI */,
 			);
 			path = Common;
@@ -712,6 +718,7 @@
 				CAAA37D12448DA4D00A8170A /* Frameworks */,
 				CAAA37D22448DA4D00A8170A /* Resources */,
 				CA81A412244CF7490016A303 /* Carthage */,
+				CAF44E8E2460548D00D2348C /* Warning */,
 			);
 			buildRules = (
 			);
@@ -822,6 +829,24 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
 		};
+		CAF44E8E2460548D00D2348C /* Warning */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Warning;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO: -\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"\n\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -850,6 +875,7 @@
 				CA884C2C244B27120004C1E3 /* UIViewController+Additions.swift in Sources */,
 				CA9D5613244A49EE0055D942 /* Coordinator.swift in Sources */,
 				CA11932824490EA100625FB5 /* UIButton+Additions.swift in Sources */,
+				CAD25A6B2460D3F4009BA080 /* MovieViewModel.swift in Sources */,
 				CA632988245A093300379198 /* UICollectionView+Additions.swift in Sources */,
 				CAA29F27245ED9C400BF5249 /* MovieItemDisplay.swift in Sources */,
 				CAA29F34245EE84000BF5249 /* ObjectMapper+Additions.swift in Sources */,
@@ -857,6 +883,7 @@
 				CA7711CF2450F29200B25AEE /* UILabel+Additions.swift in Sources */,
 				CAAA380A2448F08300A8170A /* UITableView+Additions.swift in Sources */,
 				CA37BF0F245CC7C40015D105 /* MovieTableViewCell.swift in Sources */,
+				CAF964422460C4FB00471285 /* ConfigReader.swift in Sources */,
 				CABFA8472458E2E20044784C /* Movie.swift in Sources */,
 				CABED3C6245E2F260033D776 /* UIView+Additions.swift in Sources */,
 				CA884C29244B1C6E0004C1E3 /* ThirdCoordinator.swift in Sources */,
@@ -1027,6 +1054,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				THE_MOVIE_DB_API_KEY = 2526d77d81bb50e7ae223a8f13db2a2f;
+				THE_MOVIE_DB_API_READ_ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNTI2ZDc3ZDgxYmI1MGU3YWUyMjNhOGYxM2RiMmEyZiIsInN1YiI6IjVlOTg5ZmFjZDE0NDQzMDAxMjUxNmMwYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.XO8Q3-kcNvXpMssEcWPzdL51Zn64uURYWvmKH93_eNQ";
+				THE_MOVIE_DB_API_URL = "http://api.themoviedb.org/3";
+				THE_MOVIE_DB_IMAGE_URL = "https://image.tmdb.org/t/p";
 			};
 			name = Debug;
 		};
@@ -1049,6 +1080,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				THE_MOVIE_DB_API_KEY = 2526d77d81bb50e7ae223a8f13db2a2f;
+				THE_MOVIE_DB_API_READ_ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNTI2ZDc3ZDgxYmI1MGU3YWUyMjNhOGYxM2RiMmEyZiIsInN1YiI6IjVlOTg5ZmFjZDE0NDQzMDAxMjUxNmMwYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.XO8Q3-kcNvXpMssEcWPzdL51Zn64uURYWvmKH93_eNQ";
+				THE_MOVIE_DB_API_URL = "https://api.themoviedb.org/3";
+				THE_MOVIE_DB_IMAGE_URL = "https://image.tmdb.org/t/p";
 			};
 			name = Release;
 		};

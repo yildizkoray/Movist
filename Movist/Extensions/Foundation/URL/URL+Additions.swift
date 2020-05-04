@@ -10,8 +10,13 @@ import Foundation
 
 public extension URL {
     
+    private static let RANDOM_IMAGE_BASE_URL = URL(string: ConfigReader.shared["RANDOM_IMAGE_URL"])!
+    static let TMDB_API_URL = URL(string: ConfigReader.shared["TMDB_API_URL"])!
+    static let TMDB_IMAGE_URL = URL(string: ConfigReader.shared["TMDB_IMAGE_URL"])!
+    
     static func randomIcon(width: Int, height: Int) -> URL {
-        return URL(string: "https://picsum.photos/\(width)/\(height)")!
+        let path: String = "\(width)/\(height)"
+        return URL(string: path, relativeTo: .RANDOM_IMAGE_BASE_URL)!
     }
 }
 

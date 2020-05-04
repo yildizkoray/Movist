@@ -7,6 +7,11 @@
 		<string>BahijTheSansArabic-Bold.ttf</string>
 		<string>BahijTheSansArabic-ExtraLight.ttf</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -53,5 +58,18 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>Config</key>
+	<dict>
+		<key>RANDOM_IMAGE_URL</key>
+		<string>https://picsum.photos</string>
+		<key>TMDB_API_URL</key>
+		<string>$(THE_MOVIE_DB_API_URL)</string>
+		<key>TMDB_API_KEY</key>
+		<string>$(THE_MOVIE_DB_API_KEY)</string>
+		<key>TMDB_API_READ_ACCESS_TOKEN</key>
+		<string>$(THE_MOVIE_DB_API_READ_ACCESS_TOKEN)</string>
+		<key>TMDB_IMAGE_URL</key>
+		<string>$(THE_MOVIE_DB_IMAGE_URL)</string>
+	</dict>
 </dict>
 </plist>

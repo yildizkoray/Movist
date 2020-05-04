@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct MovieItemDisplay {
+public struct MovieItemDisplay { // TODO: - Change `MovieItemDisplay` struct name
     
     let content: VisaulContent
     let rating: Double
@@ -19,7 +19,7 @@ public struct MovieItemDisplay {
     }
     
     public init(movie: Movie) {
-        let image: URL = URL(string: "https://image.tmdb.org/t/p/w300\(movie.posterImage.ifNil(.empty))")!
+        let image: URL = URL(string: "https://image.tmdb.org/t/p/w500\(movie.posterImage.ifNil(.empty))")! // TODO: - Remove this URL
         self.content = VisaulContent(
             title: movie.title.ifNil(.empty),
             subtitle: movie.averageVote.ifNil(.zero).string,

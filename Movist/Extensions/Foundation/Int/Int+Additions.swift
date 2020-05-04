@@ -13,4 +13,8 @@ public extension Int {
     var isZero: Bool {
         return self == .zero
     }
+    
+    var string: String {
+        return String(self)
+    }
 }

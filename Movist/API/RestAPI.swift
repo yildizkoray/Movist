@@ -13,7 +13,7 @@ import PromiseKit
 
 public final class RestAPI {
     
-    static let shared = RestAPI()
+    public static let shared = RestAPI()
     
     func execute<R>(with url: URL) -> Promise<R> where R: ImmutableMappable {
         

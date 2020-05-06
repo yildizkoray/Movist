@@ -21,7 +21,7 @@ public final class MovieViewController: UIViewController, ViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
-    private var display: MoviePopularDisplay = .empty {
+    private var display: [MoviePopularDisplay] = .empty() { // TODO: - Change MoviePopularDisplay, make generic
         didSet {
             tableView.reloadData()
         }
@@ -32,7 +32,7 @@ public final class MovieViewController: UIViewController, ViewController {
         
         prepareUI()
         
-        viewModel.popular().done { [weak self] display in
+        viewModel.start().done { [weak self] display in
             self?.display = display
         }.ensure {
             self.tableView.isHidden = false
@@ -61,12 +61,12 @@ public final class MovieViewController: UIViewController, ViewController {
 extension MovieViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return display.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MovieTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.configure(movieDisplay: display.movies)
+        cell.configure(movieDisplay: display[indexPath.row].movies)
         return cell
     }
 }

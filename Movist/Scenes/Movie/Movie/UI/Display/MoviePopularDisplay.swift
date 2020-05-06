@@ -35,3 +35,18 @@ public struct MovieUpComingDisplay {
     
     public static let empty = MovieUpComingDisplay()
 }
+
+public struct MovieTopDisplay {
+    
+    let movies: [MovieItemDisplay]
+    
+    public init(items: Popular) {
+        movies = items.movies.map(MovieItemDisplay.init)
+    }
+    
+    private init() {
+        movies = .empty()
+    }
+    
+    public static let empty = MovieTopDisplay()
+}

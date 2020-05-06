@@ -17,9 +17,25 @@ public final class MovieViewModel {
         self.api = api
     }
     
-    public func popular() -> Promise<MoviePopularDisplay> {
-        let url = URL(string: "https://api.themoviedb.org/3/movie/popular?api_key=2526d77d81bb50e7ae223a8f13db2a2f")! // TODO: - Remove this URL
-        let popular: Promise<Popular> = RestAPI.shared.execute(with: url)
+    public func start() -> Promise<[MoviePopularDisplay]>{
+        return when(fulfilled: popular(), toprated(), upcoming()).compactMap {
+            popular, toprated, upcoming in
+            return [popular, toprated, upcoming]
+        }
+    }
+    
+    private func popular() -> Promise<MoviePopularDisplay> {
+        let popular: Promise<Popular> = RestAPI.shared.execute(with: MovieAPI.popular)
+        return popular.map(MoviePopularDisplay.init)
+    }
+    
+    private func toprated() -> Promise<MoviePopularDisplay> {
+        let popular: Promise<Popular> = RestAPI.shared.execute(with: MovieAPI.toprated)
+        return popular.map(MoviePopularDisplay.init)
+    }
+    
+    private func upcoming() -> Promise<MoviePopularDisplay> {
+        let popular: Promise<Popular> = RestAPI.shared.execute(with: MovieAPI.upcoming)
         return popular.map(MoviePopularDisplay.init)
     }
 }

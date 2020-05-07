@@ -65,7 +65,7 @@ playground.xcworkspace
 # Carthage/Checkouts
 
 # Carthage/Build/
-# Carthage/Checkouts/
+Carthage/Checkouts/
 
 # Accio dependency management
 Dependencies/

@@ -247,35 +247,35 @@
     },
     {
       "file": "/Users/jshier/Desktop/Code/Alamofire/Source/Session.swift",
-      "line": 1021,
+      "line": 1026,
       "symbol": "Session.request(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jshier/Desktop/Code/Alamofire/Source/Session.swift",
-      "line": 1027,
+      "line": 1032,
       "symbol": "Session.didGatherMetricsForTask(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jshier/Desktop/Code/Alamofire/Source/Session.swift",
-      "line": 1038,
+      "line": 1043,
       "symbol": "Session.didCompleteTask(_:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jshier/Desktop/Code/Alamofire/Source/Session.swift",
-      "line": 1050,
+      "line": 1055,
       "symbol": "Session.credential(for:in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jshier/Desktop/Code/Alamofire/Source/Session.swift",
-      "line": 1057,
+      "line": 1062,
       "symbol": "Session.cancelRequestsForSessionInvalidation(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

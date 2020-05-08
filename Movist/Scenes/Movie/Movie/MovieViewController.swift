@@ -36,7 +36,8 @@ public final class MovieViewController: UIViewController, ViewController {
             self?.display = display
         }
         .ensure { [weak self] in
-            self?.tableView.isHidden = false
+            self?.tableView.setHidden(false, animated: true)
+            self?.view.stopLoadingIndicatorView()
         }
         .cauterize()
     }
@@ -53,6 +54,7 @@ public final class MovieViewController: UIViewController, ViewController {
     }
     
     private func prepareUI() {
+        view.startLoadingIndicatorView()
         view.backgroundColor = UIColor(red: 29, green: 29, blue: 39)
         prepareNavigation()
         prepareTableView()
@@ -63,7 +65,7 @@ public final class MovieViewController: UIViewController, ViewController {
     }
     
     private func prepareTableView() {
-        tableView.isHidden = true
+        tableView.setHidden(true, animated: false)
         tableView.addRefresher(color: .white, selector: #selector(refresh))
         tableView.registerCells(for: MovieTableViewCell.self)
     }

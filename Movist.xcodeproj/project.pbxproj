@@ -13,6 +13,8 @@
 		CA097A32245CCC4A00EB9889 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA097A30245CCC4A00EB9889 /* MovieCollectionViewCell.xib */; };
 		CA097A35245CD67700EB9889 /* MovieView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA097A34245CD67700EB9889 /* MovieView.xib */; };
 		CA097A37245CD74000EB9889 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA097A36245CD74000EB9889 /* MovieView.swift */; };
+		CA0AEB832466181300E8A703 /* UIActivityIndicatorView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0AEB822466181300E8A703 /* UIActivityIndicatorView+Additions.swift */; };
+		CA0AEB852466193E00E8A703 /* UIView+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0AEB842466193E00E8A703 /* UIView+ActivityIndicator.swift */; };
 		CA11932824490EA100625FB5 /* UIButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA11932724490EA100625FB5 /* UIButton+Additions.swift */; };
 		CA1C9D37246218A0003AEABA /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C9D36246218A0003AEABA /* Vibration.swift */; };
 		CA1C9D3D2462248A003AEABA /* MovieAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C9D3C2462248A003AEABA /* MovieAPI.swift */; };
@@ -99,6 +101,8 @@
 		CA097A30245CCC4A00EB9889 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		CA097A34245CD67700EB9889 /* MovieView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieView.xib; sourceTree = "<group>"; };
 		CA097A36245CD74000EB9889 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
+		CA0AEB822466181300E8A703 /* UIActivityIndicatorView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+Additions.swift"; sourceTree = "<group>"; };
+		CA0AEB842466193E00E8A703 /* UIView+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ActivityIndicator.swift"; sourceTree = "<group>"; };
 		CA11932724490EA100625FB5 /* UIButton+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Additions.swift"; sourceTree = "<group>"; };
 		CA1C9D36246218A0003AEABA /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
 		CA1C9D3C2462248A003AEABA /* MovieAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPI.swift; sourceTree = "<group>"; };
@@ -214,6 +218,14 @@
 				CA097A34245CD67700EB9889 /* MovieView.xib */,
 			);
 			path = MovieView;
+			sourceTree = "<group>";
+		};
+		CA0AEB81246617EB00E8A703 /* UIActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				CA0AEB822466181300E8A703 /* UIActivityIndicatorView+Additions.swift */,
+			);
+			path = UIActivityIndicatorView;
 			sourceTree = "<group>";
 		};
 		CA11932624490E8C00625FB5 /* UIButton */ = {
@@ -577,9 +589,10 @@
 		CAAA38032448EEFA00A8170A /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				CAA05BC2245D133200AE0984 /* UIColor */,
+				CA0AEB81246617EB00E8A703 /* UIActivityIndicatorView */,
 				CA11932624490E8C00625FB5 /* UIButton */,
 				CA632989245A0BA200379198 /* UICollectionView */,
+				CAA05BC2245D133200AE0984 /* UIColor */,
 				CA7711D02450F3B100B25AEE /* UIImageView */,
 				CA7711CD2450F27800B25AEE /* UILabel */,
 				CA9D560C244A47990055D942 /* UIStoryboard */,
@@ -596,6 +609,7 @@
 				CAAA38052448EF8400A8170A /* UIResponder */,
 				CAF97A062451FE1000D762B8 /* UIView+EmptyState.swift */,
 				CABED3C5245E2F260033D776 /* UIView+Additions.swift */,
+				CA0AEB842466193E00E8A703 /* UIView+ActivityIndicator.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -879,6 +893,7 @@
 				CAA29F2B245EE13B00BF5249 /* Movie+ProductionCountry.swift in Sources */,
 				CAAA38012448E3D400A8170A /* Any+Additions.swift in Sources */,
 				CA884C21244AF9A40004C1E3 /* ViewController.swift in Sources */,
+				CA0AEB852466193E00E8A703 /* UIView+ActivityIndicator.swift in Sources */,
 				CA884C27244B1C1E0004C1E3 /* ThirdViewController.swift in Sources */,
 				CA884C1B244AF1190004C1E3 /* SecondViewController.swift in Sources */,
 				CA884C19244AD9B20004C1E3 /* TabBarController.swift in Sources */,
@@ -912,6 +927,7 @@
 				CA884C29244B1C6E0004C1E3 /* ThirdCoordinator.swift in Sources */,
 				CAA29F2F245EE1A400BF5249 /* Movie+Genre.swift in Sources */,
 				CA98BC12245171BA007A4828 /* URL+Additions.swift in Sources */,
+				CA0AEB832466181300E8A703 /* UIActivityIndicatorView+Additions.swift in Sources */,
 				CA884C1D244AF1CB0004C1E3 /* MovieCoordinator.swift in Sources */,
 				CAAA37FF2448E38500A8170A /* Bool+Additions.swift in Sources */,
 				CAC11219244FA65800B5E8AE /* EmptyStateView.swift in Sources */,

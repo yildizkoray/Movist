@@ -8,6 +8,30 @@
 
 import UIKit
 
+public struct Duration {
+    static let `default` = 0.25
+}
+
+public extension UIView {
+    
+    func setHidden(_ isHidden: Bool, animated: Bool, completion: Callback<Bool>? = nil) {
+        guard self.isHidden != isHidden else { return }
+        
+        if animated {
+            UIView.transition(
+                with: self,
+                duration: Duration.default,
+                options: .transitionCrossDissolve,
+                animations: { self.isHidden = isHidden },
+                completion: completion)
+        }
+        else {
+            self.isHidden = isHidden
+            completion?(true)
+        }
+    }
+}
+
 // UIView - @IBInspectable
 
 public extension UIView {

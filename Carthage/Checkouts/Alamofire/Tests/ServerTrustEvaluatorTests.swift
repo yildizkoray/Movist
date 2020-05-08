@@ -26,7 +26,6 @@ import Alamofire
 import Foundation
 import XCTest
 
-#if !SWIFT_PACKAGE
 private struct TestCertificates {
     // Root Certificates
     static let rootCA = TestCertificates.certificate(filename: "alamofire-root-ca")
@@ -1412,4 +1411,3 @@ class ServerTrustPolicyCertificatesInBundleTestCase: ServerTrustPolicyTestCase {
         #endif
     }
 }
-#endif

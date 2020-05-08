@@ -34,8 +34,20 @@ public final class MovieViewController: UIViewController, ViewController {
         
         viewModel.start().done { [weak self] display in
             self?.display = display
-        }.ensure {
-            self.tableView.isHidden = false
+        }
+        .ensure { [weak self] in
+            self?.tableView.isHidden = false
+        }
+        .cauterize()
+    }
+    
+    @objc private func refresh() {
+        
+        viewModel.start().done { [weak self] display in
+            self?.display = display
+        }
+        .ensure { [weak self] in
+            self?.tableView.endRefreshing()
         }
         .cauterize()
     }
@@ -52,6 +64,7 @@ public final class MovieViewController: UIViewController, ViewController {
     
     private func prepareTableView() {
         tableView.isHidden = true
+        tableView.addRefresher(color: .white, selector: #selector(refresh))
         tableView.registerCells(for: MovieTableViewCell.self)
     }
 }

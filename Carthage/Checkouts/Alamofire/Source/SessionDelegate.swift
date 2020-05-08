@@ -66,7 +66,7 @@ protocol SessionStateProvider: AnyObject {
 
     func request(for task: URLSessionTask) -> Request?
     func didGatherMetricsForTask(_ task: URLSessionTask)
-    func didCompleteTask(_ task: URLSessionTask, completion: @escaping () -> Void)
+    func didCompleteTask(_ task: URLSessionTask)
     func credential(for task: URLSessionTask, in protectionSpace: URLProtectionSpace) -> URLCredential?
     func cancelRequestsForSessionInvalidation(with error: Error?)
 }
@@ -212,11 +212,9 @@ extension SessionDelegate: URLSessionTaskDelegate {
     open func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         eventMonitor?.urlSession(session, task: task, didCompleteWithError: error)
 
-        let request = stateProvider?.request(for: task)
+        stateProvider?.request(for: task)?.didCompleteTask(task, with: error.map { $0.asAFError(or: .sessionTaskFailed(error: $0)) })
 
-        stateProvider?.didCompleteTask(task) {
-            request?.didCompleteTask(task, with: error.map { $0.asAFError(or: .sessionTaskFailed(error: $0)) })
-        }
+        stateProvider?.didCompleteTask(task)
     }
 
     @available(macOS 10.13, iOS 11.0, tvOS 11.0, watchOS 4.0, *)

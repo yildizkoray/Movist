@@ -23,3 +23,20 @@ public extension UITableView {
         return dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! C
     }
 }
+
+// MARK: - Refresh Control
+
+public extension UIScrollView {
+    
+    func addRefresher(color: UIColor = .lightGray, selector: Selector) {
+        
+        let refresher = UIRefreshControl()
+        refresher.tintColor = color
+        refresher.addTarget(nil, action: selector, for: .valueChanged)
+        refreshControl = refresher
+    }
+    
+    func endRefreshing() {
+        refreshControl?.endRefreshing()
+    }
+}

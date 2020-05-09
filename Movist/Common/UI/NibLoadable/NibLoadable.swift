@@ -22,14 +22,7 @@ public extension NibLoadable where Self: UIView {
             fatalError("Error loading \(self) from nib")
         }
         
-        addSubview(view)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            view.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            view.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            view.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            view.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
-        ])
+        addSubViewAndConstraintToSafeArea(view)
     }
     
     func setupFromNibWithoutSafeArea() {
@@ -38,13 +31,6 @@ public extension NibLoadable where Self: UIView {
             fatalError("Error loading \(self) from nib")
         }
         
-        addSubview(view)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            view.leadingAnchor.constraint(equalTo: leadingAnchor),
-            view.trailingAnchor.constraint(equalTo: trailingAnchor),
-            view.topAnchor.constraint(equalTo: topAnchor),
-            view.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
+        addSubViewAndConstraintToWithoutSafeArea(view)
     }
 }

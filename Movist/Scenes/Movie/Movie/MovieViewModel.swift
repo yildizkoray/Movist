@@ -17,7 +17,7 @@ public final class MovieViewModel {
         self.api = api
     }
     
-    public func start() -> Promise<[MoviePopularDisplay]>{
+    public func start() -> Promise<[MovieDisplay]>{
         return when(fulfilled: popular(), toprated(), upcoming()).compactMap {
             popular, toprated, upcoming in
             return [popular, toprated, upcoming]
@@ -29,13 +29,13 @@ public final class MovieViewModel {
         return popular.map(MoviePopularDisplay.init)
     }
     
-    private func toprated() -> Promise<MoviePopularDisplay> {
+    private func toprated() -> Promise<MovieTopRatedDisplay> {
         let popular: Promise<Popular> = RestAPI.shared.execute(with: MovieAPI.toprated)
-        return popular.map(MoviePopularDisplay.init)
+        return popular.map(MovieTopRatedDisplay.init)
     }
     
-    private func upcoming() -> Promise<MoviePopularDisplay> {
+    private func upcoming() -> Promise<MovieUpComingDisplay> {
         let popular: Promise<Popular> = RestAPI.shared.execute(with: MovieAPI.upcoming)
-        return popular.map(MoviePopularDisplay.init)
+        return popular.map(MovieUpComingDisplay.init)
     }
 }

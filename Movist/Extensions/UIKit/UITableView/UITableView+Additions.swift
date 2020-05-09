@@ -22,6 +22,16 @@ public extension UITableView {
         let identifier = String(describing: C.self)
         return dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! C
     }
+    
+    func registerSectionHeaderFooters(for types: UITableViewHeaderFooterView.Type...) {
+        for type in types {
+            register(type.nib, forHeaderFooterViewReuseIdentifier: String(describing: type))
+        }
+    }
+    
+    func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView>() -> T {
+        return dequeueReusableHeaderFooterView(withIdentifier: String(describing: T.self)) as! T
+    }
 }
 
 // MARK: - Refresh Control

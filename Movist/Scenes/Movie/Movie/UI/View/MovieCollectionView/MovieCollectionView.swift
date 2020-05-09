@@ -8,13 +8,25 @@
 
 import UIKit
 
+private struct Constants {
+    static let emptyStateTitle = "Listelenecek film bulunamadı!"
+}
+
+public protocol MovieCollectionViewDelegate: class {
+    
+    func movieColletionView(_ movieCollectionView: MovieCollectionView, didSelectItemAt at: Int)
+}
+
 public final class MovieCollectionView: UIView, NibLoadable {
     
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var collectionViewLayout: UICollectionViewFlowLayout!
     
+    public weak var delegate: MovieCollectionViewDelegate?
+    
     public var display: [MovieItemDisplay] = .empty() {
         didSet {
+            configureEmptyState()
             collectionView.reloadData()
         }
     }
@@ -60,6 +72,20 @@ extension MovieCollectionView: UICollectionViewDataSource {
 extension MovieCollectionView: UICollectionViewDelegate {
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Koray Yıldız")
+        
+        delegate?.movieColletionView(self, didSelectItemAt: indexPath.row)
+    }
+}
+
+extension MovieCollectionView {
+    
+    func configureEmptyState() {
+        
+        if display.isNotEmpty {
+            collectionView.hideEmptyState(animated: true)
+        }
+        else {
+            collectionView.showEmptyState(with: .init(title: Constants.emptyStateTitle))
+        }
     }
 }

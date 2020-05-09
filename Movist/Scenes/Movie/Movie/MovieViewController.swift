@@ -21,7 +21,7 @@ public final class MovieViewController: UIViewController, ViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
-    private var display: [MoviePopularDisplay] = .empty() { // TODO: - Change MoviePopularDisplay, make generic
+    private var display: [MovieDisplay] = .empty() { // TODO: - Change MoviePopularDisplay, make generic
         didSet {
             tableView.reloadData()
         }
@@ -68,6 +68,7 @@ public final class MovieViewController: UIViewController, ViewController {
         tableView.setHidden(true, animated: false)
         tableView.addRefresher(color: .white, selector: #selector(refresh))
         tableView.registerCells(for: MovieTableViewCell.self)
+        tableView.registerSectionHeaderFooters(for: MovieSectionHeaderView.self)
     }
 }
 
@@ -75,13 +76,42 @@ public final class MovieViewController: UIViewController, ViewController {
 
 extension MovieViewController: UITableViewDataSource {
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return display.count
+    }
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MovieTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.configure(movieDisplay: display[indexPath.row].movies)
+        cell.movieCollectionView.delegate = self
+        cell.configure(display: display[indexPath.section].movies)
         return cell
     }
 }
+
+// MARK: - UITableViewDataSource
+
+extension MovieViewController: UITableViewDelegate {
+    
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header: MovieSectionHeaderView = tableView.dequeueReusableHeaderFooterView()
+        header.configure(with: display[section].title)
+        return header
+    }
+    
+//    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 44
+//    }
+}
+
+extension MovieViewController: MovieCollectionViewDelegate {
+    
+    public func movieColletionView(_ movieCollectionView: MovieCollectionView, didSelectItemAt at: Int) {
+        print(movieCollectionView.display[at].content.title)
+    }
+}
+
+

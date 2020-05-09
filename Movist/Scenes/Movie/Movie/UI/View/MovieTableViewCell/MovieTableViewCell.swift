@@ -16,7 +16,7 @@ public final class MovieTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    public func configure(movieDisplay: [MovieItemDisplay]) {
-        movieCollectionView.display = movieDisplay
+    public func configure(display: [MovieItemDisplay]) {
+        movieCollectionView.display = display
     }
 }

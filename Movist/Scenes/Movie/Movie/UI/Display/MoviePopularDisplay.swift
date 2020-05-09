@@ -6,9 +6,24 @@
 //  Copyright © 2020 Koray Yildiz. All rights reserved.
 //
 
-public struct MoviePopularDisplay {
+public enum Type {
+    case popular
+    case toprated
+    case upcoming
+}
+
+public protocol MovieDisplay {
     
-    let movies: [MovieItemDisplay]
+    var movies: [MovieItemDisplay] { get set }
+    var title: String { get set }
+    var type: Type { get set }
+}
+
+public struct MoviePopularDisplay: MovieDisplay {
+    
+    public var movies: [MovieItemDisplay]
+    public var title: String = "Popular"
+    public var type: Type = .popular
     
     public init(items: Popular) {
         movies = items.movies.map(MovieItemDisplay.init)
@@ -21,9 +36,11 @@ public struct MoviePopularDisplay {
     public static let empty = MoviePopularDisplay()
 }
 
-public struct MovieUpComingDisplay {
+public struct MovieUpComingDisplay: MovieDisplay {
     
-    let movies: [MovieItemDisplay]
+    public var movies: [MovieItemDisplay]
+    public var title: String = "UpComing"
+    public var type: Type = .upcoming
     
     public init(items: Popular) {
         movies = items.movies.map(MovieItemDisplay.init)
@@ -36,9 +53,11 @@ public struct MovieUpComingDisplay {
     public static let empty = MovieUpComingDisplay()
 }
 
-public struct MovieTopDisplay {
+public struct MovieTopRatedDisplay: MovieDisplay {
     
-    let movies: [MovieItemDisplay]
+    public var movies: [MovieItemDisplay]
+    public var title: String = "TopRated"
+    public var type: Type = .toprated
     
     public init(items: Popular) {
         movies = items.movies.map(MovieItemDisplay.init)
@@ -48,5 +67,5 @@ public struct MovieTopDisplay {
         movies = .empty()
     }
     
-    public static let empty = MovieTopDisplay()
+    public static let empty = MovieTopRatedDisplay()
 }

@@ -30,12 +30,12 @@ public final class MovieViewModel {
     }
     
     private func toprated() -> Promise<MovieTopRatedDisplay> {
-        let popular: Promise<Popular> = RestAPI.shared.execute(with: MovieAPI.toprated)
+        let popular: Promise<TopRated> = RestAPI.shared.execute(with: MovieAPI.toprated)
         return popular.map(MovieTopRatedDisplay.init)
     }
     
     private func upcoming() -> Promise<MovieUpComingDisplay> {
-        let popular: Promise<Popular> = RestAPI.shared.execute(with: MovieAPI.upcoming)
+        let popular: Promise<UpComing> = RestAPI.shared.execute(with: MovieAPI.upcoming)
         return popular.map(MovieUpComingDisplay.init)
     }
 }

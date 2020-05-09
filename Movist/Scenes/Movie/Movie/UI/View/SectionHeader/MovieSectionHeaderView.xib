@@ -33,6 +33,9 @@
                             <state key="normal" title="Button">
                                 <color key="titleColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="clickedSeeAllButton:" destination="-1" eventType="touchUpInside" id="riz-Pw-uuu"/>
+                            </connections>
                         </button>
                     </subviews>
                     <edgeInsets key="layoutMargins" top="4" left="10" bottom="4" right="10"/>
@@ -48,7 +51,7 @@
             <connections>
                 <outlet property="type" destination="jWF-m3-AlT" id="bqI-Kd-djb"/>
             </connections>
-            <point key="canvasLocation" x="378" y="-18"/>
+            <point key="canvasLocation" x="-43" y="-60"/>
         </view>
     </objects>
 </document>

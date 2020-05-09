@@ -99,11 +99,14 @@ extension MovieViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header: MovieSectionHeaderView = tableView.dequeueReusableHeaderFooterView()
         header.configure(with: display[section].title)
+        header.clickedSeeAll = {
+            print("dsadas")
+        }
         return header
     }
     
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 44
+        return 50
     }
 }
 

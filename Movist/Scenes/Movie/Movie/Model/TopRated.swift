@@ -1,14 +1,14 @@
 //
-//  MoviePopular.swift
+//  TopRated.swift
 //  Movist
 //
-//  Created by Yildiz, Koray(AWF) on 3.05.2020.
+//  Created by Yildiz, Koray(AWF) on 9.05.2020.
 //  Copyright © 2020 Koray Yildiz. All rights reserved.
 //
 
 import ObjectMapper
 
-public struct Popular: ImmutableMappable {
+public struct TopRated: ImmutableMappable {
     
     let movies: [Movie]
     let page: Int?

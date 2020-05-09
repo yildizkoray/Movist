@@ -10,9 +10,14 @@ import UIKit
 
 public final class MovieSectionHeaderView: UITableViewHeaderFooterView {
     
+    var clickedSeeAll: VoidCallback? = nil
+    
     @IBOutlet private weak var type: UILabel!
     
     public func configure(with type: String) {
         self.type.text = type
+    }
+    @IBAction func clickedSeeAllButton(_ sender: UIButton) {
+        clickedSeeAll?()
     }
 }

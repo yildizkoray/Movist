@@ -92,7 +92,7 @@ extension MovieViewController: UITableViewDataSource {
     }
 }
 
-// MARK: - UITableViewDataSource
+// MARK: - UITableViewDelegate
 
 extension MovieViewController: UITableViewDelegate {
     
@@ -106,6 +106,8 @@ extension MovieViewController: UITableViewDelegate {
 //        return 44
 //    }
 }
+
+// MARK: - MovieCollectionViewDelegate
 
 extension MovieViewController: MovieCollectionViewDelegate {
     

@@ -296,10 +296,10 @@
 			isa = PBXGroup;
 			children = (
 				CADD09702466DD6A00651E18 /* SectionHeader */,
-				CA097A33245CD66600EB9889 /* MovieView */,
-				CA097A2E245CCC1F00EB9889 /* MovieCollectionViewCell */,
-				CA37BF12245CC84D0015D105 /* MovieCollectionView */,
 				CA37BF11245CC7FC0015D105 /* MovieTableViewCell */,
+				CA37BF12245CC84D0015D105 /* MovieCollectionView */,
+				CA097A2E245CCC1F00EB9889 /* MovieCollectionViewCell */,
+				CA097A33245CD66600EB9889 /* MovieView */,
 			);
 			path = View;
 			sourceTree = "<group>";

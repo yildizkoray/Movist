@@ -94,7 +94,7 @@
 		CAF306A8245F514100378716 /* Popular.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF306A7245F514100378716 /* Popular.swift */; };
 		CAF964422460C4FB00471285 /* ConfigReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF964412460C4FB00471285 /* ConfigReader.swift */; };
 		CAF97A072451FE1000D762B8 /* UIView+EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF97A062451FE1000D762B8 /* UIView+EmptyState.swift */; };
-		CAFC2C37245F66A6005AB758 /* MoviePopularDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFC2C36245F66A6005AB758 /* MoviePopularDisplay.swift */; };
+		CAFC2C37245F66A6005AB758 /* MovieDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFC2C36245F66A6005AB758 /* MovieDisplay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -187,7 +187,7 @@
 		CAF306A7245F514100378716 /* Popular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popular.swift; sourceTree = "<group>"; };
 		CAF964412460C4FB00471285 /* ConfigReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigReader.swift; sourceTree = "<group>"; };
 		CAF97A062451FE1000D762B8 /* UIView+EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EmptyState.swift"; sourceTree = "<group>"; };
-		CAFC2C36245F66A6005AB758 /* MoviePopularDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePopularDisplay.swift; sourceTree = "<group>"; };
+		CAFC2C36245F66A6005AB758 /* MovieDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDisplay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -438,7 +438,7 @@
 			isa = PBXGroup;
 			children = (
 				CAA29F26245ED9C400BF5249 /* MovieItemDisplay.swift */,
-				CAFC2C36245F66A6005AB758 /* MoviePopularDisplay.swift */,
+				CAFC2C36245F66A6005AB758 /* MovieDisplay.swift */,
 			);
 			path = Display;
 			sourceTree = "<group>";
@@ -925,7 +925,7 @@
 				CA884C25244AFD2A0004C1E3 /* SecondCoordinator.swift in Sources */,
 				CAAA38072448EFA400A8170A /* UIResponder+Additions.swift in Sources */,
 				CA692E922466B16F00A0E3ED /* Collection+Additions.swift in Sources */,
-				CAFC2C37245F66A6005AB758 /* MoviePopularDisplay.swift in Sources */,
+				CAFC2C37245F66A6005AB758 /* MovieDisplay.swift in Sources */,
 				CAC11216244FA28F00B5E8AE /* NibLoadable.swift in Sources */,
 				CAAA37F72448E16100A8170A /* Bundle+Additions.swift in Sources */,
 				CA9D5615244A4A8F0055D942 /* ApplicationCoordinator.swift in Sources */,

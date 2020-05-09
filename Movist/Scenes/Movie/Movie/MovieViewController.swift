@@ -102,9 +102,9 @@ extension MovieViewController: UITableViewDelegate {
         return header
     }
     
-//    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 44
-//    }
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
+    }
 }
 
 // MARK: - MovieCollectionViewDelegate

@@ -54,6 +54,7 @@ public final class MovieViewController: UIViewController, ViewController {
     }
     
     private func prepareUI() {
+        
         view.startLoadingIndicatorView()
         view.backgroundColor = UIColor(red: 29, green: 29, blue: 39)
         prepareNavigation()
@@ -65,7 +66,9 @@ public final class MovieViewController: UIViewController, ViewController {
     }
     
     private func prepareTableView() {
+        
         tableView.setHidden(true, animated: false)
+        tableView.showsVerticalScrollIndicator = false
         tableView.addRefresher(color: .white, selector: #selector(refresh))
         tableView.registerCells(for: MovieTableViewCell.self)
         tableView.registerSectionHeaderFooters(for: MovieSectionHeaderView.self)
@@ -85,6 +88,7 @@ extension MovieViewController: UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell: MovieTableViewCell = tableView.dequeueReusableCell(for: indexPath)
         cell.movieCollectionView.delegate = self
         cell.configure(display: display[indexPath.section].movies)
@@ -97,6 +101,7 @@ extension MovieViewController: UITableViewDataSource {
 extension MovieViewController: UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
         let header: MovieSectionHeaderView = tableView.dequeueReusableHeaderFooterView()
         header.configure(with: display[section].title)
         header.clickedSeeAll = {

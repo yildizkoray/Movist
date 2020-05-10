@@ -47,8 +47,10 @@ public final class MovieCollectionView: UIView, NibLoadable {
     }
     
     private func prepareCollectionView() {
+        
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.registerCells(for: MovieCollectionViewCell.self)
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: .zero, right: 10)
     }
 }
 
@@ -61,6 +63,7 @@ extension MovieCollectionView: UICollectionViewDataSource {
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell: MovieCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.configure(display: display[indexPath.row])
         return cell

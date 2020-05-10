@@ -6,7 +6,7 @@
 //  Copyright © 2020 Koray Yildiz. All rights reserved.
 //
 
-public enum Type {
+public enum MovieType {
     case popular
     case toprated
     case upcoming
@@ -16,7 +16,7 @@ public protocol MovieDisplay {
     
     var movies: [MovieItemDisplay] { get }
     var title: String { get }
-    var type: Type { get }
+    var type: MovieType { get }
 }
 
 // MARK: - MoviePopularDisplay
@@ -25,7 +25,7 @@ public struct MoviePopularDisplay: MovieDisplay {
     
     public var movies: [MovieItemDisplay]
     public var title: String = "Popular"
-    public var type: Type = .popular
+    public var type: MovieType = .popular
     
     public init(items: Popular) {
         movies = items.movies.map(MovieItemDisplay.init)
@@ -44,7 +44,7 @@ public struct MovieUpComingDisplay: MovieDisplay {
     
     public var movies: [MovieItemDisplay]
     public var title: String = "UpComing"
-    public var type: Type = .upcoming
+    public var type: MovieType = .upcoming
     
     public init(items: UpComing) {
         movies = items.movies.map(MovieItemDisplay.init)
@@ -63,7 +63,7 @@ public struct MovieTopRatedDisplay: MovieDisplay {
     
     public var movies: [MovieItemDisplay]
     public var title: String = "TopRated"
-    public var type: Type = .toprated
+    public var type: MovieType = .toprated
     
     public init(items: TopRated) {
         movies = items.movies.map(MovieItemDisplay.init)

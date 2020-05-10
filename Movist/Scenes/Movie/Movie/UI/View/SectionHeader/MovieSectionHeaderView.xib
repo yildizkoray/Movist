@@ -18,19 +18,19 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="131" translatesAutoresizingMaskIntoConstraints="NO" id="PuE-ld-NRP">
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PuE-ld-NRP">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWF-m3-AlT">
-                            <rect key="frame" x="10" y="48" width="197" height="35"/>
-                            <fontDescription key="fontDescription" name="BahijTheSansArabicBold" family="Bahij TheSansArabic" pointSize="40"/>
+                            <rect key="frame" x="10" y="48" width="321" height="35"/>
+                            <fontDescription key="fontDescription" name="BahijTheSansArabicBold" family="Bahij TheSansArabic" pointSize="28"/>
                             <color key="textColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba7-qS-xfa">
-                            <rect key="frame" x="338" y="48" width="66" height="35"/>
-                            <fontDescription key="fontDescription" name="BahijTheSansArabicBold" family="Bahij TheSansArabic" pointSize="22"/>
-                            <state key="normal" title="Button">
+                            <rect key="frame" x="331" y="48" width="73" height="35"/>
+                            <fontDescription key="fontDescription" name="BahijTheSansArabicBold" family="Bahij TheSansArabic" pointSize="20"/>
+                            <state key="normal" title="See All &gt;">
                                 <color key="titleColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>

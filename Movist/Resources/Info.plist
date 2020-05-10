@@ -4,8 +4,14 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>BahijTheSansArabic-Bold.ttf</string>
-		<string>BahijTheSansArabic-ExtraLight.ttf</string>
+		<string>Bahij_TheSansArabic-Black.ttf</string>
+		<string>Bahij_TheSansArabic-Bold.ttf</string>
+		<string>Bahij_TheSansArabic-ExtraBold.ttf</string>
+		<string>Bahij_TheSansArabic-ExtraLight.ttf</string>
+		<string>Bahij_TheSansArabic-Light.ttf</string>
+		<string>Bahij_TheSansArabic-Plain.ttf</string>
+		<string>Bahij_TheSansArabic-SemiBold.ttf</string>
+		<string>Bahij_TheSansArabic-SemiLight.ttf</string>
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>

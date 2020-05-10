@@ -103,10 +103,22 @@ extension MovieViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let header: MovieSectionHeaderView = tableView.dequeueReusableHeaderFooterView()
-        header.configure(with: display[section].title)
-        header.clickedSeeAll = {
-            print("dsadas")
+        header.configure(with: display[section].header)
+        
+        header.didClickedSeeAll = { [unowned self] type in
+            
+            switch type {
+            case .popular:
+                print("Clicked Popular")
+                
+            case .toprated:
+                print("Clicked TopRated")
+                
+            case .upcoming:
+                print("Clicked UpComing")
+            }
         }
+        
         return header
     }
 }

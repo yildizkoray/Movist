@@ -15,8 +15,7 @@ public enum MovieType {
 public protocol MovieDisplay {
     
     var movies: [MovieItemDisplay] { get }
-    var title: String { get }
-    var type: MovieType { get }
+    var header: MovieHeaderDisplay { get }
 }
 
 // MARK: - MoviePopularDisplay
@@ -24,15 +23,16 @@ public protocol MovieDisplay {
 public struct MoviePopularDisplay: MovieDisplay {
     
     public var movies: [MovieItemDisplay]
-    public var title: String = "Popular"
-    public var type: MovieType = .popular
+    public var header: MovieHeaderDisplay
     
     public init(items: Popular) {
         movies = items.movies.map(MovieItemDisplay.init)
+        header = MovieHeaderDisplay(title: "Popular", type: .popular)
     }
     
     private init() {
         movies = .empty()
+        header = .empty
     }
     
     public static let empty = MoviePopularDisplay()
@@ -43,15 +43,16 @@ public struct MoviePopularDisplay: MovieDisplay {
 public struct MovieUpComingDisplay: MovieDisplay {
     
     public var movies: [MovieItemDisplay]
-    public var title: String = "UpComing"
-    public var type: MovieType = .upcoming
+    public var header: MovieHeaderDisplay
     
     public init(items: UpComing) {
         movies = items.movies.map(MovieItemDisplay.init)
+        header = MovieHeaderDisplay(title: "UpComing", type: .upcoming)
     }
     
     private init() {
         movies = .empty()
+        header = .empty
     }
     
     public static let empty = MovieUpComingDisplay()
@@ -62,15 +63,16 @@ public struct MovieUpComingDisplay: MovieDisplay {
 public struct MovieTopRatedDisplay: MovieDisplay {
     
     public var movies: [MovieItemDisplay]
-    public var title: String = "TopRated"
-    public var type: MovieType = .toprated
+    public var header: MovieHeaderDisplay = .empty
     
     public init(items: TopRated) {
         movies = items.movies.map(MovieItemDisplay.init)
+        header = MovieHeaderDisplay(title: "TopRated", type: .toprated)
     }
     
     private init() {
         movies = .empty()
+        header = .empty
     }
     
     public static let empty = MovieTopRatedDisplay()

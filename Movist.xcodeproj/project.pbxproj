@@ -16,6 +16,15 @@
 		CA0AEB832466181300E8A703 /* UIActivityIndicatorView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0AEB822466181300E8A703 /* UIActivityIndicatorView+Additions.swift */; };
 		CA0AEB852466193E00E8A703 /* UIView+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0AEB842466193E00E8A703 /* UIView+ActivityIndicator.swift */; };
 		CA11932824490EA100625FB5 /* UIButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA11932724490EA100625FB5 /* UIButton+Additions.swift */; };
+		CA127ADC246848210079C42F /* MovieHeaderDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127ADB246848210079C42F /* MovieHeaderDisplay.swift */; };
+		CA127AE724684F8B0079C42F /* Bahij_TheSansArabic-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA127ADF24684F890079C42F /* Bahij_TheSansArabic-Black.ttf */; };
+		CA127AE824684F8B0079C42F /* Bahij_TheSansArabic-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA127AE024684F890079C42F /* Bahij_TheSansArabic-Light.ttf */; };
+		CA127AE924684F8B0079C42F /* Bahij_TheSansArabic-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA127AE124684F890079C42F /* Bahij_TheSansArabic-ExtraLight.ttf */; };
+		CA127AEA24684F8B0079C42F /* Bahij_TheSansArabic-Plain.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA127AE224684F8A0079C42F /* Bahij_TheSansArabic-Plain.ttf */; };
+		CA127AEB24684F8B0079C42F /* Bahij_TheSansArabic-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA127AE324684F8A0079C42F /* Bahij_TheSansArabic-ExtraBold.ttf */; };
+		CA127AEC24684F8B0079C42F /* Bahij_TheSansArabic-SemiLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA127AE424684F8A0079C42F /* Bahij_TheSansArabic-SemiLight.ttf */; };
+		CA127AED24684F8B0079C42F /* Bahij_TheSansArabic-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA127AE524684F8A0079C42F /* Bahij_TheSansArabic-SemiBold.ttf */; };
+		CA127AEE24684F8B0079C42F /* Bahij_TheSansArabic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA127AE624684F8B0079C42F /* Bahij_TheSansArabic-Bold.ttf */; };
 		CA1C9D37246218A0003AEABA /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C9D36246218A0003AEABA /* Vibration.swift */; };
 		CA1C9D3D2462248A003AEABA /* MovieAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C9D3C2462248A003AEABA /* MovieAPI.swift */; };
 		CA26E997244F7282001D01C9 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA26E996244F7282001D01C9 /* PromiseKit.framework */; };
@@ -23,8 +32,6 @@
 		CA37BF10245CC7C40015D105 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA37BF0E245CC7C40015D105 /* MovieTableViewCell.xib */; };
 		CA632988245A093300379198 /* UICollectionView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA632987245A093300379198 /* UICollectionView+Additions.swift */; };
 		CA692E922466B16F00A0E3ED /* Collection+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA692E912466B16F00A0E3ED /* Collection+Additions.swift */; };
-		CA6C266E245E26D500B243EC /* BahijTheSansArabic-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA6C266D245E26D500B243EC /* BahijTheSansArabic-ExtraLight.ttf */; };
-		CA6C2670245E26DD00B243EC /* BahijTheSansArabic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA6C266F245E26DD00B243EC /* BahijTheSansArabic-Bold.ttf */; };
 		CA7711CF2450F29200B25AEE /* UILabel+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7711CE2450F29200B25AEE /* UILabel+Additions.swift */; };
 		CA7711D22450F3CB00B25AEE /* UIImageView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7711D12450F3CB00B25AEE /* UIImageView+Additions.swift */; };
 		CA81A415244CF7CF0016A303 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA81A414244CF7CF0016A303 /* Alamofire.framework */; };
@@ -109,6 +116,15 @@
 		CA0AEB822466181300E8A703 /* UIActivityIndicatorView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+Additions.swift"; sourceTree = "<group>"; };
 		CA0AEB842466193E00E8A703 /* UIView+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ActivityIndicator.swift"; sourceTree = "<group>"; };
 		CA11932724490EA100625FB5 /* UIButton+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Additions.swift"; sourceTree = "<group>"; };
+		CA127ADB246848210079C42F /* MovieHeaderDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieHeaderDisplay.swift; sourceTree = "<group>"; };
+		CA127ADF24684F890079C42F /* Bahij_TheSansArabic-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij_TheSansArabic-Black.ttf"; sourceTree = "<group>"; };
+		CA127AE024684F890079C42F /* Bahij_TheSansArabic-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij_TheSansArabic-Light.ttf"; sourceTree = "<group>"; };
+		CA127AE124684F890079C42F /* Bahij_TheSansArabic-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij_TheSansArabic-ExtraLight.ttf"; sourceTree = "<group>"; };
+		CA127AE224684F8A0079C42F /* Bahij_TheSansArabic-Plain.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij_TheSansArabic-Plain.ttf"; sourceTree = "<group>"; };
+		CA127AE324684F8A0079C42F /* Bahij_TheSansArabic-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij_TheSansArabic-ExtraBold.ttf"; sourceTree = "<group>"; };
+		CA127AE424684F8A0079C42F /* Bahij_TheSansArabic-SemiLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij_TheSansArabic-SemiLight.ttf"; sourceTree = "<group>"; };
+		CA127AE524684F8A0079C42F /* Bahij_TheSansArabic-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij_TheSansArabic-SemiBold.ttf"; sourceTree = "<group>"; };
+		CA127AE624684F8B0079C42F /* Bahij_TheSansArabic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij_TheSansArabic-Bold.ttf"; sourceTree = "<group>"; };
 		CA1C9D36246218A0003AEABA /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
 		CA1C9D3C2462248A003AEABA /* MovieAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPI.swift; sourceTree = "<group>"; };
 		CA26E996244F7282001D01C9 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
@@ -116,8 +132,6 @@
 		CA37BF0E245CC7C40015D105 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		CA632987245A093300379198 /* UICollectionView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Additions.swift"; sourceTree = "<group>"; };
 		CA692E912466B16F00A0E3ED /* Collection+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Additions.swift"; sourceTree = "<group>"; };
-		CA6C266D245E26D500B243EC /* BahijTheSansArabic-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BahijTheSansArabic-ExtraLight.ttf"; sourceTree = "<group>"; };
-		CA6C266F245E26DD00B243EC /* BahijTheSansArabic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BahijTheSansArabic-Bold.ttf"; sourceTree = "<group>"; };
 		CA7711CE2450F29200B25AEE /* UILabel+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Additions.swift"; sourceTree = "<group>"; };
 		CA7711D12450F3CB00B25AEE /* UIImageView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Additions.swift"; sourceTree = "<group>"; };
 		CA81A414244CF7CF0016A303 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -319,8 +333,14 @@
 		CA6C266C245E264E00B243EC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				CA6C266F245E26DD00B243EC /* BahijTheSansArabic-Bold.ttf */,
-				CA6C266D245E26D500B243EC /* BahijTheSansArabic-ExtraLight.ttf */,
+				CA127ADF24684F890079C42F /* Bahij_TheSansArabic-Black.ttf */,
+				CA127AE624684F8B0079C42F /* Bahij_TheSansArabic-Bold.ttf */,
+				CA127AE324684F8A0079C42F /* Bahij_TheSansArabic-ExtraBold.ttf */,
+				CA127AE124684F890079C42F /* Bahij_TheSansArabic-ExtraLight.ttf */,
+				CA127AE024684F890079C42F /* Bahij_TheSansArabic-Light.ttf */,
+				CA127AE224684F8A0079C42F /* Bahij_TheSansArabic-Plain.ttf */,
+				CA127AE524684F8A0079C42F /* Bahij_TheSansArabic-SemiBold.ttf */,
+				CA127AE424684F8A0079C42F /* Bahij_TheSansArabic-SemiLight.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -443,6 +463,7 @@
 			children = (
 				CAA29F26245ED9C400BF5249 /* MovieItemDisplay.swift */,
 				CAFC2C36245F66A6005AB758 /* MovieDisplay.swift */,
+				CA127ADB246848210079C42F /* MovieHeaderDisplay.swift */,
 			);
 			path = Display;
 			sourceTree = "<group>";
@@ -826,30 +847,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA127AEB24684F8B0079C42F /* Bahij_TheSansArabic-ExtraBold.ttf in Resources */,
 				CAEB5E672458EF54001E7EFD /* Movie_NowPlaying.json in Resources */,
 				CA097A35245CD67700EB9889 /* MovieView.xib in Resources */,
 				CABFA83F2458DE7C0044784C /* TheMovieDB_Languages.json in Resources */,
+				CA127AED24684F8B0079C42F /* Bahij_TheSansArabic-SemiBold.ttf in Resources */,
+				CA127AE824684F8B0079C42F /* Bahij_TheSansArabic-Light.ttf in Resources */,
 				CABFA8402458DE7C0044784C /* TheMovieDB_Tranlations.json in Resources */,
 				CABFA83D2458DE7C0044784C /* TheMovieDB_Certificates.json in Resources */,
 				CABFA83E2458DE7C0044784C /* TheMovieDB_Countries.json in Resources */,
 				CA37BF10245CC7C40015D105 /* MovieTableViewCell.xib in Resources */,
 				CABFA8412458DE7C0044784C /* TheMovieDB_Jobs.json in Resources */,
+				CA127AE724684F8B0079C42F /* Bahij_TheSansArabic-Black.ttf in Resources */,
 				CAAA37E42448DA4E00A8170A /* LaunchScreen.storyboard in Resources */,
 				CABFA8322458DC580044784C /* Movie_Popular.json in Resources */,
 				CA884C16244AD89D0004C1E3 /* Movie.storyboard in Resources */,
 				CA88A6312466E50F00D6382A /* MovieSectionHeaderView.xib in Resources */,
+				CA127AEE24684F8B0079C42F /* Bahij_TheSansArabic-Bold.ttf in Resources */,
+				CA127AE924684F8B0079C42F /* Bahij_TheSansArabic-ExtraLight.ttf in Resources */,
+				CA127AEC24684F8B0079C42F /* Bahij_TheSansArabic-SemiLight.ttf in Resources */,
+				CA127AEA24684F8B0079C42F /* Bahij_TheSansArabic-Plain.ttf in Resources */,
 				CAC1121B244FA70F00B5E8AE /* EmptyStateView.xib in Resources */,
 				CAEB5E652458EF12001E7EFD /* Movie_UpComing.json in Resources */,
 				CAEB5E612458ED5E001E7EFD /* testImage.jpg in Resources */,
 				CABFA8422458DE7C0044784C /* TheMovieDB_Certificates_TV.json in Resources */,
-				CA6C2670245E26DD00B243EC /* BahijTheSansArabic-Bold.ttf in Resources */,
 				CAAA37E12448DA4E00A8170A /* Assets.xcassets in Resources */,
 				CABFA82F2458D6C30044784C /* Weather.json in Resources */,
 				CAEB5E632458EE9C001E7EFD /* Movie_TopRated.json in Resources */,
 				CABFA83C2458DE7C0044784C /* TheMovieDB_TimeZones.json in Resources */,
 				CABFA8442458E2580044784C /* Movie_Detail.json in Resources */,
 				CA097A2B245CC8F200EB9889 /* MovieCollectionView.xib in Resources */,
-				CA6C266E245E26D500B243EC /* BahijTheSansArabic-ExtraLight.ttf in Resources */,
 				CA097A32245CCC4A00EB9889 /* MovieCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -915,6 +942,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CADD09722466DD8100651E18 /* MovieSectionHeaderView.swift in Sources */,
+				CA127ADC246848210079C42F /* MovieHeaderDisplay.swift in Sources */,
 				CAA29F2B245EE13B00BF5249 /* Movie+ProductionCountry.swift in Sources */,
 				CAAA38012448E3D400A8170A /* Any+Additions.swift in Sources */,
 				CA884C21244AF9A40004C1E3 /* ViewController.swift in Sources */,

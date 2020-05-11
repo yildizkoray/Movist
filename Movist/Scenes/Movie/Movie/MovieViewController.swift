@@ -56,7 +56,7 @@ public final class MovieViewController: UIViewController, ViewController {
     private func prepareUI() {
         
         view.startLoadingIndicatorView()
-        view.backgroundColor = UIColor(red: 29, green: 29, blue: 39)
+        view.backgroundColor = UIColor(red: 47, green: 47, blue: 59)
         prepareNavigation()
         prepareTableView()
     }
@@ -105,7 +105,7 @@ extension MovieViewController: UITableViewDelegate {
         let header: MovieSectionHeaderView = tableView.dequeueReusableHeaderFooterView()
         header.configure(with: display[section].header)
         
-        header.didClickedSeeAll = { [unowned self] type in
+        header.didClickedSeeAll = { type in
             
             switch type {
             case .popular:
@@ -128,7 +128,7 @@ extension MovieViewController: UITableViewDelegate {
 extension MovieViewController: MovieCollectionViewDelegate {
     
     public func movieColletionView(_ movieCollectionView: MovieCollectionView, didSelectItemAt at: Int) {
-        print(movieCollectionView.display[at].content.title)
+        viewModel.coordinator.show(detatilWith: movieCollectionView.display[at].id)
     }
 }
 

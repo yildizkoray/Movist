@@ -1,5 +1,5 @@
 //
-//  ThirdViewController.swift
+//  SecondViewController.swift
 //  Movist
 //
 //  Created by Yildiz, Koray(AWF) on 18.04.2020.
@@ -8,12 +8,16 @@
 
 import UIKit
 
-public final class ThirdViewController: UIViewController, ViewController {
+public final class MovieDetailViewController: UIViewController, ViewController {
     
     public static var storyboardName: UIStoryboard.Name = .movie
     
+    public var viewModel: MovieDetailViewModel!
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Selam"
+        
+        viewModel.start().done { [weak self] movie in
+        }
     }
 }

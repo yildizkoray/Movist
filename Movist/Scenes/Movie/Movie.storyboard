@@ -7,11 +7,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Bahij_TheSansArabic-SemiBold.ttf">
-            <string>BahijTheSansArabic-SemiBold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Movie View Controller-->
         <scene sceneID="8aR-Ci-XqB">
@@ -47,30 +42,25 @@
             </objects>
             <point key="canvasLocation" x="252" y="-15"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Movie Detail View Controller-->
         <scene sceneID="Dsc-wj-6qG">
             <objects>
-                <viewController storyboardIdentifier="Second" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nPw-7Q-Wne" customClass="SecondViewController" customModule="Movist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nPw-7Q-Wne" customClass="MovieDetailViewController" customModule="Movist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aAw-Tb-l6r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZf-Ot-t2G">
-                                <rect key="frame" x="197" y="434.5" width="20" height="27"/>
-                                <fontDescription key="fontDescription" name="BahijTheSansArabic-SemiBold" family="Bahij TheSansArabic" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IJ-bX-o7K">
-                                <rect key="frame" x="184" y="176" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bxB-Pk-m3o">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="bZf-Ot-t2G" firstAttribute="centerX" secondItem="aAw-Tb-l6r" secondAttribute="centerX" id="M8S-7o-CTh"/>
-                            <constraint firstItem="bZf-Ot-t2G" firstAttribute="centerY" secondItem="aAw-Tb-l6r" secondAttribute="centerY" id="Pjt-cA-ARb"/>
+                            <constraint firstItem="bxB-Pk-m3o" firstAttribute="leading" secondItem="hVp-42-61Z" secondAttribute="leading" id="Bff-HT-xhD"/>
+                            <constraint firstItem="bxB-Pk-m3o" firstAttribute="top" secondItem="hVp-42-61Z" secondAttribute="top" id="dF6-DV-ih1"/>
+                            <constraint firstItem="hVp-42-61Z" firstAttribute="bottom" secondItem="bxB-Pk-m3o" secondAttribute="bottom" id="mHj-9G-Q8t"/>
+                            <constraint firstItem="hVp-42-61Z" firstAttribute="trailing" secondItem="bxB-Pk-m3o" secondAttribute="trailing" id="t70-ja-tTS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hVp-42-61Z"/>
                     </view>
@@ -78,21 +68,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zt7-vt-tSc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="975" y="-15"/>
-        </scene>
-        <!--Third View Controller-->
-        <scene sceneID="7KU-rz-8pq">
-            <objects>
-                <viewController storyboardIdentifier="Third" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aFC-GR-mtf" customClass="ThirdViewController" customModule="Movist" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nVT-vL-Mp4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Cn9-qV-SC5"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KNY-mR-8Ol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1717" y="-15"/>
         </scene>
     </scenes>
 </document>

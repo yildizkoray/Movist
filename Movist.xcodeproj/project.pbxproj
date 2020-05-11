@@ -27,6 +27,7 @@
 		CA127AEE24684F8B0079C42F /* Bahij_TheSansArabic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA127AE624684F8B0079C42F /* Bahij_TheSansArabic-Bold.ttf */; };
 		CA1C9D37246218A0003AEABA /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C9D36246218A0003AEABA /* Vibration.swift */; };
 		CA1C9D3D2462248A003AEABA /* MovieAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C9D3C2462248A003AEABA /* MovieAPI.swift */; };
+		CA22AB5E246A021F00EF11D4 /* API+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA22AB5D246A021F00EF11D4 /* API+Configuration.swift */; };
 		CA26E997244F7282001D01C9 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA26E996244F7282001D01C9 /* PromiseKit.framework */; };
 		CA37BF0F245CC7C40015D105 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37BF0D245CC7C40015D105 /* MovieTableViewCell.swift */; };
 		CA37BF10245CC7C40015D105 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA37BF0E245CC7C40015D105 /* MovieTableViewCell.xib */; };
@@ -127,6 +128,7 @@
 		CA127AE624684F8B0079C42F /* Bahij_TheSansArabic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij_TheSansArabic-Bold.ttf"; sourceTree = "<group>"; };
 		CA1C9D36246218A0003AEABA /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
 		CA1C9D3C2462248A003AEABA /* MovieAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPI.swift; sourceTree = "<group>"; };
+		CA22AB5D246A021F00EF11D4 /* API+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Configuration.swift"; sourceTree = "<group>"; };
 		CA26E996244F7282001D01C9 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		CA37BF0D245CC7C40015D105 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		CA37BF0E245CC7C40015D105 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
@@ -284,6 +286,13 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		CA22AB5F246A0CAE00EF11D4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		CA37BF11245CC7FC0015D105 /* MovieTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				CA6C87522469A988003362BD /* API */,
+				CA22AB5F246A0CAE00EF11D4 /* UI */,
 				CA884C24244AFD2A0004C1E3 /* MovieDetailCoordinator.swift */,
 				CA6C87532469ABA4003362BD /* MovieDetailViewModel.swift */,
 				CA884C1A244AF1190004C1E3 /* MovieDetailViewController.swift */,
@@ -676,6 +686,7 @@
 			isa = PBXGroup;
 			children = (
 				CABFA82C2458D04D0044784C /* RestAPI.swift */,
+				CA22AB5D246A021F00EF11D4 /* API+Configuration.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -988,6 +999,7 @@
 				CAAA37FF2448E38500A8170A /* Bool+Additions.swift in Sources */,
 				CAC11219244FA65800B5E8AE /* EmptyStateView.swift in Sources */,
 				CA1C9D3D2462248A003AEABA /* MovieAPI.swift in Sources */,
+				CA22AB5E246A021F00EF11D4 /* API+Configuration.swift in Sources */,
 				CA9D560E244A47B10055D942 /* UIStoryboard+Additions.swift in Sources */,
 				CA884C14244AD85A0004C1E3 /* MovieViewController.swift in Sources */,
 				CAA29F2D245EE16D00BF5249 /* Movie+ProductionCompany.swift in Sources */,
@@ -1153,7 +1165,7 @@
 				THE_MOVIE_DB_API_KEY = 2526d77d81bb50e7ae223a8f13db2a2f;
 				THE_MOVIE_DB_API_READ_ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNTI2ZDc3ZDgxYmI1MGU3YWUyMjNhOGYxM2RiMmEyZiIsInN1YiI6IjVlOTg5ZmFjZDE0NDQzMDAxMjUxNmMwYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.XO8Q3-kcNvXpMssEcWPzdL51Zn64uURYWvmKH93_eNQ";
 				THE_MOVIE_DB_API_URL = "http://api.themoviedb.org/3";
-				THE_MOVIE_DB_IMAGE_URL = "https://image.tmdb.org/t/p";
+				THE_MOVIE_DB_IMAGE_URL = "https://image.tmdb.org/t/p/";
 			};
 			name = Debug;
 		};
@@ -1179,7 +1191,7 @@
 				THE_MOVIE_DB_API_KEY = 2526d77d81bb50e7ae223a8f13db2a2f;
 				THE_MOVIE_DB_API_READ_ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNTI2ZDc3ZDgxYmI1MGU3YWUyMjNhOGYxM2RiMmEyZiIsInN1YiI6IjVlOTg5ZmFjZDE0NDQzMDAxMjUxNmMwYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.XO8Q3-kcNvXpMssEcWPzdL51Zn64uURYWvmKH93_eNQ";
 				THE_MOVIE_DB_API_URL = "https://api.themoviedb.org/3";
-				THE_MOVIE_DB_IMAGE_URL = "https://image.tmdb.org/t/p";
+				THE_MOVIE_DB_IMAGE_URL = "https://image.tmdb.org/t/p/";
 			};
 			name = Release;
 		};

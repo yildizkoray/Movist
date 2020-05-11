@@ -21,11 +21,10 @@ public struct MovieItemDisplay { // TODO: - Change `MovieItemDisplay` struct nam
     }
     
     public init(movie: Movie) {
-        let image: URL = URL(string: "https://image.tmdb.org/t/p/w500\(movie.posterImage.ifNil(.empty))")! // TODO: - Remove this URL
         self.content = VisaulContent(
             title: movie.title.ifNil(.empty),
             subtitle: movie.averageVote.ifNil(.zero).string,
-            visual: .url(image)
+            visual: .url(.poster(file: movie.posterImage.ifNil(.empty)))
         )
         self.id = movie.id.ifNil(.zero)
         self.rating = movie.averageVote.ifNil(.zero)

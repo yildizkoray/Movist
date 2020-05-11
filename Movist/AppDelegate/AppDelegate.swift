@@ -32,18 +32,18 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func prepareUISettings() {
 //        TODO: - This color should move AppColor class
-        UINavigationBar.appearance().backgroundColor = UIColor(red: 29, green: 29, blue: 39)
-        UINavigationBar.appearance().barTintColor = UIColor(red: 29, green: 29, blue: 39)
-        UIBarButtonItem.appearance().tintColor = UIColor(red: 29, green: 29, blue: 39)
+        UINavigationBar.appearance().backgroundColor = UIColor(red: 47, green: 47, blue: 59)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 47, green: 47, blue: 59)
+        UIBarButtonItem.appearance().tintColor = .white
         
         UINavigationBar.appearance().titleTextAttributes = [
             .foregroundColor: UIColor.white
         ]
         
         
-        UITabBar.appearance().backgroundColor = UIColor(red: 29, green: 29, blue: 39)
-        UITabBar.appearance().tintColor = UIColor(red: 29, green: 29, blue: 39)
-        UITabBar.appearance().barTintColor = UIColor(red: 29, green: 29, blue: 39)
+        UITabBar.appearance().backgroundColor = UIColor(red: 158, green: 158, blue: 188)
+        UITabBar.appearance().tintColor = UIColor(red: 158, green: 158, blue: 188)
+        UITabBar.appearance().barTintColor = UIColor(red: 47, green: 47, blue: 59)
         UINavigationBar.appearance().isTranslucent = false
         UITabBar.appearance().isTranslucent = false
     }

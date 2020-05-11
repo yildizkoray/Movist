@@ -13,6 +13,8 @@ public final class MovieViewModel {
     
     let api: RestAPI
     
+    public var coordinator: MovieCoordinator!
+    
     public init(with api: RestAPI = .shared) {
         self.api = api
     }

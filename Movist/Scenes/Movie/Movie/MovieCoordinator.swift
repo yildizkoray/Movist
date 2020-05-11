@@ -17,16 +17,22 @@ public final class MovieCoordinator: Coordinator {
         
         let view = createViewController()
         view.viewModel = MovieViewModel()
+        view.viewModel.coordinator = self
         
         let navigator = UINavigationController(rootViewController: view)
         
         defer { self.navigator = navigator }
         
         navigator.tabBarItem = UITabBarItem(
-            title: "tabbarTitle", image: "tab-casino".image, selectedImage: "tab-casino-selected".image
+            title: "Movie", image: "tab-movie".image, selectedImage: "tab-movie-selected".image
         )
         navigator.setViewControllers([view], animated: false)
         
         return navigator
+    }
+    
+    public func show(detatilWith id: Int) {
+        let coordinator = MovieDetailCoordinator(with: navigator)
+        coordinator.start(with: id)
     }
 }

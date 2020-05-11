@@ -11,10 +11,12 @@ import Foundation
 public struct MovieItemDisplay { // TODO: - Change `MovieItemDisplay` struct name
     
     let content: VisaulContent
+    let id: Int
     let rating: Double
     
     private init() {
         content = .empty
+        id = .zero
         rating = .zero
     }
     
@@ -25,8 +27,9 @@ public struct MovieItemDisplay { // TODO: - Change `MovieItemDisplay` struct nam
             subtitle: movie.averageVote.ifNil(.zero).string,
             visual: .url(image)
         )
-        
+        self.id = movie.id.ifNil(.zero)
         self.rating = movie.averageVote.ifNil(.zero)
+        
     }
     
     public static let empty = MovieItemDisplay()

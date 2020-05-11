@@ -27,7 +27,6 @@ public final class ApplicationCoordinator {
         var views: [UIViewController] = .empty()
         
         views.insert(MovieCoordinator().start(), at: 0)
-        views.insert(SecondCoordinator().start(), at: 1)
         
         tabController.setViewControllers(views, animated: false)
     }

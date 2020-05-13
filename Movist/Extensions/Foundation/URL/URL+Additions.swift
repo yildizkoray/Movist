@@ -21,7 +21,7 @@ public extension URL {
 
 public extension URL {
     
-    static func backdrop(for config: BackdropSize = .w300, file: String) -> URL {
+    static func backdrop(for config: BackdropSize = .w780, file: String) -> URL {
         let path: String = "\(config.rawValue)/\(file)"
         return URL(string: path, relativeTo: .TMDB_IMAGE_URL)!
     }

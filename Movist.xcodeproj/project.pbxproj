@@ -32,6 +32,9 @@
 		CA37BF0F245CC7C40015D105 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37BF0D245CC7C40015D105 /* MovieTableViewCell.swift */; };
 		CA37BF10245CC7C40015D105 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA37BF0E245CC7C40015D105 /* MovieTableViewCell.xib */; };
 		CA632988245A093300379198 /* UICollectionView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA632987245A093300379198 /* UICollectionView+Additions.swift */; };
+		CA64806E246C14EC00D16917 /* RateStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA64806D246C14EC00D16917 /* RateStarView.swift */; };
+		CA648070246C1E5900D16917 /* RateStarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA64806F246C1E5900D16917 /* RateStarView.xib */; };
+		CA648073246C2AD100D16917 /* RateStarDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA648072246C2AD100D16917 /* RateStarDisplay.swift */; };
 		CA692E922466B16F00A0E3ED /* Collection+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA692E912466B16F00A0E3ED /* Collection+Additions.swift */; };
 		CA7711CF2450F29200B25AEE /* UILabel+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7711CE2450F29200B25AEE /* UILabel+Additions.swift */; };
 		CA7711D22450F3CB00B25AEE /* UIImageView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7711D12450F3CB00B25AEE /* UIImageView+Additions.swift */; };
@@ -129,6 +132,9 @@
 		CA37BF0D245CC7C40015D105 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		CA37BF0E245CC7C40015D105 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		CA632987245A093300379198 /* UICollectionView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Additions.swift"; sourceTree = "<group>"; };
+		CA64806D246C14EC00D16917 /* RateStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateStarView.swift; sourceTree = "<group>"; };
+		CA64806F246C1E5900D16917 /* RateStarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateStarView.xib; sourceTree = "<group>"; };
+		CA648072246C2AD100D16917 /* RateStarDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateStarDisplay.swift; sourceTree = "<group>"; };
 		CA692E912466B16F00A0E3ED /* Collection+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Additions.swift"; sourceTree = "<group>"; };
 		CA7711CE2450F29200B25AEE /* UILabel+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Additions.swift"; sourceTree = "<group>"; };
 		CA7711D12450F3CB00B25AEE /* UIImageView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Additions.swift"; sourceTree = "<group>"; };
@@ -322,6 +328,16 @@
 				CA98BC0E24516DA6007A4828 /* VisualContent.swift */,
 			);
 			path = VisualContent;
+			sourceTree = "<group>";
+		};
+		CA64806C246C13E600D16917 /* RateStarView */ = {
+			isa = PBXGroup;
+			children = (
+				CA64806D246C14EC00D16917 /* RateStarView.swift */,
+				CA64806F246C1E5900D16917 /* RateStarView.xib */,
+				CA648072246C2AD100D16917 /* RateStarDisplay.swift */,
+			);
+			path = RateStarView;
 			sourceTree = "<group>";
 		};
 		CA6C266C245E264E00B243EC /* Fonts */ = {
@@ -690,6 +706,7 @@
 			children = (
 				CAC11217244FA62300B5E8AE /* EmptyState */,
 				CAC11214244FA26E00B5E8AE /* NibLoadable */,
+				CA64806C246C13E600D16917 /* RateStarView */,
 				CA6357CF2454DDAB00EE26E2 /* VisualContent */,
 			);
 			path = UI;
@@ -824,6 +841,7 @@
 			files = (
 				CA127AEB24684F8B0079C42F /* Bahij_TheSansArabic-ExtraBold.ttf in Resources */,
 				CAEB5E672458EF54001E7EFD /* Movie_NowPlaying.json in Resources */,
+				CA648070246C1E5900D16917 /* RateStarView.xib in Resources */,
 				CA097A35245CD67700EB9889 /* MovieView.xib in Resources */,
 				CABFA83F2458DE7C0044784C /* TheMovieDB_Languages.json in Resources */,
 				CA127AED24684F8B0079C42F /* Bahij_TheSansArabic-SemiBold.ttf in Resources */,
@@ -920,6 +938,7 @@
 				CA127ADC246848210079C42F /* MovieHeaderDisplay.swift in Sources */,
 				CAA29F2B245EE13B00BF5249 /* Movie+ProductionCountry.swift in Sources */,
 				CAAA38012448E3D400A8170A /* Any+Additions.swift in Sources */,
+				CA648073246C2AD100D16917 /* RateStarDisplay.swift in Sources */,
 				CA884C21244AF9A40004C1E3 /* ViewController.swift in Sources */,
 				CA0AEB852466193E00E8A703 /* UIView+ActivityIndicator.swift in Sources */,
 				CA884C19244AD9B20004C1E3 /* TabBarController.swift in Sources */,
@@ -949,6 +968,7 @@
 				CAAA380A2448F08300A8170A /* UITableView+Additions.swift in Sources */,
 				CA37BF0F245CC7C40015D105 /* MovieTableViewCell.swift in Sources */,
 				CAF964422460C4FB00471285 /* ConfigReader.swift in Sources */,
+				CA64806E246C14EC00D16917 /* RateStarView.swift in Sources */,
 				CABFA8472458E2E20044784C /* Movie.swift in Sources */,
 				CABED3C6245E2F260033D776 /* UIView+Additions.swift in Sources */,
 				CAA29F2F245EE1A400BF5249 /* Movie+Genre.swift in Sources */,

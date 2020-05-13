@@ -30,4 +30,9 @@ public final class MovieCoordinator: Coordinator {
         
         return navigator
     }
+    
+    public func show(detailWith id: Int) {
+        let coordinator = MovieDetailCoordinator(with: navigator)
+        coordinator.start(with: id)
+    }
 }

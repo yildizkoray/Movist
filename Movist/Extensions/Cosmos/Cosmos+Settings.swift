@@ -16,6 +16,8 @@ fileprivate struct Constans {
     static let emptyBorderColor = UIColor(red: 158, green: 158, blue: 188)
     static let filledColer = UIColor(red: 238, green: 196, blue: 58)
     static let filledBorderColor = UIColor(red: 238, green: 196, blue: 58)
+    static let filledImage = "filled-star".image
+    static let emptyImage = "empty-star".image
 }
 
 public extension CosmosSettings {
@@ -25,9 +27,10 @@ public extension CosmosSettings {
         settings.totalStars = Constans.totalStars
         settings.emptyColor = Constans.emptyColor
         settings.emptyBorderColor = Constans.emptyBorderColor
-        settings.filledColor = Constans.filledColer
-        settings.filledBorderColor = Constans.filledBorderColor
+        settings.filledImage = Constans.filledImage
+        settings.emptyImage = Constans.emptyImage
         settings.starSize = Constans.starSize
+        settings.updateOnTouch = false
         return settings
     }()
 }

@@ -128,7 +128,7 @@ extension MovieViewController: UITableViewDelegate {
 extension MovieViewController: MovieCollectionViewDelegate {
     
     public func movieColletionView(_ movieCollectionView: MovieCollectionView, didSelectItemAt at: Int) {
-        viewModel.coordinator.show(detatilWith: movieCollectionView.display[at].id)
+        print(movieCollectionView.display[at].content.title)
     }
 }
 

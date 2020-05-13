@@ -42,35 +42,5 @@
             </objects>
             <point key="canvasLocation" x="252" y="-15"/>
         </scene>
-        <!--Movie Detail View Controller-->
-        <scene sceneID="Dsc-wj-6qG">
-            <objects>
-                <viewController storyboardIdentifier="MovieDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nPw-7Q-Wne" customClass="MovieDetailViewController" customModule="Movist" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aAw-Tb-l6r">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bxB-Pk-m3o">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="bxB-Pk-m3o" firstAttribute="leading" secondItem="hVp-42-61Z" secondAttribute="leading" id="Bff-HT-xhD"/>
-                            <constraint firstItem="bxB-Pk-m3o" firstAttribute="top" secondItem="hVp-42-61Z" secondAttribute="top" id="dF6-DV-ih1"/>
-                            <constraint firstItem="hVp-42-61Z" firstAttribute="bottom" secondItem="bxB-Pk-m3o" secondAttribute="bottom" id="mHj-9G-Q8t"/>
-                            <constraint firstItem="hVp-42-61Z" firstAttribute="trailing" secondItem="bxB-Pk-m3o" secondAttribute="trailing" id="t70-ja-tTS"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="hVp-42-61Z"/>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="bxB-Pk-m3o" id="qAR-kj-6EH"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zt7-vt-tSc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="975" y="-15"/>
-        </scene>
     </scenes>
 </document>

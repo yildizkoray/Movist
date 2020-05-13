@@ -27,7 +27,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNI-sX-kgi" customClass="CosmosView" customModule="Cosmos">
-                            <rect key="frame" x="0.0" y="34" width="388.5" height="12"/>
+                            <rect key="frame" x="0.0" y="15" width="388.5" height="50"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
                                     <integer key="value" value="5"/>
@@ -36,12 +36,15 @@
                                     <real key="value" value="12"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
-                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="value" red="0.61960784313725492" green="0.61960784313725492" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
-                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="value" red="0.61960784313725492" green="0.61960784313725492" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="updateOnTouch" value="NO"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                    <color key="value" red="0.93333333333333335" green="0.76862745098039209" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrG-KL-WcY">

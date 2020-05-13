@@ -12,13 +12,8 @@ import Cosmos
 public final class MovieView: UIView, NibLoadable {
     
     @IBOutlet private weak var name: UILabel!
-    @IBOutlet private weak var ratingLabel: UILabel!
     @IBOutlet private weak var image: UIImageView!
-    @IBOutlet private weak var ratingView: CosmosView! {
-        didSet {
-            ratingView.settings.fillMode = .full
-        }
-    }
+    @IBOutlet private weak var rateStarView: RateStarView!
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,8 +28,7 @@ public final class MovieView: UIView, NibLoadable {
     public func configure(display: MovieItemDisplay) {
         
         name.hidableText = display.content.title
-        ratingLabel.hidableText = display.rating.string
         image.setVisual(display.content.visual)
-        ratingView.rating = display.rating / 2
+        rateStarView.configure(display: display.rateStarDisplay)
     }
 }

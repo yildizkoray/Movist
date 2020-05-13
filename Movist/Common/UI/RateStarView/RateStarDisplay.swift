@@ -11,16 +11,16 @@ import Cosmos
 
 public struct RateStarDisplay {
     
-    let rate: String
+    let rate: Double
     let settings: CosmosSettings
     
-    public init(rate: String, settings: CosmosSettings = .default) {
+    public init(rate: Double, settings: CosmosSettings = .default) {
         self.rate = rate
         self.settings = settings
     }
     
     private init() {
-        rate = .empty
+        rate = .zero
         settings = .default
     }
     

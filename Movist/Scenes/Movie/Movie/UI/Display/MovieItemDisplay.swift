@@ -12,12 +12,12 @@ public struct MovieItemDisplay { // TODO: - Change `MovieItemDisplay` struct nam
     
     let content: VisaulContent
     let id: Int
-    let rating: Double
+    let rateStarDisplay: RateStarDisplay
     
     private init() {
         content = .empty
         id = .zero
-        rating = .zero
+        rateStarDisplay = .empty
     }
     
     public init(movie: Movie) {
@@ -27,8 +27,7 @@ public struct MovieItemDisplay { // TODO: - Change `MovieItemDisplay` struct nam
             visual: .url(.poster(file: movie.posterImage.ifNil(.empty)))
         )
         self.id = movie.id.ifNil(.zero)
-        self.rating = movie.averageVote.ifNil(.zero)
-        
+        self.rateStarDisplay = RateStarDisplay(rate: movie.averageVote.ifNil(.zero), settings: .default)
     }
     
     public static let empty = MovieItemDisplay()

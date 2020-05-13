@@ -25,7 +25,8 @@ public final class RateStarView: UIView, NibLoadable {
     }
     
     public func configure(display: RateStarDisplay) {
-        rate.hidableText = display.rate
+        rate.hidableText = display.rate.string
+        stars.rating = display.rate / 2
         stars.settings = display.settings
     }
 }

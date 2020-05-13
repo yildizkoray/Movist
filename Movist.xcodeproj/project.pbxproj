@@ -35,6 +35,7 @@
 		CA64806E246C14EC00D16917 /* RateStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA64806D246C14EC00D16917 /* RateStarView.swift */; };
 		CA648070246C1E5900D16917 /* RateStarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA64806F246C1E5900D16917 /* RateStarView.xib */; };
 		CA648073246C2AD100D16917 /* RateStarDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA648072246C2AD100D16917 /* RateStarDisplay.swift */; };
+		CA648076246C39B900D16917 /* Cosmos+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA648075246C39B900D16917 /* Cosmos+Settings.swift */; };
 		CA692E922466B16F00A0E3ED /* Collection+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA692E912466B16F00A0E3ED /* Collection+Additions.swift */; };
 		CA7711CF2450F29200B25AEE /* UILabel+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7711CE2450F29200B25AEE /* UILabel+Additions.swift */; };
 		CA7711D22450F3CB00B25AEE /* UIImageView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7711D12450F3CB00B25AEE /* UIImageView+Additions.swift */; };
@@ -135,6 +136,7 @@
 		CA64806D246C14EC00D16917 /* RateStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateStarView.swift; sourceTree = "<group>"; };
 		CA64806F246C1E5900D16917 /* RateStarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateStarView.xib; sourceTree = "<group>"; };
 		CA648072246C2AD100D16917 /* RateStarDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateStarDisplay.swift; sourceTree = "<group>"; };
+		CA648075246C39B900D16917 /* Cosmos+Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cosmos+Settings.swift"; sourceTree = "<group>"; };
 		CA692E912466B16F00A0E3ED /* Collection+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Additions.swift"; sourceTree = "<group>"; };
 		CA7711CE2450F29200B25AEE /* UILabel+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Additions.swift"; sourceTree = "<group>"; };
 		CA7711D12450F3CB00B25AEE /* UIImageView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Additions.swift"; sourceTree = "<group>"; };
@@ -338,6 +340,14 @@
 				CA648072246C2AD100D16917 /* RateStarDisplay.swift */,
 			);
 			path = RateStarView;
+			sourceTree = "<group>";
+		};
+		CA648074246C399F00D16917 /* Cosmos */ = {
+			isa = PBXGroup;
+			children = (
+				CA648075246C39B900D16917 /* Cosmos+Settings.swift */,
+			);
+			path = Cosmos;
 			sourceTree = "<group>";
 		};
 		CA6C266C245E264E00B243EC /* Fonts */ = {
@@ -548,6 +558,7 @@
 			isa = PBXGroup;
 			children = (
 				CAAA38002448E3D400A8170A /* Any+Additions.swift */,
+				CA648074246C399F00D16917 /* Cosmos */,
 				CAAA37F82448E28800A8170A /* Foundation */,
 				CAA29F32245EE82B00BF5249 /* ObjectMapper */,
 				CAAA38032448EEFA00A8170A /* UIKit */,
@@ -988,6 +999,7 @@
 				CAAA37F12448DFD300A8170A /* String+Additions.swift in Sources */,
 				CAA29F31245EE22100BF5249 /* Movie+Status.swift in Sources */,
 				CA097A2D245CC90E00EB9889 /* MovieCollectionView.swift in Sources */,
+				CA648076246C39B900D16917 /* Cosmos+Settings.swift in Sources */,
 				CA097A31245CCC4A00EB9889 /* MovieCollectionViewCell.swift in Sources */,
 				CAAA37F32448E01C00A8170A /* Int+Additions.swift in Sources */,
 				CAF97A072451FE1000D762B8 /* UIView+EmptyState.swift in Sources */,

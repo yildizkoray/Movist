@@ -19,7 +19,7 @@ public class MovieDetailViewModel {
     }
     
     public func start() -> Promise<Movie> {
-        let movie: Promise<Movie> = RestAPI.shared.execute(with: MovieDetailAPI.detail(id: id))
+        let movie: Promise<Movie> = RestAPI.shared.execute(with: GetMovieDetailTask(id: id))
         return movie
     }
 }

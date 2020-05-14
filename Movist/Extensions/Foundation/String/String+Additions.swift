@@ -14,7 +14,6 @@ public extension String {
     static let newline = "\n"
     static let slash = "/"
     static let whitespace = " "
-    static let TMDB_API_KEY = ConfigReader.shared["TMDB_API_KEY"]
     
     var isNotEmpty: Bool {
         return isEmpty == false

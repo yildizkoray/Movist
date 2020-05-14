@@ -66,6 +66,8 @@
 	</array>
 	<key>Config</key>
 	<dict>
+		<key>API_URL_SCHEME</key>
+		<string>$(API_URL_SCHEME)</string>
 		<key>RANDOM_IMAGE_URL</key>
 		<string>https://picsum.photos</string>
 		<key>TMDB_API_URL</key>

@@ -33,19 +33,21 @@ public final class RestAPI {
         }
     }
     
-    func execute<R>(with url: URLRequestConvertible) -> Promise<R> where R: ImmutableMappable {
-        
+    func execute<R>(with task: APITask) -> Promise<R> where R: ImmutableMappable {
+
+        let operation = try! request(task: task)
+
         return Promise<R> { seal in
-            
-            AF.request(url).responseObject { (response: AFDataResponse<R>) in
-                
+
+            operation.responseObject { (response: AFDataResponse<R>) in
+
                 switch response.result {
                 case .success(let data):
                     seal.fulfill(data)
-                    
+
                 case .failure(let error):
                     seal.reject(error)
-                    
+
                 }
             }
         }
@@ -68,5 +70,19 @@ public final class RestAPI {
                 }
             }
         }
+    }
+}
+
+// MARK: - Alamofire.DataRequest
+
+fileprivate extension RestAPI {
+    
+    func request(task: APITask) throws -> DataRequest {
+        return try AF.request(
+            task.asURL(),
+            method: task.method,
+            parameters: task.body,
+            encoding: task.encoding,
+            headers: HTTPHeaders(task.headers)).validate()
     }
 }

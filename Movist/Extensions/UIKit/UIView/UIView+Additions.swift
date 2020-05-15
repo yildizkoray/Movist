@@ -54,6 +54,16 @@ public extension UIView {
             view.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
+    
+    func addGradient(_ colors: [UIColor], _ locations: [NSNumber], _ point: (start: CGPoint, end: CGPoint)) {
+        let gradient = CAGradientLayer()
+        gradient.frame = bounds
+        gradient.colors = colors.map { $0.cgColor }
+        gradient.startPoint = point.start
+        gradient.endPoint = point.end
+        gradient.locations = locations
+        layer.insertSublayer(gradient, at: .zero)
+    }
 }
 
 // UIView - @IBInspectable

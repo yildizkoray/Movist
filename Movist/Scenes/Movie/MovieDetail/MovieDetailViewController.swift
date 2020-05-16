@@ -85,10 +85,13 @@ extension MovieDetailViewController: UITableViewDelegate {
     }
     
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return (view.frame.width * 0.5625) + (120 * 1.5)
+        return UITableView.automaticDimension
     }
     
     public func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-        return (view.frame.width * 0.5625) + (120 * 1.5)
+        let backdropHeight = view.frame.width * 0.5625
+        let posterHeight: CGFloat = (120 * 1.5)
+        let margin: CGFloat = 16.0
+        return backdropHeight + posterHeight + margin
     }
 }

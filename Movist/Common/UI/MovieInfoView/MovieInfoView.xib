@@ -33,18 +33,26 @@
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VTS-ek-gqb">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test-poster" translatesAutoresizingMaskIntoConstraints="NO" id="3fD-Ky-3Pn">
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="P08-L5-xPL">
                             <rect key="frame" x="0.0" y="0.0" width="120" height="180"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="3fD-Ky-3Pn" secondAttribute="height" multiplier="1:1.5" id="0kq-1S-pKq"/>
-                                <constraint firstAttribute="width" constant="120" id="u76-9u-OaP"/>
-                            </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="5"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </imageView>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test-poster" translatesAutoresizingMaskIntoConstraints="NO" id="3fD-Ky-3Pn">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="180"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="3fD-Ky-3Pn" secondAttribute="height" multiplier="1:1.5" priority="999" id="0kq-1S-pKq"/>
+                                        <constraint firstAttribute="width" constant="120" id="u76-9u-OaP"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ypV-oy-59S">
+                                    <rect key="frame" x="0.0" y="180" width="120" height="0.0"/>
+                                </view>
+                            </subviews>
+                        </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Wdd-CN-cuW">
                             <rect key="frame" x="128" y="0.0" width="286" height="180"/>
                             <subviews>
@@ -102,11 +110,12 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uI3-ee-oJ3">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="uI3-ee-oJ3">
                                     <rect key="frame" x="0.0" y="66.5" width="286" height="82"/>
                                     <string key="text">Lorem Ipsum is simply dummy text of the printing 
-and typesetting industry. Lorem Ipsum is simply dummy text of the printing 
-and typesetting industry. </string>
+and typesetting industry. Lorem Ipsum has been 
+the industry's standard dummy text ever since the 
+1500s</string>
                                     <fontDescription key="fontDescription" name="BahijTheSansArabic-Light" family="Bahij TheSansArabic" pointSize="13"/>
                                     <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -129,7 +138,7 @@ and typesetting industry. </string>
                 <constraint firstItem="VTS-ek-gqb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="x1z-dJ-rfT"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="131.8840579710145" y="372.32142857142856"/>
+            <point key="canvasLocation" x="131.8840579710145" y="516.96428571428567"/>
         </view>
     </objects>
     <resources>

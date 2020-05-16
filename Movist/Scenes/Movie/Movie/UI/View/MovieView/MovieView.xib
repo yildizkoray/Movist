@@ -27,10 +27,11 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="3wN-qK-Gbs">
                     <rect key="frame" x="0.0" y="0.0" width="120" height="210"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="999" translatesAutoresizingMaskIntoConstraints="NO" id="8LV-DS-LGc">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="8LV-DS-LGc">
                             <rect key="frame" x="0.0" y="0.0" width="120" height="180"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="180" id="2KB-aJ-6Ne"/>
+                                <constraint firstAttribute="width" secondItem="8LV-DS-LGc" secondAttribute="height" multiplier="2:3" id="RPc-B2-s0r"/>
+                                <constraint firstAttribute="width" constant="120" id="TLd-x5-AFD"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

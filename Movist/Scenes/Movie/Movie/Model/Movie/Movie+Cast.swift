@@ -30,7 +30,7 @@ public extension Movie {
             castId = try? map.value("cast_id")
             character = try? map.value("character")
             creditId = try? map.value("credit_id")
-            gender = try? map.value("gender", using: EnumTransform<Gender>())s
+            gender = try? map.value("gender", using: EnumTransform<Gender>())
             id = try? map.value("id")
             order = try? map.value("order")
             name = try? map.value("name")

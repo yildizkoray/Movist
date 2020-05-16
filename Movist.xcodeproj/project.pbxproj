@@ -90,6 +90,7 @@
 		CAB51A78246C4FC500B75DC2 /* MovieDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB51A76246C4FC500B75DC2 /* MovieDetailTableViewCell.xib */; };
 		CAB51A7B246C522F00B75DC2 /* MovieDetailSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB51A7A246C522F00B75DC2 /* MovieDetailSectionHeaderView.swift */; };
 		CAB51A7D246C523E00B75DC2 /* MovieDetailSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB51A7C246C523E00B75DC2 /* MovieDetailSectionHeaderView.xib */; };
+		CABDE5932470758500683CB3 /* CastDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDE5922470758500683CB3 /* CastDisplay.swift */; };
 		CABED3C6245E2F260033D776 /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABED3C5245E2F260033D776 /* UIView+Additions.swift */; };
 		CABFA82D2458D04D0044784C /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFA82C2458D04D0044784C /* RestAPI.swift */; };
 		CABFA82F2458D6C30044784C /* Weather.json in Resources */ = {isa = PBXBuildFile; fileRef = CABFA82E2458D6C30044784C /* Weather.json */; };
@@ -210,6 +211,7 @@
 		CAB51A76246C4FC500B75DC2 /* MovieDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailTableViewCell.xib; sourceTree = "<group>"; };
 		CAB51A7A246C522F00B75DC2 /* MovieDetailSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailSectionHeaderView.swift; sourceTree = "<group>"; };
 		CAB51A7C246C523E00B75DC2 /* MovieDetailSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailSectionHeaderView.xib; sourceTree = "<group>"; };
+		CABDE5922470758500683CB3 /* CastDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastDisplay.swift; sourceTree = "<group>"; };
 		CABED3C5245E2F260033D776 /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
 		CABFA82C2458D04D0044784C /* RestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
 		CABFA82E2458D6C30044784C /* Weather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Weather.json; sourceTree = "<group>"; };
@@ -449,6 +451,7 @@
 		CA80BD53246F7D2500E8BC83 /* Display */ = {
 			isa = PBXGroup;
 			children = (
+				CABDE5912470756700683CB3 /* Cast */,
 				CA80BD51246F7D1800E8BC83 /* MovieDetailDisplay.swift */,
 				CA80BD4D246F773500E8BC83 /* MovieDetailHeaderDisplay.swift */,
 			);
@@ -785,6 +788,14 @@
 			path = MovieDetailTableViewCell;
 			sourceTree = "<group>";
 		};
+		CABDE5912470756700683CB3 /* Cast */ = {
+			isa = PBXGroup;
+			children = (
+				CABDE5922470758500683CB3 /* CastDisplay.swift */,
+			);
+			path = Cast;
+			sourceTree = "<group>";
+		};
 		CABFA82B2458D01F0044784C /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -1086,6 +1097,7 @@
 				CA648079246C433700D16917 /* MovieDetailViewController.swift in Sources */,
 				CAFC2C37245F66A6005AB758 /* MovieDisplay.swift in Sources */,
 				CAC11216244FA28F00B5E8AE /* NibLoadable.swift in Sources */,
+				CABDE5932470758500683CB3 /* CastDisplay.swift in Sources */,
 				CAAA37F72448E16100A8170A /* Bundle+Additions.swift in Sources */,
 				CAF35CF52466F77D00E47EEA /* TopRated.swift in Sources */,
 				CA9D5615244A4A8F0055D942 /* ApplicationCoordinator.swift in Sources */,

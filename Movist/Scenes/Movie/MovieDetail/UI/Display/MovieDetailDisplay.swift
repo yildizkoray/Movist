@@ -10,15 +10,18 @@ public struct MovieDetailDisplay {
     
     let title: String
     let header: MovieDetailHeaderDisplay
+    let casts: [CastDisplay]
     
     public init(with movie: Movie) {
         title = movie.title.emptyIfNil
         header = MovieDetailHeaderDisplay.init(with: movie)
+        casts = movie.cast.ifNil(.empty()).map(CastDisplay.init)
     }
     
     private init() {
         title = .empty
         header = .empty
+        casts = .empty()
     }
     
     public static let empty = MovieDetailDisplay()

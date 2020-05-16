@@ -60,12 +60,12 @@ public final class MovieDetailViewController: UIViewController, ViewController {
 extension MovieDetailViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return display.casts.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MovieDetailTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.configure(with: "Koray Yıldız")
+        cell.configure(with: display.casts[indexPath.row].name)
         return cell
     }
 }

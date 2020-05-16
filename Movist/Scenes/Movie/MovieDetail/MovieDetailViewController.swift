@@ -16,7 +16,7 @@ public final class MovieDetailViewController: UIViewController, ViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
-    var movie: Movie? { // TODO: - Change this with `Display`
+    private var display: MovieDetailDisplay = .empty {
         didSet {
             tableView.reloadData()
         }
@@ -27,11 +27,12 @@ public final class MovieDetailViewController: UIViewController, ViewController {
         
         prepareUI()
         
-        viewModel.start().done { [weak self] movie in
-            self?.movie = movie
+        viewModel.start().done { [weak self] display in
+            self?.display = display
             self?.prepareNavigation()
         }.ensure {[weak self] in
             self?.view.stopLoadingIndicatorView()
+            self?.tableView.setHidden(false, animated: true)
         }
         .cauterize()
     }
@@ -44,10 +45,11 @@ public final class MovieDetailViewController: UIViewController, ViewController {
     }
     
     private func prepareNavigation() {
-        title = movie?.title
+        title = display.title
     }
     
     public func prepareTableView() {
+        tableView.setHidden(true, animated: false)
         tableView.registerCells(for: MovieDetailTableViewCell.self)
         tableView.registerSectionHeaderFooters(for: MovieDetailSectionHeaderView.self)
     }
@@ -75,7 +77,7 @@ extension MovieDetailViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 
         let header: MovieDetailSectionHeaderView = tableView.dequeueReusableHeaderFooterView()
-        header.configure(with: .backdrop(file: (movie?.backdropImage.emptyIfNil ?? .empty)))
+        header.configure(with: display.header)
         return header
     }
     

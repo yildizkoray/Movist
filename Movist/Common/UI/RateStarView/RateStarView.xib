@@ -20,20 +20,20 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="RZd-sv-p75">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNI-sX-kgi" customClass="CosmosView" customModule="Cosmos">
-                            <rect key="frame" x="0.0" y="15" width="388.5" height="50"/>
+                        <view contentMode="scaleToFill" horizontalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="NNI-sX-kgi" customClass="CosmosView" customModule="Cosmos">
+                            <rect key="frame" x="0.0" y="5" width="70" height="10"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
                                     <integer key="value" value="5"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="starSize">
-                                    <real key="value" value="12"/>
+                                    <real key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
                                     <color key="value" red="0.61960784313725492" green="0.61960784313725492" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,22 +45,27 @@
                                 <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
                                     <color key="value" red="0.93333333333333335" green="0.76862745098039209" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="filled-star"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="empty-star"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrG-KL-WcY">
-                            <rect key="frame" x="392.5" y="35" width="1" height="10"/>
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D2C-JE-xGs">
+                            <rect key="frame" x="74" y="0.0" width="340" height="20"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7L-i0-XdL">
+                                    <rect key="frame" x="0.0" y="3" width="340" height="17"/>
+                                    <fontDescription key="fontDescription" name="BahijTheSansArabic-SemiBold" family="Bahij TheSansArabic" pointSize="13"/>
+                                    <color key="textColor" red="0.88235294119999996" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <constraints>
-                                <constraint firstAttribute="width" constant="1" id="Axk-MW-hGt"/>
-                                <constraint firstAttribute="height" constant="10" id="slR-lU-Tvt"/>
+                                <constraint firstItem="t7L-i0-XdL" firstAttribute="top" secondItem="D2C-JE-xGs" secondAttribute="top" constant="3" id="MDx-SO-HeL"/>
+                                <constraint firstItem="t7L-i0-XdL" firstAttribute="leading" secondItem="D2C-JE-xGs" secondAttribute="leading" id="WDR-52-KXC"/>
+                                <constraint firstAttribute="bottom" secondItem="t7L-i0-XdL" secondAttribute="bottom" id="bot-ZF-gZj"/>
+                                <constraint firstAttribute="trailing" secondItem="t7L-i0-XdL" secondAttribute="trailing" id="kCY-LT-8fH"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7L-i0-XdL">
-                            <rect key="frame" x="397.5" y="30" width="16.5" height="20.5"/>
-                            <fontDescription key="fontDescription" name="BahijTheSansArabic-SemiBold" family="Bahij TheSansArabic" pointSize="13"/>
-                            <color key="textColor" red="0.88235294119999996" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                 </stackView>
             </subviews>
@@ -71,7 +76,11 @@
                 <constraint firstItem="RZd-sv-p75" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OnM-OS-IKU"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="47.826086956521742" y="265.17857142857144"/>
+            <point key="canvasLocation" x="47.826086956521742" y="245.08928571428569"/>
         </view>
     </objects>
+    <resources>
+        <image name="empty-star" width="31" height="29"/>
+        <image name="filled-star" width="31" height="29"/>
+    </resources>
 </document>

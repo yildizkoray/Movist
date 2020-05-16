@@ -22,13 +22,16 @@ private struct Constants {
 public final class MovieDetailSectionHeaderView: UITableViewHeaderFooterView {
     
     @IBOutlet private weak var backdrop: UIImageView!
+    @IBOutlet private weak var display: MovieInfoView!
     
-    public func configure(with url: URL?) {
-        backdrop.set_af_image(url: url)
+    public func configure(with display: MovieDetailHeaderDisplay) {
+        
+        backdrop.set_af_image(url: display.backdrop)
+        self.display.configure(with: display.display)
+        
         backdrop.addGradient(Constants.Gradient.color,
                              Constants.Gradient.locations,
                              Constants.Gradient.points)
     }
-    
 }
 

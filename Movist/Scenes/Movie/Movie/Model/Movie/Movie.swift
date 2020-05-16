@@ -34,6 +34,7 @@ public struct Movie: ImmutableMappable {
     let totalVoteCount: Double?
     let video: Bool?
     
+    let cast: [Cast]?
     
     public init(map: Map) throws {
         
@@ -60,5 +61,7 @@ public struct Movie: ImmutableMappable {
         video = try? map.value("video")
         averageVote = try? map.value("vote_average")
         totalVoteCount = try? map.value("vote_count")
+        
+        cast = try? map.value("casts.cast")
     }
 }

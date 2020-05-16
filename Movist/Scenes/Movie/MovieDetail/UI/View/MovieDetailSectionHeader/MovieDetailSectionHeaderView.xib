@@ -19,63 +19,20 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test-backdrop" translatesAutoresizingMaskIntoConstraints="NO" id="FAD-AQ-NeA">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
                         </imageView>
-                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2h-oY-ens">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cb6-Qj-vT3">
                             <rect key="frame" x="0.0" y="233" width="414" height="181"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test-poster" translatesAutoresizingMaskIntoConstraints="NO" id="hRp-dc-wfI">
-                                    <rect key="frame" x="8" y="8" width="110" height="165"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="hRp-dc-wfI" secondAttribute="height" multiplier="1:1.5" id="2eI-zI-CnG"/>
-                                        <constraint firstAttribute="width" priority="999" constant="120" id="jA3-bN-FTa"/>
-                                    </constraints>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="5"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </imageView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iEP-ni-xsj">
-                                    <rect key="frame" x="118" y="8" width="288" height="165"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TZn-BS-bg5">
-                                            <rect key="frame" x="0.0" y="0.0" width="288" height="24.5"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joker 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tS-6h-Muc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="4.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gX-gM-LB3">
-                                                    <rect key="frame" x="0.0" y="4.5" width="288" height="20"/>
-                                                    <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wew-oF-IEn" customClass="RateStarView" customModule="Movist" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="287" height="20"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="20" id="DN6-3U-LRs"/>
-                                                            </constraints>
-                                                        </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sgb-ci-Pjs">
-                                                            <rect key="frame" x="287" y="0.0" width="1" height="20"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" priority="1" constant="1" id="vdq-ua-32g"/>
-                                                            </constraints>
-                                                        </view>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                        </stackView>
-                                        <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="gJI-Th-jtA">
-                                            <rect key="frame" x="0.0" y="24.5" width="288" height="140.5"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" priority="1" constant="1" id="Z1t-cZ-SjD"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4TC-ei-yDh" customClass="MovieInfoView" customModule="Movist" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="8" width="398" height="165"/>
+                                </view>
                             </subviews>
-                            <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                        </stackView>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="4TC-ei-yDh" secondAttribute="trailing" constant="8" id="dVK-38-uTR"/>
+                                <constraint firstAttribute="bottom" secondItem="4TC-ei-yDh" secondAttribute="bottom" constant="8" id="iUr-de-zqD"/>
+                                <constraint firstItem="4TC-ei-yDh" firstAttribute="top" secondItem="cb6-Qj-vT3" secondAttribute="top" constant="8" id="lNU-5z-vEc"/>
+                                <constraint firstItem="4TC-ei-yDh" firstAttribute="leading" secondItem="cb6-Qj-vT3" secondAttribute="leading" constant="8" id="r9J-Ez-weq"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <constraints>
                         <constraint firstItem="FAD-AQ-NeA" firstAttribute="height" secondItem="rJM-kc-T0E" secondAttribute="width" multiplier="10:17.7777" id="94d-Wx-rdb"/>
@@ -91,12 +48,12 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="backdrop" destination="FAD-AQ-NeA" id="rbV-WL-8z9"/>
+                <outlet property="display" destination="4TC-ei-yDh" id="CIl-oC-sR6"/>
             </connections>
-            <point key="canvasLocation" x="142.02898550724638" y="446.65178571428567"/>
+            <point key="canvasLocation" x="-83" y="455"/>
         </view>
     </objects>
     <resources>
         <image name="test-backdrop" width="640" height="360"/>
-        <image name="test-poster" width="700" height="1050"/>
     </resources>
 </document>

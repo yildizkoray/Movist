@@ -13,6 +13,7 @@ public final class MovieInfoView: UIView, NibLoadable {
     @IBOutlet private weak var poster: UIImageView!
     @IBOutlet private weak var name: UILabel!
     @IBOutlet private weak var rateStarView: RateStarView!
+    @IBOutlet private weak var genre: UILabel!
     @IBOutlet private weak var language: UILabel!
     @IBOutlet private weak var overview: UILabel!
     
@@ -30,6 +31,7 @@ public final class MovieInfoView: UIView, NibLoadable {
         poster.setVisual(display.content.visual)
         name.hidableText = display.content.title
         rateStarView.configure(display: display.rateStarDisplay)
+        genre.hidableText = display.genre
         language.hidableText = display.language
         overview.hidableText = display.overview
     }

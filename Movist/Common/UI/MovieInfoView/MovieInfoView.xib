@@ -13,13 +13,11 @@
         <array key="Bahij_TheSansArabic-SemiBold.ttf">
             <string>BahijTheSansArabic-SemiBold</string>
         </array>
-        <array key="Bahij_TheSansArabic-SemiLight.ttf">
-            <string>BahijTheSansArabic-SemiLight</string>
-        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieInfoView" customModule="Movist" customModuleProvider="target">
             <connections>
+                <outlet property="genre" destination="I9E-Kq-t6O" id="vRL-mP-k4P"/>
                 <outlet property="language" destination="ARA-fK-QyK" id="Thn-b2-y4p"/>
                 <outlet property="name" destination="UC1-6R-VTg" id="GTl-L6-KnP"/>
                 <outlet property="overview" destination="uI3-ee-oJ3" id="Njs-6A-GNq"/>
@@ -50,39 +48,50 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Wdd-CN-cuW">
                             <rect key="frame" x="128" y="0.0" width="286" height="180"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ozq-Iq-rdU">
-                                    <rect key="frame" x="0.0" y="0.0" width="286" height="20.5"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1J0-x0-rDX">
+                                    <rect key="frame" x="0.0" y="0.0" width="286" height="61.5"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Titanic 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UC1-6R-VTg">
-                                            <rect key="frame" x="0.0" y="0.0" width="67" height="20.5"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ozq-Iq-rdU">
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="20.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Titanic 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UC1-6R-VTg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="67" height="20.5"/>
+                                                    <fontDescription key="fontDescription" name="BahijTheSansArabic-SemiBold" family="Bahij TheSansArabic" pointSize="13"/>
+                                                    <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3q-Zx-1t6">
+                                                    <rect key="frame" x="73" y="0.0" width="213" height="20.5"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="WED-Hj-qx4" customClass="RateStarView" customModule="Movist" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="213" height="19.5"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="WED-Hj-qx4" secondAttribute="bottom" constant="1" id="Mcn-jB-0Sn"/>
+                                                        <constraint firstItem="WED-Hj-qx4" firstAttribute="leading" secondItem="h3q-Zx-1t6" secondAttribute="leading" id="cZC-mv-PaQ"/>
+                                                        <constraint firstItem="WED-Hj-qx4" firstAttribute="top" secondItem="h3q-Zx-1t6" secondAttribute="top" id="eVR-IX-7uP"/>
+                                                        <constraint firstAttribute="trailing" secondItem="WED-Hj-qx4" secondAttribute="trailing" id="nPu-w7-IGU"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9E-Kq-t6O">
+                                            <rect key="frame" x="0.0" y="20.5" width="286" height="20.5"/>
+                                            <fontDescription key="fontDescription" name="BahijTheSansArabic-Light" family="Bahij TheSansArabic" pointSize="13"/>
+                                            <color key="textColor" red="0.88235294119999996" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language: English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARA-fK-QyK">
+                                            <rect key="frame" x="0.0" y="41" width="286" height="20.5"/>
                                             <fontDescription key="fontDescription" name="BahijTheSansArabic-SemiBold" family="Bahij TheSansArabic" pointSize="13"/>
                                             <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3q-Zx-1t6">
-                                            <rect key="frame" x="73" y="0.0" width="213" height="20.5"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="WED-Hj-qx4" customClass="RateStarView" customModule="Movist" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="213" height="19.5"/>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="WED-Hj-qx4" secondAttribute="bottom" constant="1" id="Mcn-jB-0Sn"/>
-                                                <constraint firstItem="WED-Hj-qx4" firstAttribute="leading" secondItem="h3q-Zx-1t6" secondAttribute="leading" id="cZC-mv-PaQ"/>
-                                                <constraint firstItem="WED-Hj-qx4" firstAttribute="top" secondItem="h3q-Zx-1t6" secondAttribute="top" id="eVR-IX-7uP"/>
-                                                <constraint firstAttribute="trailing" secondItem="WED-Hj-qx4" secondAttribute="trailing" id="nPu-w7-IGU"/>
-                                            </constraints>
-                                        </view>
                                     </subviews>
                                 </stackView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language: English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARA-fK-QyK">
-                                    <rect key="frame" x="0.0" y="22.5" width="286" height="20.5"/>
-                                    <fontDescription key="fontDescription" name="BahijTheSansArabic-Light" family="Bahij TheSansArabic" pointSize="13"/>
-                                    <color key="textColor" red="0.88235294119999996" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Go4-nM-dYf" userLabel="SeperatorView">
-                                    <rect key="frame" x="0.0" y="45" width="286" height="1"/>
+                                    <rect key="frame" x="0.0" y="63.5" width="286" height="1"/>
                                     <color key="backgroundColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="84g-EB-wCF"/>
@@ -94,16 +103,16 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uI3-ee-oJ3">
-                                    <rect key="frame" x="0.0" y="48" width="286" height="82"/>
+                                    <rect key="frame" x="0.0" y="66.5" width="286" height="82"/>
                                     <string key="text">Lorem Ipsum is simply dummy text of the printing 
 and typesetting industry. Lorem Ipsum is simply dummy text of the printing 
 and typesetting industry. </string>
-                                    <fontDescription key="fontDescription" name="BahijTheSansArabic-SemiLight" family="Bahij TheSansArabic" pointSize="13"/>
+                                    <fontDescription key="fontDescription" name="BahijTheSansArabic-Light" family="Bahij TheSansArabic" pointSize="13"/>
                                     <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1PY-fE-Xdz">
-                                    <rect key="frame" x="0.0" y="132" width="286" height="48"/>
+                                    <rect key="frame" x="0.0" y="150.5" width="286" height="29.5"/>
                                     <constraints>
                                         <constraint firstAttribute="height" priority="1" constant="1" id="Wc3-6x-W7I"/>
                                     </constraints>
@@ -120,7 +129,7 @@ and typesetting industry. </string>
                 <constraint firstItem="VTS-ek-gqb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="x1z-dJ-rfT"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="131.8840579710145" y="372.65625"/>
+            <point key="canvasLocation" x="131.8840579710145" y="372.32142857142856"/>
         </view>
     </objects>
     <resources>

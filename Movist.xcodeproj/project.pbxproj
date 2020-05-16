@@ -113,7 +113,6 @@
 		CAD6126F246CC5F800D602F5 /* GetUpComingTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD6126E246CC5F800D602F5 /* GetUpComingTask.swift */; };
 		CAD61272246CC6B900D602F5 /* Dictionary+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD61271246CC6B900D602F5 /* Dictionary+Additions.swift */; };
 		CADD09722466DD8100651E18 /* MovieSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD09712466DD8100651E18 /* MovieSectionHeaderView.swift */; };
-		CAEB5E612458ED5E001E7EFD /* testImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAEB5E602458ED5E001E7EFD /* testImage.jpg */; };
 		CAEB5E632458EE9C001E7EFD /* Movie_TopRated.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEB5E622458EE9C001E7EFD /* Movie_TopRated.json */; };
 		CAEB5E652458EF12001E7EFD /* Movie_UpComing.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEB5E642458EF12001E7EFD /* Movie_UpComing.json */; };
 		CAEB5E672458EF54001E7EFD /* Movie_NowPlaying.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEB5E662458EF54001E7EFD /* Movie_NowPlaying.json */; };
@@ -234,7 +233,6 @@
 		CAD6126E246CC5F800D602F5 /* GetUpComingTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUpComingTask.swift; sourceTree = "<group>"; };
 		CAD61271246CC6B900D602F5 /* Dictionary+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Additions.swift"; sourceTree = "<group>"; };
 		CADD09712466DD8100651E18 /* MovieSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSectionHeaderView.swift; sourceTree = "<group>"; };
-		CAEB5E602458ED5E001E7EFD /* testImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImage.jpg; sourceTree = "<group>"; };
 		CAEB5E622458EE9C001E7EFD /* Movie_TopRated.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movie_TopRated.json; sourceTree = "<group>"; };
 		CAEB5E642458EF12001E7EFD /* Movie_UpComing.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movie_UpComing.json; sourceTree = "<group>"; };
 		CAEB5E662458EF54001E7EFD /* Movie_NowPlaying.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movie_NowPlaying.json; sourceTree = "<group>"; };
@@ -607,7 +605,6 @@
 			children = (
 				CA6C266C245E264E00B243EC /* Fonts */,
 				CABFA8302458DC180044784C /* SampleJSON */,
-				CAEB5E682458F927001E7EFD /* SampleImage */,
 				CAAA37E02448DA4E00A8170A /* Assets.xcassets */,
 				CAAA37E52448DA4E00A8170A /* Info.plist */,
 			);
@@ -874,14 +871,6 @@
 			path = SectionHeader;
 			sourceTree = "<group>";
 		};
-		CAEB5E682458F927001E7EFD /* SampleImage */ = {
-			isa = PBXGroup;
-			children = (
-				CAEB5E602458ED5E001E7EFD /* testImage.jpg */,
-			);
-			path = SampleImage;
-			sourceTree = "<group>";
-		};
 		CAEB5E6A2458F99C001E7EFD /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1002,7 +991,6 @@
 				CA127AEA24684F8B0079C42F /* Bahij_TheSansArabic-Plain.ttf in Resources */,
 				CAC1121B244FA70F00B5E8AE /* EmptyStateView.xib in Resources */,
 				CAEB5E652458EF12001E7EFD /* Movie_UpComing.json in Resources */,
-				CAEB5E612458ED5E001E7EFD /* testImage.jpg in Resources */,
 				CABFA8422458DE7C0044784C /* TheMovieDB_Certificates_TV.json in Resources */,
 				CAAA37E12448DA4E00A8170A /* Assets.xcassets in Resources */,
 				CABFA82F2458D6C30044784C /* Weather.json in Resources */,

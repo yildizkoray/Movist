@@ -10,6 +10,7 @@ public struct MovieInfoDisplay {
     
     let content: VisaulContent
     let rateStarDisplay: RateStarDisplay
+    let genre: String
     let language: String
     let overview: String
     
@@ -21,6 +22,13 @@ public struct MovieInfoDisplay {
         )
         
         rateStarDisplay = RateStarDisplay(rate: movie.averageVote.ifNil(.zero))
+        
+        var genres: [String] = .empty()
+        movie.genres.ifNil(.empty()).forEach {
+            genres.append( $0.name.emptyIfNil)
+        }
+        genre = genres.joined(separator: " • ")
+        
         language = "Language: \(movie.originalLanguage.emptyIfNil)"
         overview = movie.overview.emptyIfNil
     }
@@ -28,6 +36,7 @@ public struct MovieInfoDisplay {
     private init() {
         content = .empty
         rateStarDisplay = .empty
+        genre = .empty
         language = .empty
         overview = .empty
     }

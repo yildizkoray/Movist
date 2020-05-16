@@ -78,6 +78,9 @@ extension MovieDetailViewController: UITableViewDelegate {
 
         let header: MovieDetailSectionHeaderView = tableView.dequeueReusableHeaderFooterView()
         header.configure(with: display.header)
+        header.didClickPlayTrailler = { [unowned self] in
+            print(self.display.title)
+        }
         return header
     }
     

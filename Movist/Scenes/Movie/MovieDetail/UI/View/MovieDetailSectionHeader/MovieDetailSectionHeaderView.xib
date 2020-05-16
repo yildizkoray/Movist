@@ -38,11 +38,24 @@
                         <constraint firstItem="FAD-AQ-NeA" firstAttribute="height" secondItem="rJM-kc-T0E" secondAttribute="width" multiplier="10:17.7777" id="94d-Wx-rdb"/>
                     </constraints>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRa-wI-f83">
+                    <rect key="frame" x="182" y="91.5" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="7vP-ck-dZZ"/>
+                        <constraint firstAttribute="height" constant="50" id="tti-dG-O3S"/>
+                    </constraints>
+                    <state key="normal" image="play-trailler"/>
+                    <connections>
+                        <action selector="playTraillerTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="jtg-kp-c3L"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
+                <constraint firstItem="FAD-AQ-NeA" firstAttribute="centerX" secondItem="FRa-wI-f83" secondAttribute="centerX" id="1Co-C3-myp"/>
                 <constraint firstItem="rJM-kc-T0E" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="8Bz-qH-ljg"/>
                 <constraint firstItem="rJM-kc-T0E" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="bMc-Ky-wkp"/>
                 <constraint firstItem="rJM-kc-T0E" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="go4-gi-gwU"/>
+                <constraint firstItem="FAD-AQ-NeA" firstAttribute="centerY" secondItem="FRa-wI-f83" secondAttribute="centerY" id="uW2-EE-AWK"/>
                 <constraint firstItem="rJM-kc-T0E" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="y7G-rg-8Im"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -54,6 +67,7 @@
         </view>
     </objects>
     <resources>
+        <image name="play-trailler" width="73" height="73"/>
         <image name="test-backdrop" width="640" height="360"/>
     </resources>
 </document>

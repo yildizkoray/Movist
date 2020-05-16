@@ -22,15 +22,15 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWF-m3-AlT">
-                            <rect key="frame" x="10" y="48" width="318" height="35"/>
+                            <rect key="frame" x="10" y="48" width="326" height="35"/>
                             <fontDescription key="fontDescription" name="BahijTheSansArabic-SemiBold" family="Bahij TheSansArabic" pointSize="28"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba7-qS-xfa">
-                            <rect key="frame" x="328" y="48" width="76" height="35"/>
+                            <rect key="frame" x="336" y="48" width="68" height="35"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="See All" image="arrow_right">
+                            <state key="normal" title="See All" image="right">
                                 <color key="titleColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
@@ -55,6 +55,6 @@
         </view>
     </objects>
     <resources>
-        <image name="arrow_right" width="20" height="20"/>
+        <image name="right" width="12" height="12"/>
     </resources>
 </document>

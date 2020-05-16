@@ -21,6 +21,8 @@ private struct Constants {
 
 public final class MovieDetailSectionHeaderView: UITableViewHeaderFooterView {
     
+    var didClickPlayTrailler: VoidCallback?
+    
     @IBOutlet private weak var backdrop: UIImageView!
     @IBOutlet private weak var display: MovieInfoView!
     
@@ -32,6 +34,10 @@ public final class MovieDetailSectionHeaderView: UITableViewHeaderFooterView {
         backdrop.addGradient(Constants.Gradient.color,
                              Constants.Gradient.locations,
                              Constants.Gradient.points)
+    }
+    
+    @IBAction func playTraillerTapped(_ sender: UIButton) {
+        didClickPlayTrailler?()
     }
 }
 

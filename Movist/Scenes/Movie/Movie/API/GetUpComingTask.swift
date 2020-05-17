@@ -11,7 +11,7 @@ import Alamofire
 public struct GetUpComingTask: APITask {
     
     public var method: HTTPMethod = .get
-    public var path: String = "/3/movie/upcoming"
+    public var path: String = "/movie/upcoming"
     public var queryParameters: [URLQueryItem]
     
     public init() {

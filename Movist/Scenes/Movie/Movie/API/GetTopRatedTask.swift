@@ -11,7 +11,7 @@ import Alamofire
 public struct GetTopRatedTask: APITask {
     
     public var method: HTTPMethod = .get
-    public var path: String = "/3/movie/top_rated"
+    public var path: String = "/movie/top_rated"
     public var queryParameters: [URLQueryItem]
     
     public init() {

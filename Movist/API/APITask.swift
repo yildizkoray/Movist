@@ -48,7 +48,7 @@ extension APITask {
         var urlComponents = URLComponents()
         urlComponents.host = .TMDB_API_URL
         urlComponents.scheme = .API_URL_SCHEME
-        urlComponents.path = path
+        urlComponents.path = "/3\(path)"
         urlComponents.queryItems = queryParameters
         return try urlComponents.asURL()
     }

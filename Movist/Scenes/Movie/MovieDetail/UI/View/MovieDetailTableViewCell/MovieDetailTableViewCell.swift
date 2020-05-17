@@ -10,20 +10,17 @@ import UIKit
 
 class MovieDetailTableViewCell: UITableViewCell {
     
-    @IBOutlet private weak var name: UILabel!
+    @IBOutlet private (set) weak var castCollectionView: CastCollectionView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
-    public func configure(with name: String) {
-        self.name.text = name
+    public func configure(with display: [CastDisplay]) {
+        castCollectionView.display = display
     }
 }

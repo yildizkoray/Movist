@@ -17,11 +17,11 @@ public extension Movie {
             case male = 1
         }
         
-        let castId: String?
+        let castId: Int?
         let character: String?
         let creditId: String?
         let gender: Gender?
-        let id: String?
+        let id: Int?
         let name: String?
         let order: Int?
         let poster: String?

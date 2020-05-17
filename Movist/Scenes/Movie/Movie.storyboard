@@ -40,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZLc-DX-oMI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="252" y="-15"/>
+            <point key="canvasLocation" x="949" y="5"/>
         </scene>
         <!--Movie Detail View Controller-->
         <scene sceneID="2LT-G9-9Oi">
@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXE-jf-umI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1041" y="-15"/>
+            <point key="canvasLocation" x="1739" y="5"/>
         </scene>
     </scenes>
 </document>

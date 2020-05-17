@@ -16,25 +16,22 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pj-Zu-W6j">
-                        <rect key="frame" x="16" y="4" width="288" height="36"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZX-bq-tjm" customClass="CastCollectionView" customModule="Movist" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="3pj-Zu-W6j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="3UG-5j-aSt"/>
-                    <constraint firstAttribute="bottom" secondItem="3pj-Zu-W6j" secondAttribute="bottom" constant="4" id="86p-zJ-fgs"/>
-                    <constraint firstAttribute="trailing" secondItem="3pj-Zu-W6j" secondAttribute="trailing" constant="16" id="SeR-o4-nBF"/>
-                    <constraint firstItem="3pj-Zu-W6j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Ysb-y5-i8W"/>
+                    <constraint firstItem="MZX-bq-tjm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QwR-VP-7eN"/>
+                    <constraint firstAttribute="bottom" secondItem="MZX-bq-tjm" secondAttribute="bottom" id="Van-T4-OHV"/>
+                    <constraint firstItem="MZX-bq-tjm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="adG-Ut-2xU"/>
+                    <constraint firstAttribute="trailing" secondItem="MZX-bq-tjm" secondAttribute="trailing" id="ixr-8m-Jz2"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="name" destination="3pj-Zu-W6j" id="W6e-3w-3Bg"/>
+                <outlet property="castCollectionView" destination="MZX-bq-tjm" id="J3e-Y3-nxj"/>
             </connections>
-            <point key="canvasLocation" x="132" y="154"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
         </tableViewCell>
     </objects>
 </document>

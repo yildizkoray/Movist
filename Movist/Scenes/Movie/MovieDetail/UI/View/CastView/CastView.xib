@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Bahij_TheSansArabic-Light.ttf">
+            <string>BahijTheSansArabic-Light</string>
+        </array>
+        <array key="Bahij_TheSansArabic-SemiLight.ttf">
+            <string>BahijTheSansArabic-SemiLight</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CastView" customModule="Movist" customModuleProvider="target">
+            <connections>
+                <outlet property="character" destination="tdA-4d-nUa" id="HAR-cP-WWt"/>
+                <outlet property="name" destination="OlA-sr-wIZ" id="fYN-JP-qEy"/>
+                <outlet property="poster" destination="XtJ-sK-O9a" id="uOC-RQ-OTz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="90" height="179"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="u3J-ZO-pQ5">
+                    <rect key="frame" x="0.0" y="0.0" width="90" height="179"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-profile-pic" translatesAutoresizingMaskIntoConstraints="NO" id="XtJ-sK-O9a">
+                            <rect key="frame" x="0.0" y="0.0" width="90" height="135"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="XtJ-sK-O9a" secondAttribute="height" multiplier="2:3" id="ImH-7b-4gT"/>
+                                <constraint firstAttribute="width" constant="90" id="NOi-aU-50u"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Lnf-AI-nQZ">
+                            <rect key="frame" x="13.5" y="137" width="63.5" height="42"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Koray Yıldız" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OlA-sr-wIZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="63.5" height="20"/>
+                                    <fontDescription key="fontDescription" name="BahijTheSansArabic-SemiLight" family="Bahij TheSansArabic" pointSize="13"/>
+                                    <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Babil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdA-4d-nUa">
+                                    <rect key="frame" x="17.5" y="22" width="28" height="20"/>
+                                    <fontDescription key="fontDescription" name="BahijTheSansArabic-Light" family="Bahij TheSansArabic" pointSize="13"/>
+                                    <color key="textColor" red="0.88235294119999996" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="u3J-ZO-pQ5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EZO-3y-xdM"/>
+                <constraint firstItem="u3J-ZO-pQ5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WWH-TF-lTZ"/>
+                <constraint firstAttribute="bottom" secondItem="u3J-ZO-pQ5" secondAttribute="bottom" id="Xyh-tO-k1g"/>
+                <constraint firstAttribute="trailing" secondItem="u3J-ZO-pQ5" secondAttribute="trailing" id="tIg-ck-D53"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="101.25" y="19.54225352112676"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="empty-profile-pic" width="90" height="90"/>
+    </resources>
+</document>

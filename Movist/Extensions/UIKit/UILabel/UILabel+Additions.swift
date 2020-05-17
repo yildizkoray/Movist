@@ -17,6 +17,14 @@ public extension UILabel {
             isHidden = newValue.emptyIfNil.isEmpty
         }
     }
+    
+    func setFont(family: Font.Family = .bahijTheSansArabic,
+              weight: Font.Weight = .semilight,
+              style: Font.Style = .regular,
+              color: UIColor) {
+        font = .font(family: family, weight: weight, style: style)
+        textColor = color
+    }
 }
 
 

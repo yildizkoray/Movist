@@ -79,6 +79,7 @@
 		CAA29F34245EE84000BF5249 /* ObjectMapper+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA29F33245EE84000BF5249 /* ObjectMapper+Additions.swift */; };
 		CAA99FCD245CFA3F003C288E /* Cosmos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA99FCC245CFA3F003C288E /* Cosmos.framework */; };
 		CAA99FD1245D0095003C288E /* Double+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA99FD0245D0095003C288E /* Double+Additions.swift */; };
+		CAA9C1E42471DBF3003535C0 /* UIFont+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9C1E32471DBF3003535C0 /* UIFont+Additions.swift */; };
 		CAAA37D82448DA4D00A8170A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA37D72448DA4D00A8170A /* AppDelegate.swift */; };
 		CAAA37E12448DA4E00A8170A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAAA37E02448DA4E00A8170A /* Assets.xcassets */; };
 		CAAA37E42448DA4E00A8170A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAA37E22448DA4E00A8170A /* LaunchScreen.storyboard */; };
@@ -204,6 +205,7 @@
 		CAA29F33245EE84000BF5249 /* ObjectMapper+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObjectMapper+Additions.swift"; sourceTree = "<group>"; };
 		CAA99FCC245CFA3F003C288E /* Cosmos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cosmos.framework; path = Carthage/Build/iOS/Cosmos.framework; sourceTree = "<group>"; };
 		CAA99FD0245D0095003C288E /* Double+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Additions.swift"; sourceTree = "<group>"; };
+		CAA9C1E32471DBF3003535C0 /* UIFont+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Additions.swift"; sourceTree = "<group>"; };
 		CAAA37D42448DA4D00A8170A /* Movist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAAA37D72448DA4D00A8170A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAAA37E02448DA4E00A8170A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -679,6 +681,7 @@
 				CAAA37F82448E28800A8170A /* Foundation */,
 				CAA29F32245EE82B00BF5249 /* ObjectMapper */,
 				CAAA38032448EEFA00A8170A /* UIKit */,
+				CAA9C1E32471DBF3003535C0 /* UIFont+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1172,6 +1175,7 @@
 				CA9873D12470A75E00B3FA91 /* CastCollectionViewCell.swift in Sources */,
 				CA0AEB832466181300E8A703 /* UIActivityIndicatorView+Additions.swift in Sources */,
 				CAD6126F246CC5F800D602F5 /* GetUpComingTask.swift in Sources */,
+				CAA9C1E42471DBF3003535C0 /* UIFont+Additions.swift in Sources */,
 				CAF35CF72466F78B00E47EEA /* UpComing.swift in Sources */,
 				CA884C1D244AF1CB0004C1E3 /* MovieCoordinator.swift in Sources */,
 				CA80BD4E246F773500E8BC83 /* MovieDetailHeaderDisplay.swift in Sources */,

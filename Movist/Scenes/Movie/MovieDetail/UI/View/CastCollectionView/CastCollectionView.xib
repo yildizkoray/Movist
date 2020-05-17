@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Bahij_TheSansArabic-SemiBold.ttf">
+            <string>BahijTheSansArabic-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CastCollectionView" customModule="Movist" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="oyJ-gw-oF0" id="iLe-gs-z3Q"/>
+                <outlet property="collectionViewLayout" destination="6kO-Vi-fWP" id="dyx-6r-n7p"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="L4I-3e-gvy">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbb-u1-qKZ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9e2-hu-P5x">
+                                    <rect key="frame" x="10" y="0.0" width="388" height="33"/>
+                                    <fontDescription key="fontDescription" name="BahijTheSansArabic-SemiBold" family="Bahij TheSansArabic" pointSize="24"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="9e2-hu-P5x" secondAttribute="trailing" constant="16" id="973-SU-NeS"/>
+                                <constraint firstItem="9e2-hu-P5x" firstAttribute="leading" secondItem="jbb-u1-qKZ" secondAttribute="leading" constant="10" id="BgT-eT-e2I"/>
+                                <constraint firstItem="9e2-hu-P5x" firstAttribute="top" secondItem="jbb-u1-qKZ" secondAttribute="top" id="RFX-KY-tdb"/>
+                                <constraint firstAttribute="bottom" secondItem="9e2-hu-P5x" secondAttribute="bottom" id="Sys-cX-iCz"/>
+                            </constraints>
+                        </view>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="oyJ-gw-oF0">
+                            <rect key="frame" x="0.0" y="33" width="414" height="200"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="200" id="Ll1-J0-j0x"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6kO-Vi-fWP">
+                                <size key="itemSize" width="90" height="180"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="1sz-I5-DPP"/>
+                                <outlet property="delegate" destination="-1" id="NWH-gN-B6A"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="L4I-3e-gvy" secondAttribute="trailing" id="Oc9-af-ec3"/>
+                <constraint firstAttribute="bottom" secondItem="L4I-3e-gvy" secondAttribute="bottom" id="cP6-Yh-b84"/>
+                <constraint firstItem="L4I-3e-gvy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kJa-im-UDr"/>
+                <constraint firstItem="L4I-3e-gvy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="y5U-pr-Zvo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-181.15942028985509" y="-90.066964285714278"/>
+        </view>
+    </objects>
+</document>

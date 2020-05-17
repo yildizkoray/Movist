@@ -60,22 +60,31 @@ public final class MovieDetailViewController: UIViewController, ViewController {
 extension MovieDetailViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return display.casts.count
+        return 5
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MovieDetailTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.configure(with: display.casts[indexPath.row].name)
+        cell.castCollectionView.delegate = self
+        cell.configure(with: display.casts)
         return cell
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    public func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }
 
 // MARK: - UITableViewDelegate
 
 extension MovieDetailViewController: UITableViewDelegate {
-
+    
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-
+        
         let header: MovieDetailSectionHeaderView = tableView.dequeueReusableHeaderFooterView()
         header.configure(with: display.header)
         header.didClickPlayTrailler = { [unowned self] in
@@ -93,5 +102,14 @@ extension MovieDetailViewController: UITableViewDelegate {
         let posterHeight: CGFloat = (120 * 1.5)
         let margin: CGFloat = 16.0
         return backdropHeight + posterHeight + margin
+    }
+}
+
+// MARK: - CastCollectionViewDelegate
+
+extension MovieDetailViewController: CastCollectionViewDelegate {
+    
+    public func castColletionView(_ movieCollectionView: CastCollectionView, didSelectItemAt at: Int) {
+        print(movieCollectionView.display[at].id)
     }
 }

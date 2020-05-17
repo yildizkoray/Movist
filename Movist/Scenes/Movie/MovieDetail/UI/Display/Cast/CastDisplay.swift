@@ -8,29 +8,29 @@
 
 public struct CastDisplay {
     
-    let id: String
-    let character: String
-    let name: String
+    let id: Int
+    let content: VisaulContent
     let gender: Movie.Cast.Gender
     let order: Int
-    let poster: String
     
     public init(with item: Movie.Cast) {
-        id = item.id.emptyIfNil
-        character = item.character.emptyIfNil
-        name = item.name.emptyIfNil
+        id = item.id.ifNil(.zero)
+        
+        content = VisaulContent(
+            title: item.name.emptyIfNil,
+            subtitle: item.character.emptyIfNil,
+            visual: .url(.poster(for: .w185, file: item.poster.emptyIfNil))
+        )
+        
         gender = item.gender.ifNil(Movie.Cast.Gender.femaale)
         order = item.order.ifNil(.zero)
-        poster = item.poster.emptyIfNil
     }
     
     private init() {
-        id = .empty
-        character = .empty
-        name = .empty
+        id = .zero
+        content = .empty
         gender = .femaale
         order = .zero
-        poster = .empty
     }
     
     static let empty = CastDisplay()

@@ -91,6 +91,7 @@
 		CAAA38012448E3D400A8170A /* Any+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA38002448E3D400A8170A /* Any+Additions.swift */; };
 		CAAA38072448EFA400A8170A /* UIResponder+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA38062448EFA400A8170A /* UIResponder+Additions.swift */; };
 		CAAA380A2448F08300A8170A /* UITableView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA38092448F08300A8170A /* UITableView+Additions.swift */; };
+		CAAFCE032475C1FA005E724D /* MovistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAFCE022475C1FA005E724D /* MovistTests.swift */; };
 		CAB51A77246C4FC500B75DC2 /* MovieDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB51A75246C4FC500B75DC2 /* MovieDetailTableViewCell.swift */; };
 		CAB51A78246C4FC500B75DC2 /* MovieDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB51A76246C4FC500B75DC2 /* MovieDetailTableViewCell.xib */; };
 		CAB51A7B246C522F00B75DC2 /* MovieDetailSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB51A7A246C522F00B75DC2 /* MovieDetailSectionHeaderView.swift */; };
@@ -131,6 +132,16 @@
 		CAF97A072451FE1000D762B8 /* UIView+EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF97A062451FE1000D762B8 /* UIView+EmptyState.swift */; };
 		CAFC2C37245F66A6005AB758 /* MovieDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFC2C36245F66A6005AB758 /* MovieDisplay.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAAFCE052475C1FA005E724D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAAA37CC2448DA4D00A8170A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAAA37D32448DA4D00A8170A;
+			remoteInfo = Movist;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CA097A2A245CC8F200EB9889 /* MovieCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionView.xib; sourceTree = "<group>"; };
@@ -219,6 +230,9 @@
 		CAAA38002448E3D400A8170A /* Any+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Any+Additions.swift"; sourceTree = "<group>"; };
 		CAAA38062448EFA400A8170A /* UIResponder+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Additions.swift"; sourceTree = "<group>"; };
 		CAAA38092448F08300A8170A /* UITableView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Additions.swift"; sourceTree = "<group>"; };
+		CAAFCE002475C1FA005E724D /* MovistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAAFCE022475C1FA005E724D /* MovistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovistTests.swift; sourceTree = "<group>"; };
+		CAAFCE042475C1FA005E724D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAB51A75246C4FC500B75DC2 /* MovieDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailTableViewCell.swift; sourceTree = "<group>"; };
 		CAB51A76246C4FC500B75DC2 /* MovieDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailTableViewCell.xib; sourceTree = "<group>"; };
 		CAB51A7A246C522F00B75DC2 /* MovieDetailSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailSectionHeaderView.swift; sourceTree = "<group>"; };
@@ -272,6 +286,13 @@
 				CA81A421244D02140016A303 /* ObjectMapper.framework in Frameworks */,
 				CA81A41D244CFF410016A303 /* AlamofireNetworkActivityLogger.framework in Frameworks */,
 				CAA99FCD245CFA3F003C288E /* Cosmos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAAFCDFD2475C1FA005E724D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +630,7 @@
 			isa = PBXGroup;
 			children = (
 				CAAA37D62448DA4D00A8170A /* Movist */,
+				CAAFCE012475C1FA005E724D /* MovistTests */,
 				CAAA37D52448DA4D00A8170A /* Products */,
 				CA81A413244CF7CF0016A303 /* Frameworks */,
 			);
@@ -618,6 +640,7 @@
 			isa = PBXGroup;
 			children = (
 				CAAA37D42448DA4D00A8170A /* Movist.app */,
+				CAAFCE002475C1FA005E724D /* MovistTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -792,6 +815,15 @@
 				CAAA38092448F08300A8170A /* UITableView+Additions.swift */,
 			);
 			path = UITableView;
+			sourceTree = "<group>";
+		};
+		CAAFCE012475C1FA005E724D /* MovistTests */ = {
+			isa = PBXGroup;
+			children = (
+				CAAFCE022475C1FA005E724D /* MovistTests.swift */,
+				CAAFCE042475C1FA005E724D /* Info.plist */,
+			);
+			path = MovistTests;
 			sourceTree = "<group>";
 		};
 		CAB51A73246C4FA300B75DC2 /* UI */ = {
@@ -983,18 +1015,40 @@
 			productReference = CAAA37D42448DA4D00A8170A /* Movist.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CAAFCDFF2475C1FA005E724D /* MovistTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAAFCE092475C1FA005E724D /* Build configuration list for PBXNativeTarget "MovistTests" */;
+			buildPhases = (
+				CAAFCDFC2475C1FA005E724D /* Sources */,
+				CAAFCDFD2475C1FA005E724D /* Frameworks */,
+				CAAFCDFE2475C1FA005E724D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAAFCE062475C1FA005E724D /* PBXTargetDependency */,
+			);
+			name = MovistTests;
+			productName = MovistTests;
+			productReference = CAAFCE002475C1FA005E724D /* MovistTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		CAAA37CC2448DA4D00A8170A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Koray Yildiz";
 				TargetAttributes = {
 					CAAA37D32448DA4D00A8170A = {
 						CreatedOnToolsVersion = 11.4;
+					};
+					CAAFCDFF2475C1FA005E724D = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = CAAA37D32448DA4D00A8170A;
 					};
 				};
 			};
@@ -1012,6 +1066,7 @@
 			projectRoot = "";
 			targets = (
 				CAAA37D32448DA4D00A8170A /* Movist */,
+				CAAFCDFF2475C1FA005E724D /* MovistTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1058,6 +1113,13 @@
 				CABFA8442458E2580044784C /* Movie_Detail.json in Resources */,
 				CA097A2B245CC8F200EB9889 /* MovieCollectionView.xib in Resources */,
 				CA097A32245CCC4A00EB9889 /* MovieCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAAFCDFE2475C1FA005E724D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1203,7 +1265,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CAAFCDFC2475C1FA005E724D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAAFCE032475C1FA005E724D /* MovistTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAAFCE062475C1FA005E724D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAAA37D32448DA4D00A8170A /* Movist */;
+			targetProxy = CAAFCE052475C1FA005E724D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CAAA37E22448DA4E00A8170A /* LaunchScreen.storyboard */ = {
@@ -1385,6 +1463,48 @@
 			};
 			name = Release;
 		};
+		CAAFCE072475C1FA005E724D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VALK7BP96F;
+				INFOPLIST_FILE = MovistTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yildizkoray.MovistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Movist.app/Movist";
+			};
+			name = Debug;
+		};
+		CAAFCE082475C1FA005E724D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VALK7BP96F;
+				INFOPLIST_FILE = MovistTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yildizkoray.MovistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Movist.app/Movist";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1402,6 +1522,15 @@
 			buildConfigurations = (
 				CAAA37E92448DA4E00A8170A /* Debug */,
 				CAAA37EA2448DA4E00A8170A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAAFCE092475C1FA005E724D /* Build configuration list for PBXNativeTarget "MovistTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAAFCE072475C1FA005E724D /* Debug */,
+				CAAFCE082475C1FA005E724D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

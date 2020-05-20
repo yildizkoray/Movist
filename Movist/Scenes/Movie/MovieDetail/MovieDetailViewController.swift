@@ -27,6 +27,8 @@ public final class MovieDetailViewController: UIViewController, ViewController {
         
         prepareUI()
         
+        
+        
         viewModel.start().done { [weak self] display in
             self?.display = display
             self?.prepareNavigation()

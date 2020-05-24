@@ -15,7 +15,7 @@ public struct MovieDetailDisplay {
     public init(with movie: Movie) {
         title = movie.title.emptyIfNil
         header = MovieDetailHeaderDisplay.init(with: movie)
-        casts = movie.cast.ifNil(.empty()).map(CastDisplay.init)
+        casts = movie.cast.ifNil(.empty()).filter { $0.poster.emptyIfNil.isNotEmpty }.map(CastDisplay.init)
     }
     
     private init() {

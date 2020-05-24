@@ -82,9 +82,25 @@
                     <view key="view" contentMode="scaleToFill" id="qEi-dH-dMj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POI-fx-Vnh">
+                                <rect key="frame" x="0.0" y="331.5" width="414" height="233"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.76862745099999996" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JK4-e8-tjU" firstAttribute="trailing" secondItem="POI-fx-Vnh" secondAttribute="trailing" id="3u6-df-jab"/>
+                            <constraint firstItem="POI-fx-Vnh" firstAttribute="leading" secondItem="JK4-e8-tjU" secondAttribute="leading" id="9rG-c5-6Oy"/>
+                            <constraint firstItem="POI-fx-Vnh" firstAttribute="height" secondItem="qEi-dH-dMj" secondAttribute="width" multiplier="1:1.77777" id="PnO-It-bKQ"/>
+                            <constraint firstItem="POI-fx-Vnh" firstAttribute="centerY" secondItem="qEi-dH-dMj" secondAttribute="centerY" id="ZBH-tW-JCx"/>
+                            <constraint firstItem="POI-fx-Vnh" firstAttribute="centerX" secondItem="qEi-dH-dMj" secondAttribute="centerX" id="Zvb-4f-I6y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JK4-e8-tjU"/>
                     </view>
+                    <connections>
+                        <outlet property="gradient" destination="POI-fx-Vnh" id="ljP-KY-w1E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jM2-a7-fdt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

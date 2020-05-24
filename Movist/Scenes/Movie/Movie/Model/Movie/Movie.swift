@@ -12,7 +12,7 @@ public struct Movie: ImmutableMappable {
     
     let averageVote: Double?
     let isAdult: Bool?
-    let backdropImage: String?
+    let backdrop: String?
     let genres: [Genre]?
     let homepage: String?
     let id: Int?
@@ -21,7 +21,7 @@ public struct Movie: ImmutableMappable {
     let origianalTitle: String?
     let overview: String?
     let popularity: Double?
-    let posterImage: String?
+    let poster: String?
     let productionCompanies: [ProductionCompany]?
     let productionCountries: [ProductionCountry]?
     let releaseDate: Date?
@@ -38,7 +38,7 @@ public struct Movie: ImmutableMappable {
     
     public init(map: Map) throws {
         
-        backdropImage = try? map.value("backdrop_path")
+        backdrop = try? map.value("backdrop_path")
         genres = try? map.value("genres")
         homepage = try? map.value("homepage")
         id = try? map.value("id")
@@ -48,7 +48,7 @@ public struct Movie: ImmutableMappable {
         origianalTitle = try? map.value("original_title")
         overview = try? map.value("overview")
         popularity = try? map.value("popularity")
-        posterImage = try? map.value("poster_path")
+        poster = try? map.value("poster_path")
         productionCompanies = try? map.value("production_companies")
         productionCountries = try? map.value("production_countries")
         releaseDate = try? map.value("release_date")

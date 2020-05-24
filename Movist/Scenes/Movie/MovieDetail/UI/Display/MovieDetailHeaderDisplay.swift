@@ -14,7 +14,7 @@ public struct MovieDetailHeaderDisplay {
     let display: MovieInfoDisplay
     
     public init(with movie: Movie) {
-        backdrop = .backdrop(file: movie.backdropImage.emptyIfNil)
+        backdrop = .backdrop(file: movie.backdrop.emptyIfNil)
         display = MovieInfoDisplay.init(with: movie)
     }
     

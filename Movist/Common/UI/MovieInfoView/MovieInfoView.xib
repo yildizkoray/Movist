@@ -103,7 +103,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie-duration" translatesAutoresizingMaskIntoConstraints="NO" id="NGo-JB-rCi">
                                                     <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="15" id="8Dq-cd-iZc"/>
+                                                        <constraint firstAttribute="width" priority="999" constant="15" id="8Dq-cd-iZc"/>
                                                         <constraint firstAttribute="width" secondItem="NGo-JB-rCi" secondAttribute="height" multiplier="1:1" id="phL-sj-mfy"/>
                                                     </constraints>
                                                 </imageView>
@@ -161,7 +161,7 @@ the industry's standard dummy text ever since the
         </view>
     </objects>
     <resources>
-        <image name="movie-duration" width="28" height="26"/>
+        <image name="movie-duration" width="15" height="15"/>
         <image name="test-poster" width="700" height="1050"/>
     </resources>
 </document>

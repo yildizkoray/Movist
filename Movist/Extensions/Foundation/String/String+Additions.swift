@@ -43,4 +43,16 @@ public extension Optional where Wrapped == String {
     var emptyIfNil: Wrapped {
         return ifNil(.empty)
     }
+    
+    func backdrop(for config: BackdropSize = .w780) -> URL? {
+        guard let self = self else { return nil }
+        let path: String = "\(config.rawValue)/\(self)"
+        return URL(string: path, relativeTo: .TMDB_IMAGE_URL)
+    }
+    
+    func poster(for config: PosterSize = .w342) -> URL? {
+        guard let self = self else { return nil }
+        let path: String = "\(config.rawValue)\(self)"
+        return URL(string: path, relativeTo: .TMDB_IMAGE_URL)
+    }
 }

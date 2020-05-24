@@ -19,7 +19,7 @@ public struct CastDisplay {
         content = VisaulContent(
             title: item.name.emptyIfNil,
             subtitle: item.character.emptyIfNil,
-            visual: .url(.poster(for: .w185, file: item.poster.emptyIfNil))
+            visual: item.poster.poster(for: .w185).visual
         )
         
         gender = item.gender.ifNil(Movie.Cast.Gender.femaale)

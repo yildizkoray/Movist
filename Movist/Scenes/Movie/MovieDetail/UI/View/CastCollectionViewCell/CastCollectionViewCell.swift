@@ -8,16 +8,21 @@
 
 import UIKit
 
-class CastCollectionViewCell: UICollectionViewCell {
+public final class CastCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet private weak var castView: CastView!
 
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
     public func configure(with content: VisaulContent) {
         castView.configure(with: content)
+    }
+    
+    override public func prepareForReuse() {
+        super.prepareForReuse()
+        castView.configure(with: .empty)
     }
 }

@@ -24,7 +24,7 @@ public struct MovieItemDisplay { // TODO: - Change `MovieItemDisplay` struct nam
         self.content = VisaulContent(
             title: movie.title.ifNil(.empty),
             subtitle: movie.averageVote.ifNil(.zero).string,
-            visual: .url(.poster(file: movie.poster.ifNil(.empty)))
+            visual: movie.poster.poster().visual
         )
         self.id = movie.id.ifNil(.zero)
         self.rateStarDisplay = RateStarDisplay(rate: movie.averageVote.ifNil(.zero), settings: .default)

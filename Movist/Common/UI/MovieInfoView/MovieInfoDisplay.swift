@@ -18,7 +18,7 @@ public struct MovieInfoDisplay {
         content = VisaulContent(
             title: movie.title.emptyIfNil,
             subtitle: movie.overview.emptyIfNil,
-            visual: .url(.poster(file: movie.poster.emptyIfNil))
+            visual: movie.poster.poster().visual
         )
         
         rateStarDisplay = RateStarDisplay(rate: movie.averageVote.ifNil(.zero))

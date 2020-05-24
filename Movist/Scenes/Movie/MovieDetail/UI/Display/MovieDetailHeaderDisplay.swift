@@ -10,11 +10,11 @@ import UIKit
 
 public struct MovieDetailHeaderDisplay {
     
-    let backdrop: URL
+    let backdrop: URL?
     let display: MovieInfoDisplay
     
     public init(with movie: Movie) {
-        backdrop = .backdrop(file: movie.backdrop.emptyIfNil)
+        backdrop = movie.backdrop.backdrop()
         display = MovieInfoDisplay.init(with: movie)
     }
     

@@ -21,14 +21,16 @@ public extension URL {
 
 public extension URL {
     
-    static func backdrop(for config: BackdropSize = .w780, file: String) -> URL {
+    static func backdrop(for config: BackdropSize = .w780, file: String?) -> URL? {
+        guard let file = file else { return nil }
         let path: String = "\(config.rawValue)/\(file)"
-        return URL(string: path, relativeTo: .TMDB_IMAGE_URL)!
+        return URL(string: path, relativeTo: .TMDB_IMAGE_URL)
     }
     
-    static func poster(for config: PosterSize = .w342, file: String) -> URL {
+    static func poster(for config: PosterSize = .w342, file: String?) -> URL? {
+        guard let file = file else { return nil }
         let path: String = "\(config.rawValue)\(file)"
-        return URL(string: path, relativeTo: .TMDB_IMAGE_URL)!
+        return URL(string: path, relativeTo: .TMDB_IMAGE_URL)
     }
     
     static func randomIcon(width: Int = 200, height: Int = 200) -> URL {

@@ -10,13 +10,26 @@ import UIKit
 
 public extension UIButton {
     
-    convenience init(title: String, image: UIImage?, action: @escaping VoidCallback) {
+    convenience init(title: String, image: UIImage? =  nil, action: @escaping VoidCallback) {
         self.init(type: .system)
         
         setTitle(title, for: .normal)
         setImage(image, for: .normal)
         
         self.action = { _ in action() }
+    }
+    
+    class func test() -> UIButton {
+        let button = UIButton(type: .system)
+        button.setTitle("Test", for: .normal)
+        
+        button.action = { _ in
+            if let navigation = UIViewController.topMostNavigationController {
+                TestCoordinator(navigator: navigation).start()
+            }
+        }
+        
+        return button
     }
 }
 
@@ -25,18 +38,18 @@ public extension UIButton {
 public extension UIButton {
     
     private struct AssociatedKey {
-        static let key = "movist_button_touchUpInsideBlock"
+        static var key = "movist_button_touchUpInsideBlock"
     }
     
     var action: Callback<UIButton>? {
         get {
-            return objc_getAssociatedObject(self, AssociatedKey.key) as? Callback<UIButton>
+            return objc_getAssociatedObject(self, &AssociatedKey.key) as? Callback<UIButton>
         }
         set {
             removeTarget(self, action: #selector(click), for: .touchUpInside)
             addTarget(self, action: #selector(click), for: .touchUpInside)
             
-            objc_setAssociatedObject(self, AssociatedKey.key, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
+            objc_setAssociatedObject(self, &AssociatedKey.key, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
         }
     }
     

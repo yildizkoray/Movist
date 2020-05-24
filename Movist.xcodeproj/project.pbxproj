@@ -57,6 +57,8 @@
 		CA884C21244AF9A40004C1E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA884C20244AF9A40004C1E3 /* ViewController.swift */; };
 		CA884C2C244B27120004C1E3 /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA884C2B244B27120004C1E3 /* UIViewController+Additions.swift */; };
 		CA88A6312466E50F00D6382A /* MovieSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA88A6302466E50F00D6382A /* MovieSectionHeaderView.xib */; };
+		CA89DE132479EB8F008A13A6 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89DE122479EB8F008A13A6 /* TestViewController.swift */; };
+		CA89DE162479EBFB008A13A6 /* TestCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89DE152479EBFB008A13A6 /* TestCoordinator.swift */; };
 		CA9703FE246F48A600E81606 /* Movie+Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9703FD246F48A600E81606 /* Movie+Cast.swift */; };
 		CA970400246F52A500E81606 /* MovieInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9703FF246F52A500E81606 /* MovieInfoView.xib */; };
 		CA970402246F698C00E81606 /* MovieInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA970401246F698C00E81606 /* MovieInfoView.swift */; };
@@ -194,6 +196,8 @@
 		CA884C20244AF9A40004C1E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CA884C2B244B27120004C1E3 /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
 		CA88A6302466E50F00D6382A /* MovieSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieSectionHeaderView.xib; sourceTree = "<group>"; };
+		CA89DE122479EB8F008A13A6 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		CA89DE152479EBFB008A13A6 /* TestCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoordinator.swift; sourceTree = "<group>"; };
 		CA9703FD246F48A600E81606 /* Movie+Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+Cast.swift"; sourceTree = "<group>"; };
 		CA9703FF246F52A500E81606 /* MovieInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieInfoView.xib; sourceTree = "<group>"; };
 		CA970401246F698C00E81606 /* MovieInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoView.swift; sourceTree = "<group>"; };
@@ -512,6 +516,7 @@
 			children = (
 				CA884C22244AFD0E0004C1E3 /* Movie */,
 				CA648077246C431C00D16917 /* MovieDetail */,
+				CA89DE142479EBD8008A13A6 /* Test */,
 				CA884C15244AD89D0004C1E3 /* Movie.storyboard */,
 			);
 			path = Movie;
@@ -546,6 +551,15 @@
 				CA884C2B244B27120004C1E3 /* UIViewController+Additions.swift */,
 			);
 			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		CA89DE142479EBD8008A13A6 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				CA89DE122479EB8F008A13A6 /* TestViewController.swift */,
+				CA89DE152479EBFB008A13A6 /* TestCoordinator.swift */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		CA970403246F6DA000E81606 /* MovieInfoView */ = {
@@ -1229,10 +1243,12 @@
 				CA37BF0F245CC7C40015D105 /* MovieTableViewCell.swift in Sources */,
 				CAF964422460C4FB00471285 /* ConfigReader.swift in Sources */,
 				CA64806E246C14EC00D16917 /* RateStarView.swift in Sources */,
+				CA89DE162479EBFB008A13A6 /* TestCoordinator.swift in Sources */,
 				CAD6126B246CB8BB00D602F5 /* APITask.swift in Sources */,
 				CABFA8472458E2E20044784C /* Movie.swift in Sources */,
 				CABED3C6245E2F260033D776 /* UIView+Additions.swift in Sources */,
 				CAA29F2F245EE1A400BF5249 /* Movie+Genre.swift in Sources */,
+				CA89DE132479EB8F008A13A6 /* TestViewController.swift in Sources */,
 				CA98BC12245171BA007A4828 /* URL+Additions.swift in Sources */,
 				CA9873D12470A75E00B3FA91 /* CastCollectionViewCell.swift in Sources */,
 				CA0AEB832466181300E8A703 /* UIActivityIndicatorView+Additions.swift in Sources */,

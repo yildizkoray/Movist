@@ -63,6 +63,7 @@ public final class MovieViewController: UIViewController, ViewController {
     
     private func prepareNavigation() {
         title = Constants.title
+        navigationItem.leftBarButtonItems = [UIBarButtonItem(customView: UIButton.test())]
     }
     
     private func prepareTableView() {

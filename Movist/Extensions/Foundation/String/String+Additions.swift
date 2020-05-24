@@ -13,6 +13,7 @@ public extension String {
     static let empty = ""
     static let newline = "\n"
     static let slash = "/"
+    static let bullet = " • "
     static let whitespace = " "
     
     var isNotEmpty: Bool {

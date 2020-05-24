@@ -17,4 +17,10 @@ public extension Int {
     var string: String {
         return String(self)
     }
+    
+    var runtime: String {
+        let hour = self / 60
+        let min = self % 60
+        return String(format: "%02d:%02d", hour, min)
+    }
 }

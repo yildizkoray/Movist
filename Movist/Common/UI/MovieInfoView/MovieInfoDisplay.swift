@@ -12,6 +12,7 @@ public struct MovieInfoDisplay {
     let rateStarDisplay: RateStarDisplay
     let genre: String
     let language: String
+    let runtime: String
     let overview: String
     
     public init(with movie: Movie) {
@@ -27,9 +28,10 @@ public struct MovieInfoDisplay {
         movie.genres.ifNil(.empty()).forEach {
             genres.append( $0.name.emptyIfNil)
         }
-        genre = genres.joined(separator: " • ")
+        genre = genres.joined(separator: .bullet)
         
         language = "Language: \(movie.originalLanguage.emptyIfNil)"
+        runtime = movie.runtime.ifNil(.zero).runtime
         overview = movie.overview.emptyIfNil
     }
     
@@ -39,6 +41,7 @@ public struct MovieInfoDisplay {
         genre = .empty
         language = .empty
         overview = .empty
+        runtime = .empty
     }
     
     public static let empty = MovieInfoDisplay()

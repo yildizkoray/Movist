@@ -15,6 +15,7 @@ public final class MovieInfoView: UIView, NibLoadable {
     @IBOutlet private weak var rateStarView: RateStarView!
     @IBOutlet private weak var genre: UILabel!
     @IBOutlet private weak var language: UILabel!
+    @IBOutlet private weak var runtime: UILabel!
     @IBOutlet private weak var overview: UILabel!
     
     public override init(frame: CGRect) {
@@ -33,6 +34,7 @@ public final class MovieInfoView: UIView, NibLoadable {
         rateStarView.configure(display: display.rateStarDisplay)
         genre.hidableText = display.genre
         language.hidableText = display.language
+        runtime.hidableText = display.runtime
         overview.hidableText = display.overview
     }
 }

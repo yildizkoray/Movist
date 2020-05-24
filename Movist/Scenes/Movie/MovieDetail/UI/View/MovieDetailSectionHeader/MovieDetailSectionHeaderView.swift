@@ -11,9 +11,9 @@ import UIKit
 private struct Constants {
     
     struct Gradient {
-        static let color: [UIColor] = [.clear, UIColor(red: 47, green: 47, blue: 59, alpa: 0.8)]
+        static let color: [UIColor] = [.clear, UIColor(red: 47, green: 47, blue: 59, alpa: 0.6)]
         static let points = (start: CGPoint(x: 0.5, y: .zero), end: CGPoint(x: 0.5, y: 1))
-        static let locations: [NSNumber] = [0.7, 1.0]
+        static let locations: [NSNumber] = [0.9, 1.0]
     }
 }
 

@@ -19,7 +19,7 @@ public struct MovieDetailHeaderDisplay {
     }
     
     private init() {
-        backdrop = .randomIcon()
+        backdrop = .localhost
         display = .empty
     }
     

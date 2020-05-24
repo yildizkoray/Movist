@@ -15,6 +15,7 @@ public extension URL {
     private static let RANDOM_IMAGE_BASE_URL = URL(string: ConfigReader.shared["RANDOM_IMAGE_URL"])!
     static let TMDB_API_URL = URL(string: ConfigReader.shared["TMDB_API_URL"])!
     static let TMDB_IMAGE_URL = URL(string: ConfigReader.shared["TMDB_IMAGE_URL"])!
+    static let localhost = URL(string: "http://localhost")
 }
 
 // MARK: - URL+Images

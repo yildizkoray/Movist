@@ -43,7 +43,7 @@ public final class CastCollectionView: UIView, NibLoadable {
     private func prepareCollectionView() {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.registerCells(for: CastCollectionViewCell.self)
-        collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        collectionView.contentInset = UIEdgeInsets(top: .zero, left: 10, bottom: .zero, right: 10)
     }
 }
 
@@ -83,6 +83,6 @@ extension CastCollectionView: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        return CGSize(width: 90, height: collectionView.frame.height - 20)
+        return CGSize(width: 90, height: collectionView.frame.height)
     }
 }

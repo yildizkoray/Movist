@@ -46,6 +46,10 @@ public final class MovieCollectionView: UIView, NibLoadable {
         prepareCollectionView()
     }
     
+    override public var intrinsicContentSize: CGSize {
+        return collectionView.frame.size
+    }
+    
     private func prepareCollectionView() {
         
         collectionView.showsHorizontalScrollIndicator = false

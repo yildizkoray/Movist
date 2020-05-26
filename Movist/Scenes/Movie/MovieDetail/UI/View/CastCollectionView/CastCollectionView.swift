@@ -40,6 +40,10 @@ public final class CastCollectionView: UIView, NibLoadable {
         prepareCollectionView()
     }
     
+    override public var intrinsicContentSize: CGSize {
+        return collectionView.frame.size
+    }
+    
     private func prepareCollectionView() {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.registerCells(for: CastCollectionViewCell.self)

@@ -46,9 +46,6 @@
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="oyJ-gw-oF0">
                             <rect key="frame" x="0.0" y="57" width="414" height="176"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="176" id="Ll1-J0-j0x"/>
-                            </constraints>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6kO-Vi-fWP">
                                 <size key="itemSize" width="90" height="180"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>

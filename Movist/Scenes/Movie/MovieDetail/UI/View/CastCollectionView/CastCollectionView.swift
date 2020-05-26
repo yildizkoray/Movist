@@ -16,6 +16,7 @@ public protocol CastCollectionViewDelegate: class {
 public final class CastCollectionView: UIView, NibLoadable {
     
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var title: UILabel!
     @IBOutlet private weak var collectionViewLayout: UICollectionViewFlowLayout!
     
     public weak var delegate: CastCollectionViewDelegate?
@@ -41,7 +42,9 @@ public final class CastCollectionView: UIView, NibLoadable {
     }
     
     override public var intrinsicContentSize: CGSize {
-        return collectionView.frame.size
+        let height = collectionView.frame.size.height + title.frame.size.height
+        let width = collectionView.frame.size.width
+        return CGSize(width: width, height: height)
     }
     
     private func prepareCollectionView() {
@@ -87,6 +90,8 @@ extension CastCollectionView: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        return CGSize(width: 90, height: collectionView.frame.height)
+        let imageHeight = 135.0
+        let labelsHeight = 22.0 * 2.0
+        return CGSize(width: 90, height: imageHeight + labelsHeight)
     }
 }

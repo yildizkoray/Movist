@@ -8,6 +8,13 @@
 
 import UIKit
 
+private struct Constants {
+    static let heightForPoster: CGFloat = 135.0
+    static let heightForLabels: CGFloat = 20.0
+    static let widthForCell: CGFloat = 90.0
+    static let contentInsetForCollection = UIEdgeInsets(horizontal: 10.0, vertical: 8.0)
+}
+
 public protocol CastCollectionViewDelegate: class {
     
     func castColletionView(_ movieCollectionView: CastCollectionView, didSelectItemAt at: Int)
@@ -15,8 +22,8 @@ public protocol CastCollectionViewDelegate: class {
 
 public final class CastCollectionView: UIView, NibLoadable {
     
-    @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var title: UILabel!
+    @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var collectionViewLayout: UICollectionViewFlowLayout!
     
     public weak var delegate: CastCollectionViewDelegate?
@@ -42,15 +49,21 @@ public final class CastCollectionView: UIView, NibLoadable {
     }
     
     override public var intrinsicContentSize: CGSize {
-        let height = collectionView.frame.size.height + title.frame.size.height
-        let width = collectionView.frame.size.width
+        let height = (Constants.heightForLabels * 2.0) + Constants.heightForPoster + title.frame.size.height
+        let width = Constants.widthForCell
         return CGSize(width: width, height: height)
     }
     
     private func prepareCollectionView() {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.registerCells(for: CastCollectionViewCell.self)
-        collectionView.contentInset = UIEdgeInsets(top: .zero, left: 10, bottom: .zero, right: 10)
+        collectionView.contentInset = Constants.contentInsetForCollection
+        NSLayoutConstraint.activate([
+            collectionView.heightAnchor.constraint(
+                equalToConstant: (Constants.heightForLabels * 2.0) +
+                    Constants.heightForPoster +
+                    Constants.contentInsetForCollection.vertical)
+        ])
     }
 }
 
@@ -90,8 +103,8 @@ extension CastCollectionView: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        let imageHeight = 135.0
-        let labelsHeight = 22.0 * 2.0
-        return CGSize(width: 90, height: imageHeight + labelsHeight)
+        let height = (Constants.heightForLabels * 2.0) + Constants.heightForPoster
+        let width = Constants.widthForCell
+        return CGSize(width: width, height: height)
     }
 }

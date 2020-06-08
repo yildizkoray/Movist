@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA02FE49248EC9B900643F32 /* UIEdgeInsets+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA02FE48248EC9B900643F32 /* UIEdgeInsets+Additions.swift */; };
 		CA097A2B245CC8F200EB9889 /* MovieCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA097A2A245CC8F200EB9889 /* MovieCollectionView.xib */; };
 		CA097A2D245CC90E00EB9889 /* MovieCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA097A2C245CC90E00EB9889 /* MovieCollectionView.swift */; };
 		CA097A31245CCC4A00EB9889 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA097A2F245CCC4A00EB9889 /* MovieCollectionViewCell.swift */; };
@@ -146,6 +147,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA02FE48248EC9B900643F32 /* UIEdgeInsets+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Additions.swift"; sourceTree = "<group>"; };
 		CA097A2A245CC8F200EB9889 /* MovieCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionView.xib; sourceTree = "<group>"; };
 		CA097A2C245CC90E00EB9889 /* MovieCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionView.swift; sourceTree = "<group>"; };
 		CA097A2F245CCC4A00EB9889 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -303,6 +305,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA02FE47248EC99900643F32 /* UIEdgeInsets */ = {
+			isa = PBXGroup;
+			children = (
+				CA02FE48248EC9B900643F32 /* UIEdgeInsets+Additions.swift */,
+			);
+			path = UIEdgeInsets;
+			sourceTree = "<group>";
+		};
 		CA097A2E245CCC1F00EB9889 /* MovieCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -790,6 +800,7 @@
 		CAAA38032448EEFA00A8170A /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CA02FE47248EC99900643F32 /* UIEdgeInsets */,
 				CA0AEB81246617EB00E8A703 /* UIActivityIndicatorView */,
 				CA11932624490E8C00625FB5 /* UIButton */,
 				CA632989245A0BA200379198 /* UICollectionView */,
@@ -1203,6 +1214,7 @@
 				CAAA38012448E3D400A8170A /* Any+Additions.swift in Sources */,
 				CA648073246C2AD100D16917 /* RateStarDisplay.swift in Sources */,
 				CA45FB42246C891500A1E06B /* GetMovieDetailTask.swift in Sources */,
+				CA02FE49248EC9B900643F32 /* UIEdgeInsets+Additions.swift in Sources */,
 				CA884C21244AF9A40004C1E3 /* ViewController.swift in Sources */,
 				CA9703FE246F48A600E81606 /* Movie+Cast.swift in Sources */,
 				CA0AEB852466193E00E8A703 /* UIView+ActivityIndicator.swift in Sources */,

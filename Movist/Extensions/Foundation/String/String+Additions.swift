@@ -10,10 +10,11 @@ import UIKit
 
 public extension String {
     
+    static let bullet = " • "
+    static let comma = ","
     static let empty = ""
     static let newline = "\n"
     static let slash = "/"
-    static let bullet = " • "
     static let whitespace = " "
     
     var isNotEmpty: Bool {

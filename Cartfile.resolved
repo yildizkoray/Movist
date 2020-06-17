@@ -1,4 +1,4 @@
-github "Alamofire/Alamofire" "5.2.0"
+github "Alamofire/Alamofire" "5.2.1"
 github "Alamofire/AlamofireImage" "4.1.0"
 github "evgenyneu/Cosmos" "21.0.0"
 github "konkab/AlamofireNetworkActivityLogger" "3.0.0"

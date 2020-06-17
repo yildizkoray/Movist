@@ -8,6 +8,12 @@
 
 import PromiseKit
 
+private struct Constants {
+    static let appendToResponse: [String] = [
+        "casts,similar"
+    ]
+}
+
 public class MovieDetailViewModel {
     
     public var coordinator: MovieDetailCoordinator!
@@ -19,7 +25,8 @@ public class MovieDetailViewModel {
     }
     
     public func start() -> Promise<MovieDetailDisplay> {
-        let movie: Promise<Movie> = RestAPI.shared.execute(with: GetMovieDetailTask(id: id))
+        let movie: Promise<Movie> =
+            RestAPI.shared.execute(with: GetMovieDetailTask(id: id, appendToResponse: Constants.appendToResponse))
         return movie.map(MovieDetailDisplay.init)
     }
 }

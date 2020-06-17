@@ -14,11 +14,11 @@ struct GetMovieDetailTask: APITask {
     public var path: String
     public var queryParameters: [URLQueryItem]
     
-    public init(id: Int) {
+    public init(id: Int, appendToResponse: [String]) {
         path = "/movie/\(id)"
         queryParameters = [
             URLQueryItem(name: "api_key", value: .TMDB_API_KEY),
-            URLQueryItem(name: "append_to_response", value: "casts")
+            URLQueryItem(name: "append_to_response", value: appendToResponse.joined(separator: .comma))
         ]
     }
 }

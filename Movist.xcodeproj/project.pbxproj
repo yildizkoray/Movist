@@ -423,7 +423,6 @@
 				CA37BF11245CC7FC0015D105 /* MovieTableViewCell */,
 				CA37BF12245CC84D0015D105 /* MovieCollectionView */,
 				CA097A2E245CCC1F00EB9889 /* MovieCollectionViewCell */,
-				CA097A33245CD66600EB9889 /* MovieView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -865,7 +864,6 @@
 			children = (
 				CA9873D42470A78500B3FA91 /* CastCollectionView */,
 				CA9873D32470A77200B3FA91 /* CastCollectionViewCell */,
-				CAE929132470AB7A00AD2132 /* CastView */,
 				CA45FB40246C6C5200A1E06B /* MovieDetailSectionHeader */,
 				CAB51A79246C51E000B75DC2 /* MovieDetailTableViewCell */,
 			);
@@ -932,11 +930,13 @@
 		CAC11213244FA26900B5E8AE /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CAE929132470AB7A00AD2132 /* CastView */,
 				CAC11217244FA62300B5E8AE /* EmptyState */,
+				CA970403246F6DA000E81606 /* MovieInfoView */,
+				CA097A33245CD66600EB9889 /* MovieView */,
 				CAC11214244FA26E00B5E8AE /* NibLoadable */,
 				CA64806C246C13E600D16917 /* RateStarView */,
 				CA6357CF2454DDAB00EE26E2 /* VisualContent */,
-				CA970403246F6DA000E81606 /* MovieInfoView */,
 			);
 			path = UI;
 			sourceTree = "<group>";

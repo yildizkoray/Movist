@@ -9,12 +9,12 @@
 import PromiseKit
 
 private struct Constants {
-    static let appendToResponse: [String] = [
-        "casts,similar"
+    static let appendToResponse: [AppendToResponse] = [
+        .cast, .review, .video, .similar
     ]
 }
 
-public class MovieDetailViewModel {
+public class MovieDetailViewModel: ViewModel {
     
     public enum CellType: Int {
         case cast = 0
@@ -30,8 +30,7 @@ public class MovieDetailViewModel {
     }
     
     public func start() -> Promise<MovieDetailDisplay> {
-        let movie: Promise<Movie> =
-            RestAPI.shared.execute(with: GetMovieDetailTask(id: id, appendToResponse: Constants.appendToResponse))
+        let movie: Promise<Movie> = api.execute(with: GetMovieDetailTask(id: id, appendToResponse: Constants.appendToResponse))
         return movie.map(MovieDetailDisplay.init)
     }
     

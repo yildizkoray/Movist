@@ -21,3 +21,10 @@ public extension Array {
         }
     }
 }
+
+public extension Array where Element == AppendToResponse {
+    
+    var queryValue: String {
+        return map { $0.rawValue }.joined(separator: .comma)
+    }
+}

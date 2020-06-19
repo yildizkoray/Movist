@@ -38,3 +38,11 @@ public enum PosterSize: String {
     case original = "original"
 }
 
+public enum AppendToResponse: String {
+    
+    case cast = "casts"
+    case review = "reviews"
+    case similar = "similar"
+    case video = "videos"
+}
+

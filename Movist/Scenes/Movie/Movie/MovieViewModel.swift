@@ -9,15 +9,9 @@
 import Foundation
 import PromiseKit
 
-public final class MovieViewModel {
-    
-    let api: RestAPI
+public final class MovieViewModel: ViewModel {
     
     public var coordinator: MovieCoordinator!
-    
-    public init(with api: RestAPI = .shared) {
-        self.api = api
-    }
     
     public func start() -> Promise<[MovieDisplay]>{
         return when(fulfilled: popular(), toprated(), upcoming()).compactMap {
@@ -27,17 +21,17 @@ public final class MovieViewModel {
     }
     
     private func popular() -> Promise<MoviePopularDisplay> {
-        let popular: Promise<Popular> = RestAPI.shared.execute(with: GetPopularTask())
+        let popular: Promise<Popular> = api.execute(with: GetPopularTask())
         return popular.map(MoviePopularDisplay.init)
     }
     
     private func toprated() -> Promise<MovieTopRatedDisplay> {
-        let popular: Promise<TopRated> = RestAPI.shared.execute(with: GetTopRatedTask())
+        let popular: Promise<TopRated> = api.execute(with: GetTopRatedTask())
         return popular.map(MovieTopRatedDisplay.init)
     }
     
     private func upcoming() -> Promise<MovieUpComingDisplay> {
-        let popular: Promise<UpComing> = RestAPI.shared.execute(with: GetUpComingTask())
+        let popular: Promise<UpComing> = api.execute(with: GetUpComingTask())
         return popular.map(MovieUpComingDisplay.init)
     }
 }

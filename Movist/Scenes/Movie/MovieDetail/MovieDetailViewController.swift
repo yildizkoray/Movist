@@ -52,7 +52,7 @@ public final class MovieDetailViewController: UIViewController, ViewController {
     
     public func prepareTableView() {
         tableView.setHidden(true, animated: false)
-        tableView.registerCells(for: MovieDetailTableViewCell.self)
+        tableView.registerCells(for: MovieDetailTableViewCell.self, MovieTableViewCell.self)
         tableView.registerSectionHeaderFooters(for: MovieDetailSectionHeaderView.self)
     }
 }
@@ -62,14 +62,26 @@ public final class MovieDetailViewController: UIViewController, ViewController {
 extension MovieDetailViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 2
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: MovieDetailTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.castCollectionView.delegate = self
-        cell.configure(with: display.casts)
-        return cell
+        let cellType = viewModel.cellType(for: indexPath)
+        
+        switch cellType {
+            
+        case .cast:
+            let cell: MovieDetailTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.castCollectionView.delegate = self
+            cell.configure(with: display.casts)
+            return cell
+            
+        case .similar:
+            let cell: MovieTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.movieCollectionView.delegate = self
+            cell.configure(display: display.similars)
+            return cell
+        }
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -113,5 +125,12 @@ extension MovieDetailViewController: CastCollectionViewDelegate {
     
     public func castColletionView(_ movieCollectionView: CastCollectionView, didSelectItemAt at: Int) {
         print(movieCollectionView.display[at].id)
+    }
+}
+
+extension MovieDetailViewController: MovieCollectionViewDelegate {
+    
+    public func movieColletionView(_ movieCollectionView: MovieCollectionView, didSelectItemAt at: Int) {
+        viewModel.coordinator.start(with: movieCollectionView.display[at].id)
     }
 }

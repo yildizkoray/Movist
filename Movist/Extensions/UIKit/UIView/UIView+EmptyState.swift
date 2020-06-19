@@ -53,7 +53,7 @@ extension UIView: EmptyStateShowing {
         return emptyStateView.isHidden == false
     }
     
-    public func hideEmptyState(animated: Bool) {
+    public func hideEmptyState(animated: Bool = true) {
         emptyStateView.isHidden = true
     }
     

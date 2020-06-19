@@ -16,6 +16,11 @@ private struct Constants {
 
 public class MovieDetailViewModel {
     
+    public enum CellType: Int {
+        case cast = 0
+        case similar = 1
+    }
+    
     public var coordinator: MovieDetailCoordinator!
     
     public var id: Int
@@ -28,5 +33,21 @@ public class MovieDetailViewModel {
         let movie: Promise<Movie> =
             RestAPI.shared.execute(with: GetMovieDetailTask(id: id, appendToResponse: Constants.appendToResponse))
         return movie.map(MovieDetailDisplay.init)
+    }
+    
+    public func cellType(for indexPath: IndexPath) -> CellType {
+        return indexPath.row.cellType
+    }
+}
+
+private extension Int {
+    
+    var cellType: MovieDetailViewModel.CellType {
+        if let type = MovieDetailViewModel.CellType(rawValue: self) {
+            return type
+        }
+        else {
+            return .cast
+        }
     }
 }

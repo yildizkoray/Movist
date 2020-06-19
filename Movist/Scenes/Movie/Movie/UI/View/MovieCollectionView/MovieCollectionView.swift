@@ -26,7 +26,7 @@ public final class MovieCollectionView: UIView, NibLoadable {
     
     public var display: [MovieItemDisplay] = .empty() {
         didSet {
-            configureEmptyState()
+//            configureEmptyState()
             collectionView.reloadData()
         }
     }

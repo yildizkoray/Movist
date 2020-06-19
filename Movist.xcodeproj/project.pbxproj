@@ -440,9 +440,9 @@
 		CA64806C246C13E600D16917 /* RateStarView */ = {
 			isa = PBXGroup;
 			children = (
+				CA648072246C2AD100D16917 /* RateStarDisplay.swift */,
 				CA64806D246C14EC00D16917 /* RateStarView.swift */,
 				CA64806F246C1E5900D16917 /* RateStarView.xib */,
-				CA648072246C2AD100D16917 /* RateStarDisplay.swift */,
 			);
 			path = RateStarView;
 			sourceTree = "<group>";
@@ -577,9 +577,9 @@
 		CA970403246F6DA000E81606 /* MovieInfoView */ = {
 			isa = PBXGroup;
 			children = (
-				CA9703FF246F52A500E81606 /* MovieInfoView.xib */,
-				CA970401246F698C00E81606 /* MovieInfoView.swift */,
 				CA80BD4F246F7C9200E8BC83 /* MovieInfoDisplay.swift */,
+				CA970401246F698C00E81606 /* MovieInfoView.swift */,
+				CA9703FF246F52A500E81606 /* MovieInfoView.xib */,
 			);
 			path = MovieInfoView;
 			sourceTree = "<group>";
@@ -894,8 +894,8 @@
 			isa = PBXGroup;
 			children = (
 				CABFA82C2458D04D0044784C /* RestAPI.swift */,
-				CA22AB5D246A021F00EF11D4 /* API+Configuration.swift */,
 				CAD6126A246CB8BB00D602F5 /* APITask.swift */,
+				CA22AB5D246A021F00EF11D4 /* API+Configuration.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";

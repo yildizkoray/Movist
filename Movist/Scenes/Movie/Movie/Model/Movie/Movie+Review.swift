@@ -13,13 +13,13 @@ public extension Movie {
     struct Review: ImmutableMappable {
         
         let author: String?
-        let content: String?
+        let comment: String?
         let id: String?
         let url: String?
         
         public init(map: Map) throws {
             author = try? map.value("author")
-            content = try? map.value("content")
+            comment = try? map.value("content")
             id = try? map.value("id")
             url = try? map.value("url")
         }

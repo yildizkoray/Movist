@@ -13,7 +13,7 @@ public final class ReviewDisplay {
     
     public init(review: Movie.Review) {
         self.author = review.author.emptyIfNil
-        self.comment = review.content.emptyIfNil
+        self.comment = review.comment.emptyIfNil
     }
     
     private init() {

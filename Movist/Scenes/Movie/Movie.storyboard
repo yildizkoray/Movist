@@ -83,7 +83,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POI-fx-Vnh">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POI-fx-Vnh" customClass="ReviewView" customModule="Movist" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="331.5" width="414" height="233"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -99,7 +99,7 @@
                         <viewLayoutGuide key="safeArea" id="JK4-e8-tjU"/>
                     </view>
                     <connections>
-                        <outlet property="gradient" destination="POI-fx-Vnh" id="ljP-KY-w1E"/>
+                        <outlet property="reviewView" destination="POI-fx-Vnh" id="lcN-8U-0PC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jM2-a7-fdt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

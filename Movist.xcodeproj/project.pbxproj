@@ -32,7 +32,10 @@
 		CA26E997244F7282001D01C9 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA26E996244F7282001D01C9 /* PromiseKit.framework */; };
 		CA37BF0F245CC7C40015D105 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37BF0D245CC7C40015D105 /* MovieTableViewCell.swift */; };
 		CA37BF10245CC7C40015D105 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA37BF0E245CC7C40015D105 /* MovieTableViewCell.xib */; };
+		CA40775E249F90CD00720DAD /* Movie+Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA40775D249F90CD00720DAD /* Movie+Review.swift */; };
 		CA45FB42246C891500A1E06B /* GetMovieDetailTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA45FB41246C891500A1E06B /* GetMovieDetailTask.swift */; };
+		CA58700E249EACB700B2636E /* ReviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA58700D249EACB700B2636E /* ReviewView.xib */; };
+		CA587010249EACC500B2636E /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58700F249EACC500B2636E /* ReviewView.swift */; };
 		CA632988245A093300379198 /* UICollectionView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA632987245A093300379198 /* UICollectionView+Additions.swift */; };
 		CA64806E246C14EC00D16917 /* RateStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA64806D246C14EC00D16917 /* RateStarView.swift */; };
 		CA648070246C1E5900D16917 /* RateStarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA64806F246C1E5900D16917 /* RateStarView.xib */; };
@@ -129,6 +132,7 @@
 		CAEB5E632458EE9C001E7EFD /* Movie_TopRated.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEB5E622458EE9C001E7EFD /* Movie_TopRated.json */; };
 		CAEB5E652458EF12001E7EFD /* Movie_UpComing.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEB5E642458EF12001E7EFD /* Movie_UpComing.json */; };
 		CAEB5E672458EF54001E7EFD /* Movie_NowPlaying.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEB5E662458EF54001E7EFD /* Movie_NowPlaying.json */; };
+		CAEFDFC5249F86EB002DEDE9 /* ReviewDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEFDFC4249F86EB002DEDE9 /* ReviewDisplay.swift */; };
 		CAF306A8245F514100378716 /* Popular.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF306A7245F514100378716 /* Popular.swift */; };
 		CAF35CF52466F77D00E47EEA /* TopRated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF35CF42466F77D00E47EEA /* TopRated.swift */; };
 		CAF35CF72466F78B00E47EEA /* UpComing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF35CF62466F78B00E47EEA /* UpComing.swift */; };
@@ -173,7 +177,10 @@
 		CA26E996244F7282001D01C9 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		CA37BF0D245CC7C40015D105 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		CA37BF0E245CC7C40015D105 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		CA40775D249F90CD00720DAD /* Movie+Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+Review.swift"; sourceTree = "<group>"; };
 		CA45FB41246C891500A1E06B /* GetMovieDetailTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieDetailTask.swift; sourceTree = "<group>"; };
+		CA58700D249EACB700B2636E /* ReviewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewView.xib; sourceTree = "<group>"; };
+		CA58700F249EACC500B2636E /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		CA632987245A093300379198 /* UICollectionView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Additions.swift"; sourceTree = "<group>"; };
 		CA64806D246C14EC00D16917 /* RateStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateStarView.swift; sourceTree = "<group>"; };
 		CA64806F246C1E5900D16917 /* RateStarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateStarView.xib; sourceTree = "<group>"; };
@@ -274,6 +281,7 @@
 		CAEB5E622458EE9C001E7EFD /* Movie_TopRated.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movie_TopRated.json; sourceTree = "<group>"; };
 		CAEB5E642458EF12001E7EFD /* Movie_UpComing.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movie_UpComing.json; sourceTree = "<group>"; };
 		CAEB5E662458EF54001E7EFD /* Movie_NowPlaying.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movie_NowPlaying.json; sourceTree = "<group>"; };
+		CAEFDFC4249F86EB002DEDE9 /* ReviewDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDisplay.swift; sourceTree = "<group>"; };
 		CAF306A7245F514100378716 /* Popular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popular.swift; sourceTree = "<group>"; };
 		CAF35CF42466F77D00E47EEA /* TopRated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRated.swift; sourceTree = "<group>"; };
 		CAF35CF62466F78B00E47EEA /* UpComing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComing.swift; sourceTree = "<group>"; };
@@ -408,6 +416,16 @@
 				CA45FB41246C891500A1E06B /* GetMovieDetailTask.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		CA58700C249EAC7E00B2636E /* ReviewView */ = {
+			isa = PBXGroup;
+			children = (
+				CAEFDFC4249F86EB002DEDE9 /* ReviewDisplay.swift */,
+				CA58700F249EACC500B2636E /* ReviewView.swift */,
+				CA58700D249EACB700B2636E /* ReviewView.xib */,
+			);
+			path = ReviewView;
 			sourceTree = "<group>";
 		};
 		CA632989245A0BA200379198 /* UICollectionView */ = {
@@ -933,6 +951,7 @@
 		CAC11213244FA26900B5E8AE /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CA58700C249EAC7E00B2636E /* ReviewView */,
 				CAE929132470AB7A00AD2132 /* CastView */,
 				CAC11217244FA62300B5E8AE /* EmptyState */,
 				CA970403246F6DA000E81606 /* MovieInfoView */,
@@ -1017,6 +1036,7 @@
 				CAA29F2C245EE16D00BF5249 /* Movie+ProductionCompany.swift */,
 				CAA29F2A245EE13B00BF5249 /* Movie+ProductionCountry.swift */,
 				CAA29F30245EE22100BF5249 /* Movie+Status.swift */,
+				CA40775D249F90CD00720DAD /* Movie+Review.swift */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -1110,6 +1130,7 @@
 				CAB51A7D246C523E00B75DC2 /* MovieDetailSectionHeaderView.xib in Resources */,
 				CA097A35245CD67700EB9889 /* MovieView.xib in Resources */,
 				CABFA83F2458DE7C0044784C /* TheMovieDB_Languages.json in Resources */,
+				CA58700E249EACB700B2636E /* ReviewView.xib in Resources */,
 				CA127AED24684F8B0079C42F /* Bahij_TheSansArabic-SemiBold.ttf in Resources */,
 				CA127AE824684F8B0079C42F /* Bahij_TheSansArabic-Light.ttf in Resources */,
 				CABFA8402458DE7C0044784C /* TheMovieDB_Tranlations.json in Resources */,
@@ -1257,6 +1278,7 @@
 				CAD61272246CC6B900D602F5 /* Dictionary+Additions.swift in Sources */,
 				CA37BF0F245CC7C40015D105 /* MovieTableViewCell.swift in Sources */,
 				CAF964422460C4FB00471285 /* ConfigReader.swift in Sources */,
+				CA40775E249F90CD00720DAD /* Movie+Review.swift in Sources */,
 				CA64806E246C14EC00D16917 /* RateStarView.swift in Sources */,
 				CA89DE162479EBFB008A13A6 /* TestCoordinator.swift in Sources */,
 				CAD6126B246CB8BB00D602F5 /* APITask.swift in Sources */,
@@ -1287,11 +1309,13 @@
 				CAB51A77246C4FC500B75DC2 /* MovieDetailTableViewCell.swift in Sources */,
 				CAAA37F12448DFD300A8170A /* String+Additions.swift in Sources */,
 				CAA29F31245EE22100BF5249 /* Movie+Status.swift in Sources */,
+				CA587010249EACC500B2636E /* ReviewView.swift in Sources */,
 				CA097A2D245CC90E00EB9889 /* MovieCollectionView.swift in Sources */,
 				CA648076246C39B900D16917 /* Cosmos+Settings.swift in Sources */,
 				CA097A31245CCC4A00EB9889 /* MovieCollectionViewCell.swift in Sources */,
 				CAAA37F32448E01C00A8170A /* Int+Additions.swift in Sources */,
 				CAD6126D246CC5A700D602F5 /* GetTopRatedTask.swift in Sources */,
+				CAEFDFC5249F86EB002DEDE9 /* ReviewDisplay.swift in Sources */,
 				CAF97A072451FE1000D762B8 /* UIView+EmptyState.swift in Sources */,
 				CAA99FD1245D0095003C288E /* Double+Additions.swift in Sources */,
 			);

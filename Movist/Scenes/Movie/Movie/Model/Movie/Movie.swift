@@ -36,6 +36,7 @@ public struct Movie: ImmutableMappable {
     
     let cast: [Cast]?
     let similars: [Movie]?
+    let reviews: [Review]?
     
     public init(map: Map) throws {
         
@@ -65,5 +66,6 @@ public struct Movie: ImmutableMappable {
         
         cast = try? map.value("casts.cast")
         similars = try? map.value("similar.results")
+        reviews = try? map.value("reviews.results")
     }
 }

@@ -54,7 +54,7 @@ public final class MovieCollectionView: UIView, NibLoadable {
         
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.registerCells(for: MovieCollectionViewCell.self)
-        collectionView.contentInset = UIEdgeInsets(top: .zero, left: 10, bottom: .zero, right: 10)
+        collectionView.contentInset = UIEdgeInsets(horizontal: 10, vertical: .zero)
     }
 }
 

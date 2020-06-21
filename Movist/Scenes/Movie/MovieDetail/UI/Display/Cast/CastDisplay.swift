@@ -22,14 +22,14 @@ public struct CastDisplay {
             visual: item.poster.poster(for: .w185).visual
         )
         
-        gender = item.gender.ifNil(Movie.Cast.Gender.femaale)
+        gender = item.gender.ifNil(Movie.Cast.Gender.female)
         order = item.order.ifNil(.zero)
     }
     
     private init() {
         id = .zero
         content = .empty
-        gender = .femaale
+        gender = .female
         order = .zero
     }
     

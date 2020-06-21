@@ -13,7 +13,7 @@ public extension Movie {
     struct Cast: ImmutableMappable {
         
         enum Gender: Int {
-            case femaale = 0
+            case female = 0
             case male = 1
         }
         

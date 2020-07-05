@@ -1,7 +1,0 @@
-github "Alamofire/Alamofire" "5.0.5"
-github "Alamofire/AlamofireImage" "4.1.0"
-github "evgenyneu/Cosmos" "21.0.0"
-github "konkab/AlamofireNetworkActivityLogger" "3.0.0"
-github "mxcl/PromiseKit" "6.13.2"
-github "tristanhimmelman/AlamofireObjectMapper" "6.2.0"
-github "tristanhimmelman/ObjectMapper" "3.5.3"

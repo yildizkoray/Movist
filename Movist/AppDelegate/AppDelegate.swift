@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AlamofireNetworkActivityLogger
 
 @UIApplicationMain
 public class AppDelegate: UIResponder, UIApplicationDelegate {

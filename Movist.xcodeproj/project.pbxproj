@@ -43,14 +43,14 @@
 		CA648079246C433700D16917 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA648078246C433700D16917 /* MovieDetailViewController.swift */; };
 		CA64807B246C434700D16917 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA64807A246C434700D16917 /* MovieDetailViewModel.swift */; };
 		CA64807D246C437B00D16917 /* MovieDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA64807C246C437B00D16917 /* MovieDetailCoordinator.swift */; };
+		CA66F0AE24B1EF0D00D2FC8C /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = CA66F0AD24B1EF0D00D2FC8C /* Cosmos */; };
+		CA66F0B124B1EF3200D2FC8C /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = CA66F0B024B1EF3200D2FC8C /* ObjectMapper */; };
+		CA66F0B424B1EF6600D2FC8C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CA66F0B324B1EF6600D2FC8C /* Alamofire */; };
+		CA66F0B724B1EFA400D2FC8C /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = CA66F0B624B1EFA400D2FC8C /* AlamofireImage */; };
+		CA66F0BA24B1F01500D2FC8C /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = CA66F0B924B1F01500D2FC8C /* PromiseKit */; };
 		CA692E922466B16F00A0E3ED /* Collection+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA692E912466B16F00A0E3ED /* Collection+Additions.swift */; };
 		CA7711CF2450F29200B25AEE /* UILabel+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7711CE2450F29200B25AEE /* UILabel+Additions.swift */; };
 		CA7711D22450F3CB00B25AEE /* UIImageView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7711D12450F3CB00B25AEE /* UIImageView+Additions.swift */; };
-		CA7796AB24B1304A00C4C25C /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = CA7796AA24B1304A00C4C25C /* PromiseKit */; };
-		CA7796AE24B1D1B000C4C25C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CA7796AD24B1D1B000C4C25C /* Alamofire */; };
-		CA7796B124B1D22800C4C25C /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = CA7796B024B1D22800C4C25C /* AlamofireImage */; };
-		CA7796B624B1D61D00C4C25C /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = CA7796B524B1D61D00C4C25C /* ObjectMapper */; };
-		CA7796B924B1D6A400C4C25C /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = CA7796B824B1D6A400C4C25C /* Cosmos */; };
 		CA7796BB24B1D78F00C4C25C /* Alamofire+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7796BA24B1D78F00C4C25C /* Alamofire+ObjectMapper.swift */; };
 		CA7796BD24B1DB8D00C4C25C /* Alamofire+NetworkActivityLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7796BC24B1DB8D00C4C25C /* Alamofire+NetworkActivityLogger.swift */; };
 		CA80BD4E246F773500E8BC83 /* MovieDetailHeaderDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA80BD4D246F773500E8BC83 /* MovieDetailHeaderDisplay.swift */; };
@@ -297,11 +297,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA7796B624B1D61D00C4C25C /* ObjectMapper in Frameworks */,
-				CA7796AE24B1D1B000C4C25C /* Alamofire in Frameworks */,
-				CA7796B924B1D6A400C4C25C /* Cosmos in Frameworks */,
-				CA7796AB24B1304A00C4C25C /* PromiseKit in Frameworks */,
-				CA7796B124B1D22800C4C25C /* AlamofireImage in Frameworks */,
+				CA66F0BA24B1F01500D2FC8C /* PromiseKit in Frameworks */,
+				CA66F0B424B1EF6600D2FC8C /* Alamofire in Frameworks */,
+				CA66F0AE24B1EF0D00D2FC8C /* Cosmos in Frameworks */,
+				CA66F0B724B1EFA400D2FC8C /* AlamofireImage in Frameworks */,
+				CA66F0B124B1EF3200D2FC8C /* ObjectMapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1077,11 +1077,11 @@
 			);
 			name = Movist;
 			packageProductDependencies = (
-				CA7796AA24B1304A00C4C25C /* PromiseKit */,
-				CA7796AD24B1D1B000C4C25C /* Alamofire */,
-				CA7796B024B1D22800C4C25C /* AlamofireImage */,
-				CA7796B524B1D61D00C4C25C /* ObjectMapper */,
-				CA7796B824B1D6A400C4C25C /* Cosmos */,
+				CA66F0AD24B1EF0D00D2FC8C /* Cosmos */,
+				CA66F0B024B1EF3200D2FC8C /* ObjectMapper */,
+				CA66F0B324B1EF6600D2FC8C /* Alamofire */,
+				CA66F0B624B1EFA400D2FC8C /* AlamofireImage */,
+				CA66F0B924B1F01500D2FC8C /* PromiseKit */,
 			);
 			productName = Movist;
 			productReference = CAAA37D42448DA4D00A8170A /* Movist.app */;
@@ -1134,11 +1134,11 @@
 			);
 			mainGroup = CAAA37CB2448DA4D00A8170A;
 			packageReferences = (
-				CA7796A924B1304A00C4C25C /* XCRemoteSwiftPackageReference "PromiseKit" */,
-				CA7796AC24B1D1B000C4C25C /* XCRemoteSwiftPackageReference "Alamofire" */,
-				CA7796AF24B1D22800C4C25C /* XCRemoteSwiftPackageReference "AlamofireImage" */,
-				CA7796B424B1D61D00C4C25C /* XCRemoteSwiftPackageReference "ObjectMapper" */,
-				CA7796B724B1D6A400C4C25C /* XCRemoteSwiftPackageReference "Cosmos" */,
+				CA66F0AC24B1EF0D00D2FC8C /* XCRemoteSwiftPackageReference "Cosmos" */,
+				CA66F0AF24B1EF3200D2FC8C /* XCRemoteSwiftPackageReference "ObjectMapper" */,
+				CA66F0B224B1EF6600D2FC8C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CA66F0B524B1EFA400D2FC8C /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				CA66F0B824B1F01500D2FC8C /* XCRemoteSwiftPackageReference "PromiseKit" */,
 			);
 			productRefGroup = CAAA37D52448DA4D00A8170A /* Products */;
 			projectDirPath = "";
@@ -1589,73 +1589,73 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CA7796A924B1304A00C4C25C /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mxcl/PromiseKit";
-			requirement = {
-				kind = exactVersion;
-				version = 6.12.0;
-			};
-		};
-		CA7796AC24B1D1B000C4C25C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = exactVersion;
-				version = "5.0.0-rc.3";
-			};
-		};
-		CA7796AF24B1D22800C4C25C /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
-			requirement = {
-				kind = exactVersion;
-				version = "4.0.0-beta.6";
-			};
-		};
-		CA7796B424B1D61D00C4C25C /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
-			requirement = {
-				kind = exactVersion;
-				version = 3.5.1;
-			};
-		};
-		CA7796B724B1D6A400C4C25C /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+		CA66F0AC24B1EF0D00D2FC8C /* XCRemoteSwiftPackageReference "Cosmos" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
 			requirement = {
-				kind = exactVersion;
-				version = 21.0.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 22.1.0;
+			};
+		};
+		CA66F0AF24B1EF3200D2FC8C /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
+		CA66F0B224B1EF6600D2FC8C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.1;
+			};
+		};
+		CA66F0B524B1EFA400D2FC8C /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+		CA66F0B824B1F01500D2FC8C /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.13.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CA7796AA24B1304A00C4C25C /* PromiseKit */ = {
+		CA66F0AD24B1EF0D00D2FC8C /* Cosmos */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CA7796A924B1304A00C4C25C /* XCRemoteSwiftPackageReference "PromiseKit" */;
-			productName = PromiseKit;
+			package = CA66F0AC24B1EF0D00D2FC8C /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
 		};
-		CA7796AD24B1D1B000C4C25C /* Alamofire */ = {
+		CA66F0B024B1EF3200D2FC8C /* ObjectMapper */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CA7796AC24B1D1B000C4C25C /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		CA7796B024B1D22800C4C25C /* AlamofireImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA7796AF24B1D22800C4C25C /* XCRemoteSwiftPackageReference "AlamofireImage" */;
-			productName = AlamofireImage;
-		};
-		CA7796B524B1D61D00C4C25C /* ObjectMapper */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA7796B424B1D61D00C4C25C /* XCRemoteSwiftPackageReference "ObjectMapper" */;
+			package = CA66F0AF24B1EF3200D2FC8C /* XCRemoteSwiftPackageReference "ObjectMapper" */;
 			productName = ObjectMapper;
 		};
-		CA7796B824B1D6A400C4C25C /* Cosmos */ = {
+		CA66F0B324B1EF6600D2FC8C /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CA7796B724B1D6A400C4C25C /* XCRemoteSwiftPackageReference "Cosmos" */;
-			productName = Cosmos;
+			package = CA66F0B224B1EF6600D2FC8C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CA66F0B624B1EFA400D2FC8C /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA66F0B524B1EFA400D2FC8C /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		CA66F0B924B1F01500D2FC8C /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA66F0B824B1F01500D2FC8C /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

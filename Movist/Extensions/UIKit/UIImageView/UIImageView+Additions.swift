@@ -22,13 +22,13 @@ public extension UIImageView {
     func set_af_image(url: URL?, placeholderImage: UIImage? = nil) {
         
         if let url = url {
-            af_setImage(
+            af.setImage(
                 withURL: url,
                 placeholderImage: placeholderImage,
                 imageTransition: .crossDissolve(0.25))
         }
         else {
-            af_cancelImageRequest()
+            af.cancelImageRequest()
             image = placeholderImage
         }
     }

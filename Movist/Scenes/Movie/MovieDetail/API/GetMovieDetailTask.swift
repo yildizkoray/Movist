@@ -6,6 +6,7 @@
 //  Copyright © 2020 Koray Yildiz. All rights reserved.
 //
 
+import Foundation
 import Alamofire
 
 struct GetMovieDetailTask: APITask {

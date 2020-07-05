@@ -6,9 +6,9 @@
 //  Copyright © 2020 Koray Yildiz. All rights reserved.
 //
 
+import Foundation
 import Alamofire
 import ObjectMapper
-import AlamofireObjectMapper
 import PromiseKit
 
 public final class RestAPI {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,7 +29,6 @@
 		CA1C9D37246218A0003AEABA /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C9D36246218A0003AEABA /* Vibration.swift */; };
 		CA1C9D3D2462248A003AEABA /* GetPopularTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C9D3C2462248A003AEABA /* GetPopularTask.swift */; };
 		CA22AB5E246A021F00EF11D4 /* API+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA22AB5D246A021F00EF11D4 /* API+Configuration.swift */; };
-		CA26E997244F7282001D01C9 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA26E996244F7282001D01C9 /* PromiseKit.framework */; };
 		CA37BF0F245CC7C40015D105 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37BF0D245CC7C40015D105 /* MovieTableViewCell.swift */; };
 		CA37BF10245CC7C40015D105 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA37BF0E245CC7C40015D105 /* MovieTableViewCell.xib */; };
 		CA40775E249F90CD00720DAD /* Movie+Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA40775D249F90CD00720DAD /* Movie+Review.swift */; };
@@ -47,13 +46,16 @@
 		CA692E922466B16F00A0E3ED /* Collection+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA692E912466B16F00A0E3ED /* Collection+Additions.swift */; };
 		CA7711CF2450F29200B25AEE /* UILabel+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7711CE2450F29200B25AEE /* UILabel+Additions.swift */; };
 		CA7711D22450F3CB00B25AEE /* UIImageView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7711D12450F3CB00B25AEE /* UIImageView+Additions.swift */; };
+		CA7796AB24B1304A00C4C25C /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = CA7796AA24B1304A00C4C25C /* PromiseKit */; };
+		CA7796AE24B1D1B000C4C25C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CA7796AD24B1D1B000C4C25C /* Alamofire */; };
+		CA7796B124B1D22800C4C25C /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = CA7796B024B1D22800C4C25C /* AlamofireImage */; };
+		CA7796B624B1D61D00C4C25C /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = CA7796B524B1D61D00C4C25C /* ObjectMapper */; };
+		CA7796B924B1D6A400C4C25C /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = CA7796B824B1D6A400C4C25C /* Cosmos */; };
+		CA7796BB24B1D78F00C4C25C /* Alamofire+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7796BA24B1D78F00C4C25C /* Alamofire+ObjectMapper.swift */; };
+		CA7796BD24B1DB8D00C4C25C /* Alamofire+NetworkActivityLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7796BC24B1DB8D00C4C25C /* Alamofire+NetworkActivityLogger.swift */; };
 		CA80BD4E246F773500E8BC83 /* MovieDetailHeaderDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA80BD4D246F773500E8BC83 /* MovieDetailHeaderDisplay.swift */; };
 		CA80BD50246F7C9200E8BC83 /* MovieInfoDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA80BD4F246F7C9200E8BC83 /* MovieInfoDisplay.swift */; };
 		CA80BD52246F7D1800E8BC83 /* MovieDetailDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA80BD51246F7D1800E8BC83 /* MovieDetailDisplay.swift */; };
-		CA81A415244CF7CF0016A303 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA81A414244CF7CF0016A303 /* Alamofire.framework */; };
-		CA81A419244CFC4B0016A303 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA81A418244CFC4B0016A303 /* AlamofireImage.framework */; };
-		CA81A41D244CFF410016A303 /* AlamofireNetworkActivityLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA81A41C244CFF410016A303 /* AlamofireNetworkActivityLogger.framework */; };
-		CA81A421244D02140016A303 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA81A420244D02140016A303 /* ObjectMapper.framework */; };
 		CA884C14244AD85A0004C1E3 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA884C13244AD85A0004C1E3 /* MovieViewController.swift */; };
 		CA884C16244AD89D0004C1E3 /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA884C15244AD89D0004C1E3 /* Movie.storyboard */; };
 		CA884C19244AD9B20004C1E3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA884C18244AD9B20004C1E3 /* TabBarController.swift */; };
@@ -83,7 +85,6 @@
 		CAA29F2F245EE1A400BF5249 /* Movie+Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA29F2E245EE1A400BF5249 /* Movie+Genre.swift */; };
 		CAA29F31245EE22100BF5249 /* Movie+Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA29F30245EE22100BF5249 /* Movie+Status.swift */; };
 		CAA29F34245EE84000BF5249 /* ObjectMapper+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA29F33245EE84000BF5249 /* ObjectMapper+Additions.swift */; };
-		CAA99FCD245CFA3F003C288E /* Cosmos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA99FCC245CFA3F003C288E /* Cosmos.framework */; };
 		CAA99FD1245D0095003C288E /* Double+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA99FD0245D0095003C288E /* Double+Additions.swift */; };
 		CAA9C1E42471DBF3003535C0 /* UIFont+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9C1E32471DBF3003535C0 /* UIFont+Additions.swift */; };
 		CAAA37D82448DA4D00A8170A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA37D72448DA4D00A8170A /* AppDelegate.swift */; };
@@ -121,7 +122,6 @@
 		CAC11219244FA65800B5E8AE /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC11218244FA65800B5E8AE /* EmptyStateView.swift */; };
 		CAC1121B244FA70F00B5E8AE /* EmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC1121A244FA70F00B5E8AE /* EmptyStateView.xib */; };
 		CAD25A6B2460D3F4009BA080 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD25A6A2460D3F4009BA080 /* MovieViewModel.swift */; };
-		CAD3081D2455E0B700317EBD /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD3081C2455E0B700317EBD /* AlamofireObjectMapper.framework */; };
 		CAD6126B246CB8BB00D602F5 /* APITask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD6126A246CB8BB00D602F5 /* APITask.swift */; };
 		CAD6126D246CC5A700D602F5 /* GetTopRatedTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD6126C246CC5A700D602F5 /* GetTopRatedTask.swift */; };
 		CAD6126F246CC5F800D602F5 /* GetUpComingTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD6126E246CC5F800D602F5 /* GetUpComingTask.swift */; };
@@ -192,6 +192,8 @@
 		CA692E912466B16F00A0E3ED /* Collection+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Additions.swift"; sourceTree = "<group>"; };
 		CA7711CE2450F29200B25AEE /* UILabel+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Additions.swift"; sourceTree = "<group>"; };
 		CA7711D12450F3CB00B25AEE /* UIImageView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Additions.swift"; sourceTree = "<group>"; };
+		CA7796BA24B1D78F00C4C25C /* Alamofire+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+ObjectMapper.swift"; sourceTree = "<group>"; };
+		CA7796BC24B1DB8D00C4C25C /* Alamofire+NetworkActivityLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+NetworkActivityLogger.swift"; sourceTree = "<group>"; };
 		CA80BD4D246F773500E8BC83 /* MovieDetailHeaderDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailHeaderDisplay.swift; sourceTree = "<group>"; };
 		CA80BD4F246F7C9200E8BC83 /* MovieInfoDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoDisplay.swift; sourceTree = "<group>"; };
 		CA80BD51246F7D1800E8BC83 /* MovieDetailDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailDisplay.swift; sourceTree = "<group>"; };
@@ -295,13 +297,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA81A415244CF7CF0016A303 /* Alamofire.framework in Frameworks */,
-				CAD3081D2455E0B700317EBD /* AlamofireObjectMapper.framework in Frameworks */,
-				CA81A419244CFC4B0016A303 /* AlamofireImage.framework in Frameworks */,
-				CA26E997244F7282001D01C9 /* PromiseKit.framework in Frameworks */,
-				CA81A421244D02140016A303 /* ObjectMapper.framework in Frameworks */,
-				CA81A41D244CFF410016A303 /* AlamofireNetworkActivityLogger.framework in Frameworks */,
-				CAA99FCD245CFA3F003C288E /* Cosmos.framework in Frameworks */,
+				CA7796B624B1D61D00C4C25C /* ObjectMapper in Frameworks */,
+				CA7796AE24B1D1B000C4C25C /* Alamofire in Frameworks */,
+				CA7796B924B1D6A400C4C25C /* Cosmos in Frameworks */,
+				CA7796AB24B1304A00C4C25C /* PromiseKit in Frameworks */,
+				CA7796B124B1D22800C4C25C /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +514,23 @@
 				CA7711D12450F3CB00B25AEE /* UIImageView+Additions.swift */,
 			);
 			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		CA7796BE24B1DBD600C4C25C /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				CA7796BA24B1D78F00C4C25C /* Alamofire+ObjectMapper.swift */,
+				CA7796BC24B1DB8D00C4C25C /* Alamofire+NetworkActivityLogger.swift */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		CA7796BF24B1DBF100C4C25C /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				CAA9C1E32471DBF3003535C0 /* UIFont+Additions.swift */,
+			);
+			path = UIFont;
 			sourceTree = "<group>";
 		};
 		CA80BD53246F7D2500E8BC83 /* Display */ = {
@@ -744,11 +761,11 @@
 			isa = PBXGroup;
 			children = (
 				CAAA38002448E3D400A8170A /* Any+Additions.swift */,
+				CA7796BE24B1DBD600C4C25C /* Alamofire */,
 				CA648074246C399F00D16917 /* Cosmos */,
 				CAAA37F82448E28800A8170A /* Foundation */,
 				CAA29F32245EE82B00BF5249 /* ObjectMapper */,
 				CAAA38032448EEFA00A8170A /* UIKit */,
-				CAA9C1E32471DBF3003535C0 /* UIFont+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -820,11 +837,12 @@
 		CAAA38032448EEFA00A8170A /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				CA02FE47248EC99900643F32 /* UIEdgeInsets */,
 				CA0AEB81246617EB00E8A703 /* UIActivityIndicatorView */,
 				CA11932624490E8C00625FB5 /* UIButton */,
 				CA632989245A0BA200379198 /* UICollectionView */,
 				CAA05BC2245D133200AE0984 /* UIColor */,
+				CA02FE47248EC99900643F32 /* UIEdgeInsets */,
+				CA7796BF24B1DBF100C4C25C /* UIFont */,
 				CA7711D02450F3B100B25AEE /* UIImageView */,
 				CA7711CD2450F27800B25AEE /* UILabel */,
 				CA9D560C244A47990055D942 /* UIStoryboard */,
@@ -1051,7 +1069,6 @@
 				CAAA37D02448DA4D00A8170A /* Sources */,
 				CAAA37D12448DA4D00A8170A /* Frameworks */,
 				CAAA37D22448DA4D00A8170A /* Resources */,
-				CA81A412244CF7490016A303 /* Carthage */,
 				CAF44E8E2460548D00D2348C /* Warning */,
 			);
 			buildRules = (
@@ -1059,6 +1076,13 @@
 			dependencies = (
 			);
 			name = Movist;
+			packageProductDependencies = (
+				CA7796AA24B1304A00C4C25C /* PromiseKit */,
+				CA7796AD24B1D1B000C4C25C /* Alamofire */,
+				CA7796B024B1D22800C4C25C /* AlamofireImage */,
+				CA7796B524B1D61D00C4C25C /* ObjectMapper */,
+				CA7796B824B1D6A400C4C25C /* Cosmos */,
+			);
 			productName = Movist;
 			productReference = CAAA37D42448DA4D00A8170A /* Movist.app */;
 			productType = "com.apple.product-type.application";
@@ -1109,6 +1133,13 @@
 				Base,
 			);
 			mainGroup = CAAA37CB2448DA4D00A8170A;
+			packageReferences = (
+				CA7796A924B1304A00C4C25C /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				CA7796AC24B1D1B000C4C25C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CA7796AF24B1D22800C4C25C /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				CA7796B424B1D61D00C4C25C /* XCRemoteSwiftPackageReference "ObjectMapper" */,
+				CA7796B724B1D6A400C4C25C /* XCRemoteSwiftPackageReference "Cosmos" */,
+			);
 			productRefGroup = CAAA37D52448DA4D00A8170A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1175,38 +1206,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CA81A412244CF7490016A303 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Cosmos.framework",
-			);
-			name = Carthage;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireImage.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireNetworkActivityLogger.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ObjectMapper.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PromiseKit.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireObjectMapper.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Cosmos.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
-		};
 		CAF44E8E2460548D00D2348C /* Warning */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1306,6 +1305,7 @@
 				CAA29F2D245EE16D00BF5249 /* Movie+ProductionCompany.swift in Sources */,
 				CAA29F29245EE0A000BF5249 /* Movie+Language.swift in Sources */,
 				CAAA37D82448DA4D00A8170A /* AppDelegate.swift in Sources */,
+				CA7796BD24B1DB8D00C4C25C /* Alamofire+NetworkActivityLogger.swift in Sources */,
 				CAB51A77246C4FC500B75DC2 /* MovieDetailTableViewCell.swift in Sources */,
 				CAAA37F12448DFD300A8170A /* String+Additions.swift in Sources */,
 				CAA29F31245EE22100BF5249 /* Movie+Status.swift in Sources */,
@@ -1313,6 +1313,7 @@
 				CA097A2D245CC90E00EB9889 /* MovieCollectionView.swift in Sources */,
 				CA648076246C39B900D16917 /* Cosmos+Settings.swift in Sources */,
 				CA097A31245CCC4A00EB9889 /* MovieCollectionViewCell.swift in Sources */,
+				CA7796BB24B1D78F00C4C25C /* Alamofire+ObjectMapper.swift in Sources */,
 				CAAA37F32448E01C00A8170A /* Int+Additions.swift in Sources */,
 				CAD6126D246CC5A700D602F5 /* GetTopRatedTask.swift in Sources */,
 				CAEFDFC5249F86EB002DEDE9 /* ReviewDisplay.swift in Sources */,
@@ -1592,6 +1593,77 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CA7796A924B1304A00C4C25C /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				kind = exactVersion;
+				version = 6.12.0;
+			};
+		};
+		CA7796AC24B1D1B000C4C25C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = "5.0.0-rc.3";
+			};
+		};
+		CA7796AF24B1D22800C4C25C /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = exactVersion;
+				version = "4.0.0-beta.6";
+			};
+		};
+		CA7796B424B1D61D00C4C25C /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
+			requirement = {
+				kind = exactVersion;
+				version = 3.5.1;
+			};
+		};
+		CA7796B724B1D6A400C4C25C /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				kind = exactVersion;
+				version = 21.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CA7796AA24B1304A00C4C25C /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA7796A924B1304A00C4C25C /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+		CA7796AD24B1D1B000C4C25C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA7796AC24B1D1B000C4C25C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CA7796B024B1D22800C4C25C /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA7796AF24B1D22800C4C25C /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		CA7796B524B1D61D00C4C25C /* ObjectMapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA7796B424B1D61D00C4C25C /* XCRemoteSwiftPackageReference "ObjectMapper" */;
+			productName = ObjectMapper;
+		};
+		CA7796B824B1D6A400C4C25C /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA7796B724B1D6A400C4C25C /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CAAA37CC2448DA4D00A8170A /* Project object */;
 }

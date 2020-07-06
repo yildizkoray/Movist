@@ -1593,40 +1593,40 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 22.1.0;
+				kind = exactVersion;
+				version = 22.1.0;
 			};
 		};
 		CA66F0AF24B1EF3200D2FC8C /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.2.0;
+				kind = exactVersion;
+				version = 4.2.0;
 			};
 		};
 		CA66F0B224B1EF6600D2FC8C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.2.1;
+				kind = exactVersion;
+				version = 5.2.1;
 			};
 		};
 		CA66F0B524B1EFA400D2FC8C /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.1.0;
+				kind = exactVersion;
+				version = 4.1.0;
 			};
 		};
 		CA66F0B824B1F01500D2FC8C /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mxcl/PromiseKit";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.13.2;
+				kind = exactVersion;
+				version = 6.13.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

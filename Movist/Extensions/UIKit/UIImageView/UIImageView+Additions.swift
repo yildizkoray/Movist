@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AlamofireImage
+import Kingfisher
 
 public extension UIImageView {
     
@@ -19,21 +19,19 @@ public extension UIImageView {
         }
     }
     
-    func set_af_image(url: URL?, placeholderImage: UIImage? = nil) {
+    func set_kf_image(_ url: URL?, placeholder: UIImage? = nil) {
         
         if let url = url {
-            af.setImage(
-                withURL: url,
-                placeholderImage: placeholderImage,
-                imageTransition: .crossDissolve(0.25))
+            let resource = ImageResource(downloadURL: url)
+            kf.setImage(with: resource, placeholder: placeholder, options: [.transition(.fade(0.25))])
         }
         else {
-            af.cancelImageRequest()
-            image = placeholderImage
+            kf.cancelDownloadTask()
+            image = placeholder
         }
     }
     
-    func setVisual(_ visual: VisaulContent.Visual?, placeholderImage: UIImage? = nil) {
+    func setVisual(_ visual: VisaulContent.Visual?, placeholder: UIImage? = nil) {
         
         if let visual = visual {
             switch visual {
@@ -41,7 +39,7 @@ public extension UIImageView {
                 self.image = image
                 
             case .url(let url):
-                set_af_image(url: url, placeholderImage: placeholderImage)
+                set_kf_image(url, placeholder: placeholder)
             }
         }
     }

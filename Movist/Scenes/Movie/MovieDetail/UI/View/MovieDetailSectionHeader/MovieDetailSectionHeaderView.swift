@@ -28,7 +28,7 @@ public final class MovieDetailSectionHeaderView: UITableViewHeaderFooterView {
     
     public func configure(with display: MovieDetailHeaderDisplay) {
         
-        backdrop.set_af_image(url: display.backdrop)
+        backdrop.set_kf_image(display.backdrop)
         self.display.configure(with: display.display)
         
         backdrop.addGradient(Constants.Gradient.color,

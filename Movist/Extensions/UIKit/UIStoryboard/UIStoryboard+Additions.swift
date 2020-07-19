@@ -12,6 +12,7 @@ public extension UIStoryboard {
     
     enum Name: String {
         case movie
+        case notificationCenter
         
         public var description: String {
             return rawValue.capitalized

@@ -36,6 +36,10 @@ public extension String {
     var url: URL? {
         return URL(string: self)
     }
+    
+    var capitalized: String {
+      return prefix(1).capitalized + dropFirst()
+    }
 }
 
 // MARK: - Optional

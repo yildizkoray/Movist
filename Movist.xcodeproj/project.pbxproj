@@ -103,6 +103,9 @@
 		CAB51A78246C4FC500B75DC2 /* MovieDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB51A76246C4FC500B75DC2 /* MovieDetailTableViewCell.xib */; };
 		CAB51A7B246C522F00B75DC2 /* MovieDetailSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB51A7A246C522F00B75DC2 /* MovieDetailSectionHeaderView.swift */; };
 		CAB51A7D246C523E00B75DC2 /* MovieDetailSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB51A7C246C523E00B75DC2 /* MovieDetailSectionHeaderView.xib */; };
+		CAB970EA24C380270096B297 /* NotificationCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB970E924C380270096B297 /* NotificationCenter.storyboard */; };
+		CAB970EC24C3804D0096B297 /* NotificationCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB970EB24C3804D0096B297 /* NotificationCenterViewController.swift */; };
+		CAB970EE24C381370096B297 /* NotificationCenterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB970ED24C381370096B297 /* NotificationCenterCoordinator.swift */; };
 		CABDE5932470758500683CB3 /* CastDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDE5922470758500683CB3 /* CastDisplay.swift */; };
 		CABED3C6245E2F260033D776 /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABED3C5245E2F260033D776 /* UIView+Additions.swift */; };
 		CABFA82D2458D04D0044784C /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFA82C2458D04D0044784C /* RestAPI.swift */; };
@@ -254,6 +257,9 @@
 		CAB51A76246C4FC500B75DC2 /* MovieDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailTableViewCell.xib; sourceTree = "<group>"; };
 		CAB51A7A246C522F00B75DC2 /* MovieDetailSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailSectionHeaderView.swift; sourceTree = "<group>"; };
 		CAB51A7C246C523E00B75DC2 /* MovieDetailSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailSectionHeaderView.xib; sourceTree = "<group>"; };
+		CAB970E924C380270096B297 /* NotificationCenter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotificationCenter.storyboard; sourceTree = "<group>"; };
+		CAB970EB24C3804D0096B297 /* NotificationCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterViewController.swift; sourceTree = "<group>"; };
+		CAB970ED24C381370096B297 /* NotificationCenterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterCoordinator.swift; sourceTree = "<group>"; };
 		CABDE5922470758500683CB3 /* CastDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastDisplay.swift; sourceTree = "<group>"; };
 		CABED3C5245E2F260033D776 /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
 		CABFA82C2458D04D0044784C /* RestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
@@ -744,6 +750,7 @@
 			children = (
 				CA884C17244AD9940004C1E3 /* Base */,
 				CA884C12244AD8390004C1E3 /* Movie */,
+				CAB970E824C37FF70096B297 /* NotificationCenter */,
 				CAAA37EE2448DCA400A8170A /* Splash */,
 			);
 			path = Scenes;
@@ -916,6 +923,16 @@
 				CAB51A76246C4FC500B75DC2 /* MovieDetailTableViewCell.xib */,
 			);
 			path = MovieDetailTableViewCell;
+			sourceTree = "<group>";
+		};
+		CAB970E824C37FF70096B297 /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				CAB970ED24C381370096B297 /* NotificationCenterCoordinator.swift */,
+				CAB970EB24C3804D0096B297 /* NotificationCenterViewController.swift */,
+				CAB970E924C380270096B297 /* NotificationCenter.storyboard */,
+			);
+			path = NotificationCenter;
 			sourceTree = "<group>";
 		};
 		CABDE5912470756700683CB3 /* Cast */ = {
@@ -1176,6 +1193,7 @@
 				CAAA37E42448DA4E00A8170A /* LaunchScreen.storyboard in Resources */,
 				CA970400246F52A500E81606 /* MovieInfoView.xib in Resources */,
 				CABFA8322458DC580044784C /* Movie_Popular.json in Resources */,
+				CAB970EA24C380270096B297 /* NotificationCenter.storyboard in Resources */,
 				CA884C16244AD89D0004C1E3 /* Movie.storyboard in Resources */,
 				CA88A6312466E50F00D6382A /* MovieSectionHeaderView.xib in Resources */,
 				CA127AEE24684F8B0079C42F /* Bahij_TheSansArabic-Bold.ttf in Resources */,
@@ -1231,6 +1249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAB970EE24C381370096B297 /* NotificationCenterCoordinator.swift in Sources */,
 				CADD09722466DD8100651E18 /* MovieSectionHeaderView.swift in Sources */,
 				CA127ADC246848210079C42F /* MovieHeaderDisplay.swift in Sources */,
 				CAA29F2B245EE13B00BF5249 /* Movie+ProductionCountry.swift in Sources */,
@@ -1247,6 +1266,7 @@
 				CA1C9D37246218A0003AEABA /* Vibration.swift in Sources */,
 				CAA05BC4245D134E00AE0984 /* UIColor+Additions.swift in Sources */,
 				CA98BC0F24516DA6007A4828 /* VisualContent.swift in Sources */,
+				CAB970EC24C3804D0096B297 /* NotificationCenterViewController.swift in Sources */,
 				CAF306A8245F514100378716 /* Popular.swift in Sources */,
 				CA64807D246C437B00D16917 /* MovieDetailCoordinator.swift in Sources */,
 				CABFA82D2458D04D0044784C /* RestAPI.swift in Sources */,

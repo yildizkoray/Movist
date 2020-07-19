@@ -25,7 +25,8 @@ public extension UIButton {
         
         button.action = { _ in
             if let navigation = UIViewController.topMostNavigationController {
-                TestCoordinator(navigator: navigation).start()
+//                TestCoordinator(navigator: navigation).start()
+                NotificationCenterCoordinator().start(with: navigation)
             }
         }
         

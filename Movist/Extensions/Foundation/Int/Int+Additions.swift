@@ -8,6 +8,10 @@
 
 import Foundation
 
+private struct Constants {
+    static let formatForRuntime: String = "%02d:%02d"
+}
+
 public extension Int {
     
     var isZero: Bool {
@@ -21,6 +25,6 @@ public extension Int {
     var runtime: String {
         let hour = self / 60
         let min = self % 60
-        return String(format: "%02d:%02d", hour, min)
+        return String(format: Constants.formatForRuntime, hour, min)
     }
 }

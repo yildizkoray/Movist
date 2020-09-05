@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Bahij_TheSansArabic-SemiBold.ttf">
+            <string>BahijTheSansArabic-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RateStarView" customModule="Movist" customModuleProvider="target">
+            <connections>
+                <outlet property="rate" destination="t7L-i0-XdL" id="8Fs-Z4-cEX"/>
+                <outlet property="stars" destination="NNI-sX-kgi" id="v3N-hW-ebc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="RZd-sv-p75">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" horizontalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="NNI-sX-kgi" customClass="CosmosView" customModule="Cosmos">
+                            <rect key="frame" x="0.0" y="5" width="70" height="10"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                    <color key="value" red="0.61960784313725492" green="0.61960784313725492" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                    <color key="value" red="0.61960784313725492" green="0.61960784313725492" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="updateOnTouch" value="NO"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                    <color key="value" red="0.93333333333333335" green="0.76862745098039209" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="filled-star"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="empty-star"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D2C-JE-xGs">
+                            <rect key="frame" x="74" y="0.0" width="340" height="20"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7L-i0-XdL">
+                                    <rect key="frame" x="0.0" y="3" width="340" height="17"/>
+                                    <fontDescription key="fontDescription" name="BahijTheSansArabic-SemiBold" family="Bahij TheSansArabic" pointSize="13"/>
+                                    <color key="textColor" red="0.88235294119999996" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="t7L-i0-XdL" firstAttribute="top" secondItem="D2C-JE-xGs" secondAttribute="top" constant="3" id="MDx-SO-HeL"/>
+                                <constraint firstItem="t7L-i0-XdL" firstAttribute="leading" secondItem="D2C-JE-xGs" secondAttribute="leading" id="WDR-52-KXC"/>
+                                <constraint firstAttribute="bottom" secondItem="t7L-i0-XdL" secondAttribute="bottom" id="bot-ZF-gZj"/>
+                                <constraint firstAttribute="trailing" secondItem="t7L-i0-XdL" secondAttribute="trailing" id="kCY-LT-8fH"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="RZd-sv-p75" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9gx-bS-ogG"/>
+                <constraint firstAttribute="trailing" secondItem="RZd-sv-p75" secondAttribute="trailing" id="GMF-e8-sXn"/>
+                <constraint firstAttribute="bottom" secondItem="RZd-sv-p75" secondAttribute="bottom" id="OTs-I4-KNZ"/>
+                <constraint firstItem="RZd-sv-p75" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OnM-OS-IKU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="47.826086956521742" y="245.08928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="empty-star" width="31" height="29"/>
+        <image name="filled-star" width="31" height="29"/>
+    </resources>
+</document>

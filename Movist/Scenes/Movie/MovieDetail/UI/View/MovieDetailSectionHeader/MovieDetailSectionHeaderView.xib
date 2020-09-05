@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MovieDetailSectionHeaderView" customModule="Movist" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rJM-kc-T0E">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test-backdrop" translatesAutoresizingMaskIntoConstraints="NO" id="FAD-AQ-NeA">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cb6-Qj-vT3">
+                            <rect key="frame" x="0.0" y="233" width="414" height="181"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4TC-ei-yDh" customClass="MovieInfoView" customModule="Movist" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="8" width="398" height="165"/>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="4TC-ei-yDh" secondAttribute="trailing" constant="8" id="dVK-38-uTR"/>
+                                <constraint firstAttribute="bottom" secondItem="4TC-ei-yDh" secondAttribute="bottom" constant="8" id="iUr-de-zqD"/>
+                                <constraint firstItem="4TC-ei-yDh" firstAttribute="top" secondItem="cb6-Qj-vT3" secondAttribute="top" constant="8" id="lNU-5z-vEc"/>
+                                <constraint firstItem="4TC-ei-yDh" firstAttribute="leading" secondItem="cb6-Qj-vT3" secondAttribute="leading" constant="8" id="r9J-Ez-weq"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="FAD-AQ-NeA" firstAttribute="height" secondItem="rJM-kc-T0E" secondAttribute="width" multiplier="10:17.7777" id="94d-Wx-rdb"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRa-wI-f83">
+                    <rect key="frame" x="182" y="91.5" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="7vP-ck-dZZ"/>
+                        <constraint firstAttribute="height" constant="50" id="tti-dG-O3S"/>
+                    </constraints>
+                    <state key="normal" image="play-trailler"/>
+                    <connections>
+                        <action selector="playTraillerTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="jtg-kp-c3L"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="FAD-AQ-NeA" firstAttribute="centerX" secondItem="FRa-wI-f83" secondAttribute="centerX" id="1Co-C3-myp"/>
+                <constraint firstItem="rJM-kc-T0E" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="8Bz-qH-ljg"/>
+                <constraint firstItem="rJM-kc-T0E" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="bMc-Ky-wkp"/>
+                <constraint firstItem="rJM-kc-T0E" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="go4-gi-gwU"/>
+                <constraint firstItem="FAD-AQ-NeA" firstAttribute="centerY" secondItem="FRa-wI-f83" secondAttribute="centerY" id="uW2-EE-AWK"/>
+                <constraint firstItem="rJM-kc-T0E" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="y7G-rg-8Im"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backdrop" destination="FAD-AQ-NeA" id="rbV-WL-8z9"/>
+                <outlet property="display" destination="4TC-ei-yDh" id="CIl-oC-sR6"/>
+            </connections>
+            <point key="canvasLocation" x="-83" y="455"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="play-trailler" width="73" height="73"/>
+        <image name="test-backdrop" width="640" height="360"/>
+    </resources>
+</document>

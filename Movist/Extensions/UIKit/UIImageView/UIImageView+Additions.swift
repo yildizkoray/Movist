@@ -31,7 +31,7 @@ public extension UIImageView {
         }
     }
     
-    func setVisual(_ visual: VisaulContent.Visual?, placeholder: UIImage? = nil) {
+    func setVisual(_ visual: VisualContent.Visual?, placeholder: UIImage? = nil) {
         
         if let visual = visual {
             switch visual {

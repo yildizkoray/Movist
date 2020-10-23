@@ -15,7 +15,7 @@ public protocol EmptyStateShowing: class {
     var isEmptyStateVisible: Bool { get }
     
     func hideEmptyState(animated: Bool)
-    func showEmptyState(with content: VisaulContent)
+    func showEmptyState(with content: VisualContent)
 }
 
 extension UIView: EmptyStateShowing {
@@ -57,7 +57,7 @@ extension UIView: EmptyStateShowing {
         emptyStateView.isHidden = true
     }
     
-    public func showEmptyState(with content: VisaulContent) {
+    public func showEmptyState(with content: VisualContent) {
         bringSubviewToFront(emptyStateView)
         emptyStateView.isHidden = false
         emptyStateView.configure(visualContent: content)

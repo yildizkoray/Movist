@@ -24,7 +24,7 @@ public final class CastView: UIView, NibLoadable {
         setupFromNib()
     }
     
-    public func configure(with display: VisaulContent) {
+    public func configure(with display: VisualContent) {
         poster.setVisual(display.visual)
         name.hidableText = display.title
         character.hidableText = display.subtitle

@@ -9,14 +9,14 @@
 public struct CastDisplay {
     
     let id: Int
-    let content: VisaulContent
+    let content: VisualContent
     let gender: Movie.Cast.Gender
     let order: Int
     
     public init(with item: Movie.Cast) {
         id = item.id.ifNil(.zero)
         
-        content = VisaulContent(
+        content = VisualContent(
             title: item.name.emptyIfNil,
             subtitle: item.character.emptyIfNil,
             visual: item.poster.poster(for: .w185).visual

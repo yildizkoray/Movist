@@ -27,7 +27,7 @@ public final class EmptyStateView: UIView, NibLoadable {
     }
     
     
-    public func configure(visualContent: VisaulContent, info: UIImage = "empty_info".image) {
+    public func configure(visualContent: VisualContent, info: UIImage = "empty_info".image) {
         
         self.info.hidableImage = info
         self.image.hidableImage = visualContent.image

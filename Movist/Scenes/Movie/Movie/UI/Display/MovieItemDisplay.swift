@@ -10,7 +10,7 @@ import Foundation
 
 public struct MovieItemDisplay { // TODO: - Change `MovieItemDisplay` struct name
     
-    let content: VisaulContent
+    let content: VisualContent
     let id: Int
     let rateStarDisplay: RateStarDisplay
     
@@ -21,7 +21,7 @@ public struct MovieItemDisplay { // TODO: - Change `MovieItemDisplay` struct nam
     }
     
     public init(movie: Movie) {
-        self.content = VisaulContent(
+        self.content = VisualContent(
             title: movie.title.ifNil(.empty),
             subtitle: movie.averageVote.ifNil(.zero).string,
             visual: movie.poster.poster().visual

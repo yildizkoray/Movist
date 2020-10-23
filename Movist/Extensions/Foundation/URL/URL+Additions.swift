@@ -44,7 +44,7 @@ public extension URL {
 
 public extension Optional where Wrapped == URL {
     
-    var visual: VisaulContent.Visual? {
+    var visual: VisualContent.Visual? {
         switch self {
         case .none:
             return nil

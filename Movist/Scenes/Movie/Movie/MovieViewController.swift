@@ -39,7 +39,7 @@ public final class MovieViewController: UIViewController, ViewController {
             self?.tableView.setHidden(false, animated: true)
             self?.view.stopLoadingIndicatorView()
         }
-        .cauterize()
+        .alertOnError()
     }
     
     @objc private func refresh() {

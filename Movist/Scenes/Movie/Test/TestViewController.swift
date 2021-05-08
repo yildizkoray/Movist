@@ -26,14 +26,14 @@ public final class TestViewController: UIViewController, ViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        start().done { [weak self] display in
-            self?.reviewView.configure(with: display.reviews[1])
-            
-        }.cauterize()
+//        start().done { [weak self] display in
+//            self?.reviewView.configure(with: display.reviews[1])
+//            
+//        }.cauterize()
     }
     
-    public func start() -> Promise<MovieDetailDisplay> {
-        let movie: Promise<Movie> = RestAPI.shared.execute(with: GetMovieDetailTask(id: 278, appendToResponse: [.review]))
-        return movie.map(MovieDetailDisplay.init)
-    }
+//    public func start() -> Promise<MovieDetailDisplay> {
+//        let movie: Promise<Movie> = serexecute(with: GetMovieDetailTask(id: 278, appendToResponse: [.review]))
+//        return movie.map(MovieDetailDisplay.init)
+//    }
 }

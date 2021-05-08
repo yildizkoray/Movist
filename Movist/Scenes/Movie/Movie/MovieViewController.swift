@@ -50,7 +50,7 @@ public final class MovieViewController: UIViewController, ViewController {
         .ensure { [weak self] in
             self?.tableView.endRefreshing()
         }
-        .cauterize()
+        .alertOnError()
     }
     
     private func prepareUI() {

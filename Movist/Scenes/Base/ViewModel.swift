@@ -8,9 +8,9 @@
 
 public class ViewModel {
     
-    public var api: RestAPI
+    public var service: RestService
     
-    public init(_ api: RestAPI = .shared) {
-        self.api = api
+    public init(_ service: RestService = RestService(backend: RestAPI(with: RestAPIMiddleware(allowsRetry: true)))) {
+        self.service = service
     }
 }

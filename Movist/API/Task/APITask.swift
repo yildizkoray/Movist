@@ -32,11 +32,11 @@ extension APITask {
             return URLEncoding.default
         }
     }
-
+    
     public var headers: [String: String] {
         return .empty
     }
-
+    
     public var queryParameters: [URLQueryItem] {
         return .empty()
     }

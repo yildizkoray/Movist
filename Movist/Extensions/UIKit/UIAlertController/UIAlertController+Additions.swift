@@ -21,7 +21,7 @@ extension UIAlertController {
     }
     
     class func error(_ error: Error) -> UIAlertController {
-        let content = VisualContent(title: Constants.titleForGeneralError, subtitle: error.localizedDescription)
+        let content = VisualContent(title: Constants.titleForGeneralError, subtitle: error.asAPIError?.description ?? error.localizedDescription)
         return .init(content: content, actions: .okay())
     }
 }

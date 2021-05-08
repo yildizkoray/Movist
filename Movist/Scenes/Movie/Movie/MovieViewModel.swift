@@ -21,17 +21,17 @@ public final class MovieViewModel: ViewModel {
     }
     
     private func popular() -> Promise<MoviePopularDisplay> {
-        let popular: Promise<Popular> = api.execute(with: GetPopularTask())
-        return popular.map(MoviePopularDisplay.init)
+        let popular: Promise<RestArrayResponse<Movie>> = service.execute(task: GetPopularTask())
+        return popular.compactMap { $0.data }.map(MoviePopularDisplay.init)
     }
     
     private func toprated() -> Promise<MovieTopRatedDisplay> {
-        let popular: Promise<TopRated> = api.execute(with: GetTopRatedTask())
-        return popular.map(MovieTopRatedDisplay.init)
+        let popular: Promise<RestArrayResponse<Movie>> = service.execute(task: GetTopRatedTask())
+        return popular.compactMap { $0.data }.map(MovieTopRatedDisplay.init)
     }
     
     private func upcoming() -> Promise<MovieUpComingDisplay> {
-        let popular: Promise<UpComing> = api.execute(with: GetUpComingTask())
-        return popular.map(MovieUpComingDisplay.init)
+        let popular: Promise<RestArrayResponse<Movie>> = service.execute(task: GetUpComingTask())
+        return popular.compactMap { $0.data }.map(MovieUpComingDisplay.init)
     }
 }

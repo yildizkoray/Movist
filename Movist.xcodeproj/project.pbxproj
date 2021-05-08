@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B101A4772646B1C200CE91E9 /* RestObjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B101A4762646B1C200CE91E9 /* RestObjectResponse.swift */; };
+		B166B6D52584DD490043D911 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B6D42584DD490043D911 /* API.swift */; };
+		B166B6D92584DFF10043D911 /* Session+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B6D82584DFF10043D911 /* Session+Additions.swift */; };
+		B166B6E52584E1FE0043D911 /* RestAPIMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B6E42584E1FE0043D911 /* RestAPIMiddleware.swift */; };
+		B166B6EB2584E6610043D911 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B6EA2584E6610043D911 /* APIError.swift */; };
+		B166B6EF2584E7930043D911 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B6EE2584E7930043D911 /* APIResponse.swift */; };
+		B166B6F32584E80C0043D911 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B6F22584E80C0043D911 /* Service.swift */; };
+		B166B6F72584E86A0043D911 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B6F62584E86A0043D911 /* RestService.swift */; };
+		B1B079EC2644921800698923 /* RestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B079EB2644921800698923 /* RestResponse.swift */; };
+		B1B079F02644923D00698923 /* RestArrayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B079EF2644923D00698923 /* RestArrayResponse.swift */; };
 		CA02FE49248EC9B900643F32 /* UIEdgeInsets+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA02FE48248EC9B900643F32 /* UIEdgeInsets+Additions.swift */; };
 		CA097A2B245CC8F200EB9889 /* MovieCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA097A2A245CC8F200EB9889 /* MovieCollectionView.xib */; };
 		CA097A2D245CC90E00EB9889 /* MovieCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA097A2C245CC90E00EB9889 /* MovieCollectionView.swift */; };
@@ -159,6 +169,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B101A4762646B1C200CE91E9 /* RestObjectResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestObjectResponse.swift; sourceTree = "<group>"; };
+		B166B6D42584DD490043D911 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		B166B6D82584DFF10043D911 /* Session+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+Additions.swift"; sourceTree = "<group>"; };
+		B166B6E42584E1FE0043D911 /* RestAPIMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIMiddleware.swift; sourceTree = "<group>"; };
+		B166B6EA2584E6610043D911 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		B166B6EE2584E7930043D911 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		B166B6F22584E80C0043D911 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		B166B6F62584E86A0043D911 /* RestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
+		B1B079EB2644921800698923 /* RestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestResponse.swift; sourceTree = "<group>"; };
+		B1B079EF2644923D00698923 /* RestArrayResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestArrayResponse.swift; sourceTree = "<group>"; };
 		CA02FE48248EC9B900643F32 /* UIEdgeInsets+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Additions.swift"; sourceTree = "<group>"; };
 		CA097A2A245CC8F200EB9889 /* MovieCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionView.xib; sourceTree = "<group>"; };
 		CA097A2C245CC90E00EB9889 /* MovieCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionView.swift; sourceTree = "<group>"; };
@@ -329,6 +349,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B166B6DE2584E1C40043D911 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				CAD6126A246CB8BB00D602F5 /* APITask.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		B166B6E12584E1CA0043D911 /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				CABFA82C2458D04D0044784C /* RestAPI.swift */,
+				B166B6E42584E1FE0043D911 /* RestAPIMiddleware.swift */,
+				B1B079EF2644923D00698923 /* RestArrayResponse.swift */,
+				B101A4762646B1C200CE91E9 /* RestObjectResponse.swift */,
+				B1B079EB2644921800698923 /* RestResponse.swift */,
+				B166B6F62584E86A0043D911 /* RestService.swift */,
+			);
+			path = Rest;
+			sourceTree = "<group>";
+		};
 		CA02FE47248EC99900643F32 /* UIEdgeInsets */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,6 +576,7 @@
 			children = (
 				CA7796BA24B1D78F00C4C25C /* Alamofire+ObjectMapper.swift */,
 				CA7796BC24B1DB8D00C4C25C /* Alamofire+NetworkActivityLogger.swift */,
+				B166B6D82584DFF10043D911 /* Session+Additions.swift */,
 			);
 			path = Alamofire;
 			sourceTree = "<group>";
@@ -974,9 +1016,13 @@
 		CABFA82B2458D01F0044784C /* API */ = {
 			isa = PBXGroup;
 			children = (
-				CABFA82C2458D04D0044784C /* RestAPI.swift */,
-				CAD6126A246CB8BB00D602F5 /* APITask.swift */,
+				B166B6D42584DD490043D911 /* API.swift */,
 				CA22AB5D246A021F00EF11D4 /* API+Configuration.swift */,
+				B166B6EA2584E6610043D911 /* APIError.swift */,
+				B166B6EE2584E7930043D911 /* APIResponse.swift */,
+				B166B6F22584E80C0043D911 /* Service.swift */,
+				B166B6E12584E1CA0043D911 /* Rest */,
+				B166B6DE2584E1C40043D911 /* Task */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1319,6 +1365,7 @@
 				CAA05BC4245D134E00AE0984 /* UIColor+Additions.swift in Sources */,
 				CA98BC0F24516DA6007A4828 /* VisualContent.swift in Sources */,
 				CAB970EC24C3804D0096B297 /* NotificationCenterViewController.swift in Sources */,
+				B166B6F72584E86A0043D911 /* RestService.swift in Sources */,
 				CAF306A8245F514100378716 /* Popular.swift in Sources */,
 				CA64807D246C437B00D16917 /* MovieDetailCoordinator.swift in Sources */,
 				CABFA82D2458D04D0044784C /* RestAPI.swift in Sources */,
@@ -1333,6 +1380,7 @@
 				CAAA37F72448E16100A8170A /* Bundle+Additions.swift in Sources */,
 				CAF35CF52466F77D00E47EEA /* TopRated.swift in Sources */,
 				CA9D5615244A4A8F0055D942 /* ApplicationCoordinator.swift in Sources */,
+				B166B6D92584DFF10043D911 /* Session+Additions.swift in Sources */,
 				CA097A37245CD74000EB9889 /* MovieView.swift in Sources */,
 				CA80BD52246F7D1800E8BC83 /* MovieDetailDisplay.swift in Sources */,
 				CA970402246F698C00E81606 /* MovieInfoView.swift in Sources */,
@@ -1340,12 +1388,14 @@
 				CA9D5613244A49EE0055D942 /* Coordinator.swift in Sources */,
 				CA11932824490EA100625FB5 /* UIButton+Additions.swift in Sources */,
 				CAD25A6B2460D3F4009BA080 /* MovieViewModel.swift in Sources */,
+				B166B6D52584DD490043D911 /* API.swift in Sources */,
 				CA632988245A093300379198 /* UICollectionView+Additions.swift in Sources */,
 				CAA29F27245ED9C400BF5249 /* MovieItemDisplay.swift in Sources */,
 				CAA29F34245EE84000BF5249 /* ObjectMapper+Additions.swift in Sources */,
 				CA7711D22450F3CB00B25AEE /* UIImageView+Additions.swift in Sources */,
 				CA7711CF2450F29200B25AEE /* UILabel+Additions.swift in Sources */,
 				CAAA380A2448F08300A8170A /* UITableView+Additions.swift in Sources */,
+				B1B079EC2644921800698923 /* RestResponse.swift in Sources */,
 				CAD61272246CC6B900D602F5 /* Dictionary+Additions.swift in Sources */,
 				CA37BF0F245CC7C40015D105 /* MovieTableViewCell.swift in Sources */,
 				CAF964422460C4FB00471285 /* ConfigReader.swift in Sources */,
@@ -1360,20 +1410,25 @@
 				CA9021D62544169F002F4AC9 /* UIAlertController+Additions.swift in Sources */,
 				CAB24382249D69F40067E7E3 /* ViewModel.swift in Sources */,
 				CA89DE132479EB8F008A13A6 /* TestViewController.swift in Sources */,
+				B101A4772646B1C200CE91E9 /* RestObjectResponse.swift in Sources */,
 				CA98BC12245171BA007A4828 /* URL+Additions.swift in Sources */,
 				CA9873D12470A75E00B3FA91 /* CastCollectionViewCell.swift in Sources */,
+				B1B079F02644923D00698923 /* RestArrayResponse.swift in Sources */,
 				CA0AEB832466181300E8A703 /* UIActivityIndicatorView+Additions.swift in Sources */,
 				CAD6126F246CC5F800D602F5 /* GetUpComingTask.swift in Sources */,
 				CAA9C1E42471DBF3003535C0 /* UIFont+Additions.swift in Sources */,
 				CAF35CF72466F78B00E47EEA /* UpComing.swift in Sources */,
 				CA884C1D244AF1CB0004C1E3 /* MovieCoordinator.swift in Sources */,
+				B166B6E52584E1FE0043D911 /* RestAPIMiddleware.swift in Sources */,
 				CA80BD4E246F773500E8BC83 /* MovieDetailHeaderDisplay.swift in Sources */,
 				CAB51A7B246C522F00B75DC2 /* MovieDetailSectionHeaderView.swift in Sources */,
+				B166B6EF2584E7930043D911 /* APIResponse.swift in Sources */,
 				CAAA37FF2448E38500A8170A /* Bool+Additions.swift in Sources */,
 				CA9873CC2470A38300B3FA91 /* CastCollectionView.swift in Sources */,
 				CAC11219244FA65800B5E8AE /* EmptyStateView.swift in Sources */,
 				CA1C9D3D2462248A003AEABA /* GetPopularTask.swift in Sources */,
 				CA22AB5E246A021F00EF11D4 /* API+Configuration.swift in Sources */,
+				B166B6F32584E80C0043D911 /* Service.swift in Sources */,
 				CA9D560E244A47B10055D942 /* UIStoryboard+Additions.swift in Sources */,
 				CA884C14244AD85A0004C1E3 /* MovieViewController.swift in Sources */,
 				CAA29F2D245EE16D00BF5249 /* Movie+ProductionCompany.swift in Sources */,
@@ -1395,6 +1450,7 @@
 				CAEFDFC5249F86EB002DEDE9 /* ReviewDisplay.swift in Sources */,
 				CAF97A072451FE1000D762B8 /* UIView+EmptyState.swift in Sources */,
 				CAA99FD1245D0095003C288E /* Double+Additions.swift in Sources */,
+				B166B6EB2584E6610043D911 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

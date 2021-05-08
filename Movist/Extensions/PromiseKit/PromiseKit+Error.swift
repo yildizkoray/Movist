@@ -39,6 +39,13 @@ fileprivate extension Error {
     }
 }
 
+public extension Error {
+    
+    var asAPIError: APIError? {
+        return self as? APIError
+    }
+}
+
 // MARK: - PromiseKit.Result
 
 fileprivate extension PromiseKit.Result {

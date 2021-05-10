@@ -29,8 +29,8 @@ public final class RestAPI: API {
         self.connector = Session(additionalHTTPHeaders: HTTPHeaders(), interceptor: connector)
     }
     
-    public func execute(task: APITask) -> DataRequest {
-        return try! connector.request(
+    public func execute(task: APITask) throws -> DataRequest {
+        return try connector.request(
             task.asURL(),
             method: task.method,
             parameters: task.body,

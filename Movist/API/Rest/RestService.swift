@@ -30,7 +30,7 @@ public final class RestService: Service {
         return
             firstly {
                 [unowned self] () -> Guarantee<AFDataResponse<R>> in
-                let operation = backend.execute(task: task)
+                let operation = try backend.execute(task: task)
                 return operation.responseObject()
             }
             .then { response -> Promise<R> in

@@ -13,5 +13,5 @@ public protocol API {
     associatedtype Executable
     associatedtype Operation
     
-    func execute(task: Operation) -> Executable
+    func execute(task: Operation) throws -> Executable
 }

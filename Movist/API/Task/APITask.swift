@@ -18,6 +18,7 @@ public protocol APITask {
     
     var path: String { get }
     var queryParameters: [URLQueryItem] { get }
+    var defaultQueryParameters: [URLQueryItem] { get }
     
     var encoding: ParameterEncoding { get }
 }
@@ -41,6 +42,10 @@ extension APITask {
         return .empty()
     }
     
+    public var defaultQueryParameters: [URLQueryItem] {
+        return [URLQueryItem(name: "api_key", value: .TMDB_API_KEY)]
+    }
+    
     public var body: Parameters? {
         return nil
     }
@@ -50,7 +55,10 @@ extension APITask {
         urlComponents.host = .TMDB_API_URL
         urlComponents.scheme = .API_URL_SCHEME
         urlComponents.path = "/3\(path)"
-        urlComponents.queryItems = queryParameters
+        var params: [URLQueryItem] = .empty()
+        params.append(contentsOf: defaultQueryParameters)
+        params.append(contentsOf: queryParameters)
+        urlComponents.queryItems = params
         return try urlComponents.asURL()
     }
 }

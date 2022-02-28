@@ -1,5 +1,7 @@
 # Movist
 
+A simple trial movie listing app based on MVVM-C best practices by using TheMovieDB
+
 <p align="center">
 <img src="/home.png"  width="300"/>
 <img src="/movie.png" width="300"/>

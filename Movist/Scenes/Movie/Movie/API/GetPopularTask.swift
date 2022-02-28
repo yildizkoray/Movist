@@ -12,5 +12,5 @@ import Alamofire
 public struct GetPopularTask: APITask {
     
     public var method: HTTPMethod = .get
-    public var path: String = "/movie/populasr"
+    public var path: String = "/movie/popular"
 }

@@ -31,8 +31,8 @@ public class MovieDetailViewModel: ViewModel {
     }
     
     public func start() -> Promise<MovieDetailDisplay> {
-        let movie: Promise<Movie> = api.execute(with: GetMovieDetailTask(id: id, appendToResponse: Constants.appendToResponse))
-        return movie.map(MovieDetailDisplay.init)
+        let movie: Promise<RestObjectResponse<Movie>> = service.execute(task: GetMovieDetailTask(id: id, appendToResponse: Constants.appendToResponse))
+        return movie.compactMap { $0.data }.map(MovieDetailDisplay.init)
     }
     
     public func cellType(for indexPath: IndexPath) -> CellType {

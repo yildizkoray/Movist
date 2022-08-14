@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct VisaulContent {
+public struct VisualContent {
     
     public enum Visual {
         case `static`(UIImage)
@@ -33,5 +33,5 @@ public struct VisaulContent {
         return nil
     }
     
-    public static let empty = VisaulContent(title: .empty)
+    public static let empty = VisualContent(title: .empty)
 }

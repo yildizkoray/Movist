@@ -25,8 +25,8 @@ public struct MoviePopularDisplay: MovieDisplay {
     public var movies: [MovieItemDisplay]
     public var header: MovieHeaderDisplay
     
-    public init(items: Popular) {
-        movies = items.movies.map(MovieItemDisplay.init)
+    public init(items: [Movie]) {
+        movies = items.map(MovieItemDisplay.init)
         header = MovieHeaderDisplay(title: "Popular", type: .popular)
     }
     
@@ -45,8 +45,8 @@ public struct MovieUpComingDisplay: MovieDisplay {
     public var movies: [MovieItemDisplay]
     public var header: MovieHeaderDisplay
     
-    public init(items: UpComing) {
-        movies = items.movies.map(MovieItemDisplay.init)
+    public init(items: [Movie]) {
+        movies = items.map(MovieItemDisplay.init)
         header = MovieHeaderDisplay(title: "UpComing", type: .upcoming)
     }
     
@@ -65,8 +65,8 @@ public struct MovieTopRatedDisplay: MovieDisplay {
     public var movies: [MovieItemDisplay]
     public var header: MovieHeaderDisplay = .empty
     
-    public init(items: TopRated) {
-        movies = items.movies.map(MovieItemDisplay.init)
+    public init(items: [Movie]) {
+        movies = items.map(MovieItemDisplay.init)
         header = MovieHeaderDisplay(title: "TopRated", type: .toprated)
     }
     

@@ -8,7 +8,7 @@
 
 public struct MovieInfoDisplay {
     
-    let content: VisaulContent
+    let content: VisualContent
     let rateStarDisplay: RateStarDisplay
     let genre: String
     let language: String
@@ -16,7 +16,7 @@ public struct MovieInfoDisplay {
     let overview: String
     
     public init(with movie: Movie) {
-        content = VisaulContent(
+        content = VisualContent(
             title: movie.title.emptyIfNil,
             subtitle: movie.overview.emptyIfNil,
             visual: movie.poster.poster().visual

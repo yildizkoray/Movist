@@ -13,11 +13,4 @@ public struct GetPopularTask: APITask {
     
     public var method: HTTPMethod = .get
     public var path: String = "/movie/popular"
-    public var queryParameters: [URLQueryItem]
-    
-    public init() {
-        queryParameters = [
-            URLQueryItem(name: "api_key", value: .TMDB_API_KEY)
-        ]
-    }
 }

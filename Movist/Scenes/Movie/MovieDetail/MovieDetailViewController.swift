@@ -26,9 +26,6 @@ public final class MovieDetailViewController: UIViewController, ViewController {
         super.viewDidLoad()
         
         prepareUI()
-        
-        
-        
         viewModel.start().done { [weak self] display in
             self?.display = display
             self?.prepareNavigation()
@@ -36,7 +33,7 @@ public final class MovieDetailViewController: UIViewController, ViewController {
             self?.view.stopLoadingIndicatorView()
             self?.tableView.setHidden(false, animated: true)
         }
-        .cauterize()
+        .alertOnError()
     }
     
     private func prepareUI() {

@@ -39,7 +39,7 @@ public final class MovieViewController: UIViewController, ViewController {
             self?.tableView.setHidden(false, animated: true)
             self?.view.stopLoadingIndicatorView()
         }
-        .cauterize()
+        .alertOnError()
     }
     
     @objc private func refresh() {
@@ -50,7 +50,7 @@ public final class MovieViewController: UIViewController, ViewController {
         .ensure { [weak self] in
             self?.tableView.endRefreshing()
         }
-        .cauterize()
+        .alertOnError()
     }
     
     private func prepareUI() {

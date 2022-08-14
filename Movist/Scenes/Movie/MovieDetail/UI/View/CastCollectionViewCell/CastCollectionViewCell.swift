@@ -17,7 +17,7 @@ public final class CastCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    public func configure(with content: VisaulContent) {
+    public func configure(with content: VisualContent) {
         castView.configure(with: content)
     }
     
